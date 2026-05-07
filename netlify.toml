@@ -1,0 +1,17 @@
+# Netlify configuration for David Atinga Portfolio
+# No build step needed — pure static HTML
+
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[redirects]]
+  from = "/cv"
+  to = "/resume.pdf"
+  status = 302
