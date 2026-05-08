@@ -9,13 +9,13 @@
 <meta property="og:description" content="PhD Applied Economist specialising in agricultural economics, climate-agriculture linkages, food security and impact evaluation across Sub-Saharan Africa."/>
 <meta property="og:url" content="https://davidatinga.netlify.app/"/>
 <meta property="og:type" content="website"/>
-<meta property="og:image" content="https://davidatinga.netlify.app/og-image.jpg"/>
+<meta property="og:image" content="https://davidatinga.netlify.app/og-image.png"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
 <meta property="twitter:card" content="summary_large_image"/>
 <meta property="twitter:title" content="David Atinga | Applied Economist"/>
 <meta property="twitter:description" content="PhD Applied Economist specialising in agricultural economics, climate-agriculture linkages, food security and impact evaluation across Sub-Saharan Africa."/>
-<meta property="twitter:image" content="https://davidatinga.netlify.app/og-image.jpg"/>
+<meta property="twitter:image" content="https://davidatinga.netlify.app/og-image.png"/>
 <title>David Atinga | Applied Economist</title>
 
 <!-- ── GOOGLE ANALYTICS GA4 ─────────────────────────────────────────
@@ -679,12 +679,11 @@ footer a:hover{color:#fff}
   </div>
 
   <div class="hero-right">
-    <!-- PHOTO: upload your headshot as "photo.jpg" to the GitHub repo root,
-         then delete the style="display:none" from the img and remove the fallback span -->
+    <!-- PHOTO: upload your headshot as photo.jpg to the GitHub repo root -->
     <div class="hero-avatar" id="avatarWrap">
       <img id="avatarImg" src="./photo.jpg" alt="David Atinga"
         style="width:100%;height:100%;border-radius:50%;object-fit:cover;display:block"
-        onerror="this.style.display='none';document.getElementById('avatarFallback').style.display='flex'"/>
+        onerror="this.src='./photo.png';this.onerror=function(){this.style.display='none';document.getElementById('avatarFallback').style.display='flex';}"/>
       <span id="avatarFallback"
         style="display:none;width:100%;height:100%;align-items:center;justify-content:center;font-family:'DM Serif Display',Georgia,serif;font-size:3.5rem;color:#fff">DA</span>
     </div>

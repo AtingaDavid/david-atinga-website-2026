@@ -1,18 +1,18 @@
 # David Atinga — Portfolio Website
 
-Auto-deploys from this GitHub repo via Netlify on every push.
-Free hosting + free domain on `.netlify.app` — no cost at all.
+Live at: **https://davidatinga.netlify.app**
+Auto-deploys from GitHub repo `david-atinga-website-2026` via Netlify on every push.
 
 ---
 
 ## 📁 Repo File Structure
 
 ```
-/
+david-atinga-website-2026/
 ├── index.html        ← Main portfolio page (edit this to update the site)
 ├── resume.pdf        ← Your CV — replace this file to update the download
 ├── photo.jpg         ← Your headshot (square crop, min 300×300px)
-├── og-image.jpg      ← Social share preview image (1200×630px)
+├── og-image.png      ← Social share preview image (1200×630px)
 ├── netlify.toml      ← Netlify config (do not edit)
 └── README.md         ← This file
 ```
@@ -21,101 +21,132 @@ Free hosting + free domain on `.netlify.app` — no cost at all.
 
 ## ✅ Pre-Launch Checklist
 
-### 🔴 Must Do
+### 🔴 Must Do Before Launch
 
-- [ ] **Choose your free domain name** — e.g. `davidatinga.netlify.app` (see guide below)
-- [ ] **Update `og:url` in `index.html`** — replace `YOUR-CHOSEN-NAME` with your real subdomain
-- [ ] **Upload `photo.jpg`** — your headshot, square crop
-- [ ] **Upload `resume.pdf`** — your latest CV
-- [ ] **Create & upload `og-image.jpg`** — see guide below
-- [ ] **Verify Formspree** — log in at formspree.io, confirm form `mbdwkyry` is active and emailing `atingad@gmail.com`. If not, create a new form and replace `mbdwkyry` in `index.html`
-- [ ] **Set up Google Analytics** — replace both `G-XXXXXXXXXX` in `index.html` with your real ID (see guide below)
+- [ ] Upload all files to GitHub repo (see Part 1 below)
+- [ ] Deploy on Netlify and set site name to `davidatinga` (see Part 2 below)
+- [ ] Set up Google Analytics — replace `G-XXXXXXXXXX` ×2 in `index.html` (see Part 3)
+- [ ] Verify Formspree form `mbdwkyry` is active at formspree.io (see Part 4)
 
-### 🟡 Review & Confirm
+### 🟡 Review & Confirm in index.html
 
-- [ ] Teaching section courses, supervision titles and dates match your actual CV
-- [ ] Hero stats correct: 9+ years, 5 publications, 108 villages, 4 working papers
+- [ ] Teaching section — courses, supervision titles and dates match your actual CV
+- [ ] Hero stats — 9+ years, 5 publications, 108 villages, 4 working papers
 - [ ] Working papers in Research section are current
 
 ---
 
-## 🌐 Setting Your Free Netlify Domain (100% free, forever)
+## 💻 PART 1 — Upload Files to GitHub (Windows PC)
 
-Your site will be at `davidatinga.netlify.app` — completely free, no card needed.
+### Files you need ready on your PC before starting:
+| Filename | What it is |
+|---|---|
+| `index.html` | Main site file (downloaded from Claude) |
+| `netlify.toml` | Netlify config (downloaded from Claude) |
+| `README.md` | This file (downloaded from Claude) |
+| `resume.pdf` | Your CV — must be named exactly `resume.pdf` |
+| `photo.jpg` | Your headshot — must be named exactly `photo.jpg` |
+| `og-image.png` | Social preview image — must be named exactly `og-image.png` |
 
-**Good name ideas for your profile:**
-- `davidatinga.netlify.app`
-- `atinga-economist.netlify.app`
-- `david-atinga.netlify.app`
-- `atingaeconomics.netlify.app`
-
-**How to set it (on your phone):**
-1. Go to **app.netlify.com** → tap your site
-2. Tap **Site configuration → Site details → Change site name**
-3. Type your preferred name (it checks availability instantly)
-4. Tap **Save** → your site is immediately live at that address ✅
-5. Then edit `index.html` on GitHub and replace `YOUR-CHOSEN-NAME` in the `og:url` line with your real subdomain name
-
----
-
-## 🖼 How to Create og-image.jpg (on your phone)
-
-This is the preview image when you share your link on WhatsApp, LinkedIn, Twitter etc.
-
-### Option A — Screenshot (easiest, 2 minutes)
-1. Download `index.html` and open it in your phone browser
-2. Scroll to the top hero section
-3. Take a **screenshot**
-4. Open it in your phone's photo editor (Photos on iPhone / Gallery on Android)
-5. **Crop to wide landscape** — roughly 2:1 ratio (wide, not tall)
-6. Save as `og-image.jpg`
-7. Upload to your GitHub repo
-
-### Option B — Canva (free, more polished)
-1. Go to **canva.com** on your phone — sign up free
-2. Tap **"Create a design"** → search **"Open Graph"** or **"Presentation 16:9"**
-3. Add your name + title using the site colours:
-   - Dark green background: `#2C4A3E`
-   - Cream text: `#FDFAF5`
-4. Download as **JPG**
-5. Upload to GitHub repo as `og-image.jpg`
+### Steps:
+1. Open **Chrome or Edge** on your PC
+2. Go to **github.com** → sign in
+3. Click your repo **`david-atinga-website-2026`**
+4. Click **"Add file"** (top right area) → click **"Upload files"**
+5. A drag-and-drop area appears — open **File Explorer** on your PC
+6. Navigate to where your files are saved
+7. Select all 6 files at once (hold **Ctrl** and click each one) → drag them into the GitHub upload area
+8. Scroll down on GitHub → you will see a "Commit changes" section
+9. Leave the commit message as is → click the green **"Commit changes"** button
+10. Wait a few seconds → you will see all files listed in your repo ✅
 
 ---
 
-## 📊 Google Analytics Setup (free, ~5 minutes)
+## 🌐 PART 2 — Deploy on Netlify (Windows PC, step by step)
 
-1. Go to **analytics.google.com** on your phone
-2. Sign in with Google → **"Start measuring"**
-3. Account name: `David Atinga Portfolio` → Next
-4. Property name: `Portfolio` → Next → choose **Web**
-5. Enter your `.netlify.app` domain → **Create stream**
-6. Copy your **Measurement ID** — looks like `G-AB12CD34EF`
-7. Open your GitHub repo → tap `index.html` → ✏️ Edit
-8. Search `G-XXXXXXXXXX` → replace **both** instances with your real ID
-9. Commit changes → done ✅
+### Step 1 — Log in to Netlify
+1. Open a new tab → go to **netlify.com**
+2. Click **"Log in"** (top right)
+3. Click **"Log in with GitHub"** — this connects your GitHub account automatically
+   > Already logged in? Skip straight to Step 2.
+
+### Step 2 — Import your GitHub repo
+4. Once logged in you land on your **Netlify dashboard**
+5. Click the **"Add new site"** button
+6. Click **"Import an existing project"**
+7. Click **"GitHub"** as your Git provider
+   > First time connecting GitHub to Netlify? A popup asks you to authorise — click **"Authorise Netlify"** then come back to this tab
+8. A search box appears with a list of your GitHub repos
+9. Type `david-atinga` in the search box → click **`david-atinga-website-2026`** when it appears
+
+### Step 3 — Deploy the site
+10. A page titled **"Configure site and deploy"** appears
+11. **Do not change anything on this page** — all settings are already correct
+12. Scroll to the very bottom → click the **"Deploy david-atinga-website-2026"** button
+13. Netlify takes you to a page showing **"Building"** with a yellow indicator
+14. Wait about 30–60 seconds → it changes to a green **"Published"** badge ✅
+15. Netlify gives your site a random temporary name like `fluffy-fox-abc123.netlify.app` — ignore this for now
+
+### Step 4 — Set your site name to `davidatinga`
+16. Look at the top menu on the same page — click **"Site configuration"**
+17. On the Site configuration page, click **"Site details"**
+18. You will see your current random site name — click the **"Change site name"** button next to it
+19. A small box appears — clear the random name completely
+20. Type exactly: **`davidatinga`**
+21. Click **"Save"**
+22. 🎉 Your site is now live at **https://davidatinga.netlify.app** — open it in a new tab to confirm!
 
 ---
 
-## 🔄 How to Update the Site (all on your phone)
+## 📊 PART 3 — Google Analytics (Windows PC)
 
-**Edit text / content:**
-1. Open repo on **github.com** on your phone browser
-2. Tap `index.html` → ✏️ pencil (Edit) icon
-3. Make your edits → scroll down → **"Commit changes"**
+1. Open a new tab → go to **analytics.google.com** → sign in with your Google account
+2. Click **"Start measuring"**
+3. **Account name** → type `David Atinga Portfolio` → click **Next**
+4. **Property name** → type `Portfolio` → **Reporting time zone** → select your timezone → click **Next**
+5. Fill in business info → Industry: `Education` → Size: `Small` → click **Next**
+6. Business objective → select **"Examine user behavior"** → click **Next**
+7. Click **"Web"** as your platform
+8. **Website URL** → type `davidatinga.netlify.app` → **Stream name** → type `Portfolio` → click **"Create and continue"**
+9. Your **Measurement ID** appears at the top right — it looks like **`G-AB12CD34EF`**
+10. Copy it (click the copy icon next to it)
+11. Go to **github.com** → open **`david-atinga-website-2026`** → click `index.html`
+12. Click the ✏️ **pencil icon** (top right of the file view) — this opens the editor
+13. Press **Ctrl + F** to open find → type `G-XXXXXXXXXX`
+14. You will see it highlighted in **2 places** — click on each one and replace with your real ID
+15. Scroll down → click **"Commit changes"** → click **"Commit changes"** again to confirm
+16. Netlify auto-redeploys in ~30 seconds → analytics tracking is live ✅
+
+---
+
+## 📬 PART 4 — Verify Contact Form (Formspree)
+
+1. Open a new tab → go to **formspree.io** → click **"Log in"**
+2. Once logged in, look at your list of forms
+3. **If you see form `mbdwkyry` and it shows "Active":**
+   → Nothing to do ✅ Contact messages will go to `atingad@gmail.com`
+4. **If the form is missing or shows an error:**
+   - Click **"+ New form"**
+   - Name it `Portfolio Contact` → click **"Create form"**
+   - Copy the new Form ID shown (e.g. `xpzgkryq`)
+   - Go to GitHub → `index.html` → ✏️ Edit → press **Ctrl+F** → search `mbdwkyry`
+   - Replace it with your new Form ID → **Commit changes** ✅
+
+---
+
+## 🔄 How to Update the Site in Future (Windows PC)
+
+### Edit text or content:
+1. Go to **github.com** → open **`david-atinga-website-2026`**
+2. Click `index.html` → click the ✏️ pencil icon
+3. Make your edits → click **"Commit changes"**
 4. Netlify redeploys automatically in ~30 seconds ✅
 
-**Upload new files (photo, CV, og-image):**
-1. Open repo → tap **"Add file" → "Upload files"**
-2. Choose your file → **"Commit changes"** ✅
+### Upload a new file (new CV, updated photo etc.):
+1. Go to your repo → click **"Add file" → "Upload files"**
+2. Drag in your new file (use the same filename as before to replace it)
+3. Click **"Commit changes"** ✅
 
-**Pro tip:** Install the free **GitHub Mobile app** (iOS / Android) for a much smoother editing experience on your phone than the browser.
+### To update your CV:
+- Save your new CV as `resume.pdf` (exact name) → upload it to the repo → it replaces the old one automatically
 
----
-
-## 🔗 Useful Links
-
-- Netlify dashboard: https://app.netlify.com
-- Formspree dashboard: https://formspree.io
-- Google Analytics: https://analytics.google.com
-- ORCID profile: https://orcid.org/0000-0002-3281-3175
-- GitHub Mobile app: https://github.com/mobile
