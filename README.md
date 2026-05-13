@@ -31,7 +31,7 @@ david-atinga-website-2026/
 ### 🟡 Review & Confirm in index.html
 
 - [ ] Teaching section — courses, supervision titles and dates match your actual CV
-- [ ] Hero stats — 9+ years, 5 publications, 108 villages, 4 working papers
+- [ ] Hero stats — 10+ years, 5 publications, 500+ villages, 4 working papers
 - [ ] Working papers in Research section are current
 
 ---
@@ -41,9 +41,9 @@ david-atinga-website-2026/
 ### Files you need ready on your PC before starting:
 | Filename | What it is |
 |---|---|
-| `index.html` | Main site file (downloaded from Claude) |
-| `netlify.toml` | Netlify config (downloaded from Claude) |
-| `README.md` | This file (downloaded from Claude) |
+| `index.html` | Main site file (master file) |
+| `netlify.toml` | Netlify config |
+| `README.md` | This file (this opened file) |
 | `resume.pdf` | Your CV — must be named exactly `resume.pdf` |
 | `photo.jpg` | Your headshot — must be named exactly `photo.jpg` |
 | `og-image.png` | Social preview image — must be named exactly `og-image.png` |
