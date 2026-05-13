@@ -1,0 +1,1509 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="description" content="David Atinga — Applied Economics, Agricultural & Development Economics, M&E. PhD University of Tokyo."/>
+<meta name="keywords" content="David Atinga, agricultural economist, development economics, impact evaluation, food security, Ghana, Africa"/>
+<meta property="og:title" content="David Atinga | Applied Economist"/>
+<meta property="og:description" content="PhD Applied Economist specialising in agricultural economics, climate-agriculture linkages, food security and impact evaluation across Sub-Saharan Africa."/>
+<meta property="og:url" content="https://davidatinga.netlify.app/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="https://davidatinga.netlify.app/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="twitter:card" content="summary_large_image"/>
+<meta property="twitter:title" content="David Atinga | Applied Economist"/>
+<meta property="twitter:description" content="PhD Applied Economist specialising in agricultural economics, climate-agriculture linkages, food security and impact evaluation across Sub-Saharan Africa."/>
+<meta property="twitter:image" content="https://davidatinga.netlify.app/og-image.png"/>
+<title>David Atinga | Applied Economist</title>
+
+<!-- ── GOOGLE ANALYTICS GA4 ─────────────────────────────────────────
+     SETUP: Replace G-XXXXXXXXXX with your Measurement ID from
+     Google Analytics → Admin → Data Streams → your stream → Measurement ID
+     Get it free at: https://analytics.google.com
+──────────────────────────────────────────────────────────────────── -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B32FW2WLLG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-B32FW2WLLG');
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+
+<style>
+/* ───────────────────────────────────────────────────────────────────
+   LIGHT MODE — Editorial Academic: warm ivory, deep forest green,
+   generous whitespace, serif headlines, mono details.
+─────────────────────────────────────────────────────────────────── */
+:root,
+[data-theme="light"] {
+  --bg:      #F7F4EE;
+  --bg2:     #FFFFFF;
+  --cream:   #EDE9DF;
+  --warm:    #D9D2C3;
+  --forest:  #1D4A35;
+  --forest2: #2A6349;
+  --sage:    #4E7A63;
+  --gold:    #C4882A;
+  --text:    #1A1A18;
+  --muted:   #5A5A52;
+  --light:   #8A8A80;
+  --white:   #FFFFFF;
+  --nav-bg:  rgba(247,244,238,.92);
+  --nav-bdr: #D9D2C3;
+  --card-bg: #FFFFFF;
+  --card-bdr:#D9D2C3;
+  --input-bg:#F7F4EE;
+  --footer-bg:#1A1A18;
+  --footer-text:rgba(255,255,255,.4);
+  --hero-panel:#1D4A35;
+  --pill-bg: #EDE9DF;
+  --pill-c:  #1D4A35;
+  --skills-section-bg:#1D4A35;
+  --award-bg:#F7F4EE;
+  --shadow:  0 4px 24px rgba(0,0,0,.07);
+  --toggle-bg:#D9D2C3;
+  --toggle-knob:#1D4A35;
+}
+
+[data-theme="dark"] {
+  --bg:      #0F1510;
+  --bg2:     #162019;
+  --cream:   #1E2A22;
+  --warm:    #2A3830;
+  --forest:  #6DBF8A;
+  --forest2: #85D4A0;
+  --sage:    #7DBFA0;
+  --gold:    #E0A84A;
+  --text:    #E8E4DC;
+  --muted:   #A8A89E;
+  --light:   #6A6A60;
+  --white:   #E8E4DC;
+  --nav-bg:  rgba(15,21,16,.94);
+  --nav-bdr: #2A3830;
+  --card-bg: #162019;
+  --card-bdr:#2A3830;
+  --input-bg:#0F1510;
+  --footer-bg:#080D09;
+  --footer-text:rgba(232,228,220,.4);
+  --hero-panel:#0A1A10;
+  --pill-bg: #1E2A22;
+  --pill-c:  #7DBFA0;
+  --skills-section-bg:#0A1A10;
+  --award-bg:#1E2A22;
+  --shadow:  0 4px 24px rgba(0,0,0,.35);
+  --toggle-bg:#2A3830;
+  --toggle-knob:#E0A84A;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'DM Sans',system-ui,sans-serif;
+  font-weight:300;
+  line-height:1.7;
+  overflow-x:hidden;
+  transition:background .35s ease, color .35s ease;
+}
+
+/* ── SCROLLBAR ──────────────────────────────────────────────────── */
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--cream)}
+::-webkit-scrollbar-thumb{background:var(--sage);border-radius:3px}
+::selection{background:var(--forest);color:#fff}
+
+/* ── NAV ────────────────────────────────────────────────────────── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  height:64px;
+  background:var(--nav-bg);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--nav-bdr);
+  display:flex;align-items:center;
+  transition:background .35s ease, border-color .35s ease;
+}
+.nav-inner{
+  max-width:1100px;margin:0 auto;padding:0 32px;
+  display:flex;align-items:center;justify-content:space-between;
+  width:100%;
+}
+.nav-brand{
+  font-family:'DM Serif Display',Georgia,serif;font-size:1.15rem;
+  color:var(--forest);text-decoration:none;letter-spacing:.01em;
+  transition:color .2s;
+}
+.nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+.nav-links a{
+  font-size:.82rem;font-weight:500;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--muted);
+  text-decoration:none;transition:color .2s;
+}
+.nav-links a:hover{color:var(--forest)}
+
+/* ── DARK MODE TOGGLE ───────────────────────────────────────────── */
+.theme-toggle{
+  display:flex;align-items:center;gap:8px;
+  cursor:pointer;padding:4px;
+  background:none;border:none;
+  font-size:.75rem;font-family:'JetBrains Mono',monospace;
+  color:var(--muted);letter-spacing:.06em;
+  text-transform:uppercase;transition:color .2s;
+}
+.theme-toggle:hover{color:var(--forest)}
+.toggle-track{
+  width:36px;height:20px;border-radius:10px;
+  background:var(--toggle-bg);position:relative;
+  transition:background .3s;flex-shrink:0;
+}
+.toggle-knob{
+  position:absolute;top:3px;left:3px;
+  width:14px;height:14px;border-radius:50%;
+  background:var(--toggle-knob);
+  transition:transform .3s, background .3s;
+}
+[data-theme="dark"] .toggle-knob{transform:translateX(16px)}
+.toggle-icon{font-size:.9rem}
+
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+.hamburger span{width:22px;height:2px;background:var(--forest);transition:.3s;display:block}
+.mobile-menu{
+  display:none;position:fixed;top:64px;left:0;right:0;z-index:99;
+  background:var(--bg);border-bottom:1px solid var(--warm);
+  padding:24px 32px;flex-direction:column;gap:20px;
+  transition:background .35s;
+}
+.mobile-menu a{
+  font-size:1rem;font-weight:500;color:var(--text);text-decoration:none;
+  letter-spacing:.04em;padding:8px 0;border-bottom:1px solid var(--cream);
+}
+.mobile-menu.open{display:flex}
+
+/* ── HERO ──────────────────────────────────────────────────────── */
+#hero{
+  min-height:100vh;
+  display:grid;grid-template-columns:1fr 1fr;
+  padding-top:64px;overflow:hidden;position:relative;
+}
+.hero-left{
+  display:flex;flex-direction:column;justify-content:center;
+  padding:80px 60px 80px 64px;position:relative;z-index:2;
+}
+.hero-tag{
+  font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--gold);
+  margin-bottom:20px;
+  opacity:0;animation:fadeUp .6s .1s cubic-bezier(.4,0,.2,1) forwards;
+}
+.hero-name{
+  font-family:'DM Serif Display',Georgia,serif;
+  font-size:clamp(2.8rem,4.5vw,4.2rem);
+  line-height:1.05;color:var(--forest);
+  margin-bottom:16px;
+  opacity:0;animation:fadeUp .7s .2s cubic-bezier(.4,0,.2,1) forwards;
+}
+.hero-name em{font-style:italic;color:var(--sage)}
+.hero-title{
+  font-size:1rem;font-weight:400;color:var(--muted);
+  margin-bottom:28px;line-height:1.5;
+  opacity:0;animation:fadeUp .7s .3s cubic-bezier(.4,0,.2,1) forwards;
+}
+.hero-desc{
+  font-size:.95rem;color:var(--muted);max-width:440px;
+  line-height:1.75;margin-bottom:40px;
+  opacity:0;animation:fadeUp .7s .4s cubic-bezier(.4,0,.2,1) forwards;
+}
+.hero-badges{
+  display:flex;flex-wrap:wrap;gap:8px;margin-bottom:40px;
+  opacity:0;animation:fadeUp .7s .5s cubic-bezier(.4,0,.2,1) forwards;
+}
+.badge{
+  font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.06em;
+  padding:4px 12px;border-radius:100px;
+  border:1px solid var(--warm);color:var(--muted);
+  background:var(--cream);
+  transition:background .35s,border-color .35s,color .35s;
+}
+.hero-actions{
+  display:flex;gap:16px;flex-wrap:wrap;
+  opacity:0;animation:fadeUp .7s .6s cubic-bezier(.4,0,.2,1) forwards;
+}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--forest);color:#fff;
+  padding:13px 28px;border-radius:4px;
+  font-size:.85rem;font-weight:500;letter-spacing:.04em;
+  text-decoration:none;transition:background .25s,transform .2s;
+}
+.btn-primary:hover{background:var(--forest2);transform:translateY(-1px)}
+.btn-outline{
+  display:inline-flex;align-items:center;gap:8px;
+  border:1.5px solid var(--forest);color:var(--forest);
+  padding:12px 24px;border-radius:4px;
+  font-size:.85rem;font-weight:500;letter-spacing:.04em;
+  text-decoration:none;transition:all .25s;
+}
+.btn-outline:hover{background:var(--forest);color:#fff;transform:translateY(-1px)}
+
+.hero-right{
+  background:var(--hero-panel);
+  display:flex;flex-direction:column;justify-content:center;align-items:center;
+  padding:80px 60px;position:relative;overflow:hidden;
+  transition:background .35s;
+}
+.hero-right::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 30% 70%,rgba(78,122,99,.5) 0%,transparent 60%),
+             radial-gradient(ellipse at 80% 20%,rgba(196,136,42,.15) 0%,transparent 50%);
+}
+.hero-avatar{
+  width:160px;height:160px;border-radius:50%;
+  border:4px solid rgba(255,255,255,.15);
+  background:var(--sage);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'DM Serif Display',Georgia,serif;font-size:3.5rem;color:#fff;
+  margin-bottom:32px;position:relative;z-index:1;
+  box-shadow:0 20px 60px rgba(0,0,0,.3);
+  opacity:0;animation:fadeIn .8s .5s cubic-bezier(.4,0,.2,1) forwards;
+}
+.hero-stats{
+  display:grid;grid-template-columns:1fr 1fr;gap:24px;
+  position:relative;z-index:1;width:100%;max-width:340px;
+  opacity:0;animation:fadeIn .8s .7s cubic-bezier(.4,0,.2,1) forwards;
+}
+.stat-card{
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:8px;padding:20px 16px;
+}
+.stat-num{
+  font-family:'DM Serif Display',Georgia,serif;font-size:2.2rem;
+  color:#fff;line-height:1;margin-bottom:4px;
+}
+.stat-label{
+  font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.1em;
+  text-transform:uppercase;color:rgba(255,255,255,.5);
+}
+.hero-links{
+  display:flex;gap:16px;margin-top:32px;position:relative;z-index:1;
+  opacity:0;animation:fadeIn .8s .9s cubic-bezier(.4,0,.2,1) forwards;
+}
+.hero-links a{
+  width:40px;height:40px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.2);
+  display:flex;align-items:center;justify-content:center;
+  color:rgba(255,255,255,.7);text-decoration:none;font-size:.85rem;
+  transition:all .25s;
+}
+.hero-links a:hover{background:rgba(255,255,255,.15);color:#fff;border-color:rgba(255,255,255,.4)}
+
+/* ── SECTIONS ───────────────────────────────────────────────────── */
+section{padding:100px 32px}
+.container{max-width:1100px;margin:0 auto}
+.section-label{
+  font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:12px;
+}
+.section-title{
+  font-family:'DM Serif Display',Georgia,serif;
+  font-size:clamp(1.8rem,3vw,2.6rem);
+  color:var(--forest);line-height:1.15;margin-bottom:16px;
+}
+.section-sub{font-size:.95rem;color:var(--muted);max-width:560px;line-height:1.7}
+.section-divider{width:48px;height:3px;background:var(--gold);border-radius:2px;margin:20px 0 60px}
+
+/* ── ABOUT ──────────────────────────────────────────────────────── */
+#about{background:var(--bg2);transition:background .35s}
+.about-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:80px;align-items:start}
+.about-text p{font-size:1rem;color:var(--muted);line-height:1.8;margin-bottom:20px}
+.about-text strong{color:var(--forest);font-weight:600}
+.interests-block{margin-top:32px}
+.interests-title{
+  font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--light);margin-bottom:16px;
+}
+.interest-pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{
+  font-size:.8rem;padding:6px 14px;border-radius:100px;
+  background:var(--pill-bg);color:var(--pill-c);
+  border:1px solid var(--warm);font-weight:400;
+  transition:background .35s,color .35s,border-color .35s;
+}
+.edu-block{margin-bottom:48px}
+.edu-title{
+  font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--light);margin-bottom:20px;
+}
+.edu-item{
+  display:flex;gap:16px;margin-bottom:24px;padding-bottom:24px;
+  border-bottom:1px solid var(--cream);transition:border-color .35s;
+}
+.edu-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.edu-dot{width:10px;height:10px;border-radius:50%;background:var(--gold);margin-top:6px;flex-shrink:0}
+.edu-deg{font-weight:600;font-size:.9rem;color:var(--text);margin-bottom:2px}
+.edu-inst{font-size:.82rem;color:var(--muted)}
+.edu-year{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--light);margin-top:2px}
+.award-item{
+  display:flex;align-items:flex-start;gap:12px;
+  margin-bottom:16px;padding:14px 16px;
+  background:var(--award-bg);border-radius:6px;border-left:3px solid var(--gold);
+  transition:background .35s;
+}
+.award-icon{font-size:1rem;margin-top:1px}
+.award-text{font-size:.85rem;color:var(--muted);line-height:1.5}
+.award-text strong{color:var(--text);font-weight:500}
+
+/* ── RESEARCH ───────────────────────────────────────────────────── */
+#research{background:var(--bg);transition:background .35s}
+.research-intro{font-size:.95rem;color:var(--muted);max-width:680px;line-height:1.8;margin-bottom:60px}
+.research-intro p{margin-bottom:14px}
+.pub-grid{display:flex;flex-direction:column;gap:0}
+.pub-item{
+  display:grid;grid-template-columns:48px 1fr;gap:20px;
+  padding:28px 0;border-bottom:1px solid var(--warm);
+  transition:border-color .35s;
+}
+.pub-item:first-child{border-top:1px solid var(--warm)}
+.pub-num{
+  font-family:'DM Serif Display',Georgia,serif;font-size:1.6rem;
+  color:var(--warm);margin-top:2px;user-select:none;transition:color .35s;
+}
+.pub-year{
+  font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:6px;
+}
+.pub-title{font-size:.95rem;font-weight:500;color:var(--text);line-height:1.55;margin-bottom:8px}
+.pub-journal{font-size:.82rem;color:var(--sage);font-style:italic}
+.pub-abstract{
+  font-size:.82rem;color:var(--muted);line-height:1.65;margin-top:8px;
+  max-height:0;overflow:hidden;transition:max-height .4s,opacity .3s;opacity:0;
+}
+.pub-abstract.open{max-height:300px;opacity:1}
+.pub-toggle{
+  font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.08em;
+  color:var(--sage);cursor:pointer;margin-top:10px;
+  display:inline-flex;align-items:center;gap:4px;
+  background:none;border:none;padding:0;text-transform:uppercase;
+}
+.pub-toggle:hover{color:var(--forest)}
+.wip-section{margin-top:56px}
+.wip-title{
+  font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--light);margin-bottom:20px;
+}
+.wip-item{display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid var(--cream)}
+.wip-dot{width:8px;height:8px;border-radius:50%;border:2px solid var(--sage);margin-top:6px;flex-shrink:0}
+.wip-text{font-size:.88rem;color:var(--muted);line-height:1.6;font-style:italic}
+.wip-status{
+  font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--gold);margin-left:8px;
+}
+
+/* ── EXPERIENCE ─────────────────────────────────────────────────── */
+#experience{background:var(--bg2);transition:background .35s}
+.exp-timeline{position:relative;padding-left:32px}
+.exp-timeline::before{
+  content:'';position:absolute;left:0;top:8px;bottom:8px;
+  width:2px;background:linear-gradient(to bottom,var(--gold),var(--warm));
+}
+.exp-item{
+  position:relative;margin-bottom:48px;
+  opacity:0;transform:translateX(-10px);
+  transition:opacity .5s,transform .5s;
+}
+.exp-item.visible{opacity:1;transform:translateX(0)}
+.exp-dot{
+  position:absolute;left:-38px;top:6px;
+  width:14px;height:14px;border-radius:50%;
+  background:var(--bg2);border:2.5px solid var(--gold);
+  transition:background .35s;
+}
+.exp-dot.active{background:var(--gold)}
+.exp-period{font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+.exp-role{font-size:1rem;font-weight:600;color:var(--text);margin-bottom:2px}
+.exp-org{font-size:.88rem;color:var(--sage);margin-bottom:12px}
+.exp-bullets{list-style:none;padding:0}
+.exp-bullets li{font-size:.85rem;color:var(--muted);line-height:1.65;padding-left:16px;position:relative;margin-bottom:6px}
+.exp-bullets li::before{content:'→';position:absolute;left:0;color:var(--gold);font-size:.75rem;top:2px}
+
+/* ── TEACHING ────────────────────────────────────────────────────── */
+#teaching{background:var(--bg);transition:background .35s}
+.teaching-intro{font-size:.95rem;color:var(--muted);max-width:680px;line-height:1.8;margin-bottom:60px}
+.teaching-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;margin-bottom:56px}
+.teaching-card{
+  background:var(--card-bg);border:1px solid var(--card-bdr);border-radius:8px;
+  padding:28px;transition:border-color .25s,transform .2s,background .35s;
+  box-shadow:var(--shadow);
+}
+.teaching-card:hover{border-color:var(--sage);transform:translateY(-2px)}
+.teaching-card-header{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:12px}
+.teaching-card-title{font-size:.95rem;font-weight:600;color:var(--text);line-height:1.4}
+.teaching-card-code{
+  font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.08em;
+  padding:3px 10px;border-radius:100px;
+  background:var(--cream);color:var(--forest);border:1px solid var(--warm);
+  white-space:nowrap;flex-shrink:0;transition:background .35s,color .35s,border-color .35s;
+}
+.teaching-card-meta{font-size:.8rem;color:var(--sage);font-style:italic;margin-bottom:10px}
+.teaching-card-role{
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:10px;
+}
+.teaching-card-desc{font-size:.83rem;color:var(--muted);line-height:1.65}
+.teaching-sub-title{
+  font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--light);margin-bottom:20px;margin-top:40px;
+}
+.teaching-supervision-list{display:flex;flex-direction:column;gap:0}
+.supervision-item{
+  display:flex;align-items:flex-start;gap:16px;
+  padding:18px 0;border-bottom:1px solid var(--cream);transition:border-color .35s;
+}
+.supervision-item:first-child{border-top:1px solid var(--cream)}
+.supervision-num{
+  font-family:'DM Serif Display',Georgia,serif;font-size:1.3rem;
+  color:var(--warm);margin-top:2px;user-select:none;flex-shrink:0;min-width:32px;
+  transition:color .35s;
+}
+.supervision-body{}
+.supervision-level{
+  font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:4px;
+}
+.supervision-title{font-size:.9rem;font-weight:500;color:var(--text);line-height:1.5;margin-bottom:4px}
+.supervision-detail{font-size:.8rem;color:var(--muted)}
+
+/* ── SKILLS ─────────────────────────────────────────────────────── */
+#skills{background:var(--skills-section-bg);color:#fff;transition:background .35s}
+#skills .section-title{color:#fff}
+#skills .section-label{color:var(--gold)}
+#skills .section-sub{color:rgba(255,255,255,.6)}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:48px}
+.skill-card{
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+  border-radius:8px;padding:28px;transition:background .25s,transform .2s;
+}
+.skill-card:hover{background:rgba(255,255,255,.1);transform:translateY(-2px)}
+.skill-icon{font-size:1.4rem;margin-bottom:12px}
+.skill-name{font-size:.85rem;font-weight:600;color:#fff;letter-spacing:.03em;margin-bottom:12px}
+.skill-tags{display:flex;flex-wrap:wrap;gap:6px}
+.skill-tag{
+  font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.04em;
+  padding:3px 10px;border-radius:100px;
+  background:rgba(255,255,255,.08);color:rgba(255,255,255,.65);
+  border:1px solid rgba(255,255,255,.1);
+}
+
+/* ── CONTACT ─────────────────────────────────────────────────────── */
+#contact{background:var(--bg);transition:background .35s}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.contact-text p{font-size:.95rem;color:var(--muted);line-height:1.8;margin-bottom:20px}
+.contact-items{margin-top:32px;display:flex;flex-direction:column;gap:16px}
+.contact-item{
+  display:flex;align-items:center;gap:16px;
+  padding:16px 20px;background:var(--card-bg);
+  border-radius:6px;border:1px solid var(--card-bdr);
+  text-decoration:none;color:var(--text);
+  transition:border-color .2s,transform .2s,background .35s;
+}
+.contact-item:hover{border-color:var(--sage);transform:translateX(4px)}
+.contact-item-icon{
+  width:36px;height:36px;border-radius:50%;
+  background:var(--cream);display:flex;align-items:center;justify-content:center;
+  font-size:.9rem;flex-shrink:0;transition:background .35s;
+}
+.contact-item-label{font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--light);margin-bottom:2px}
+.contact-item-val{font-size:.85rem;color:var(--text)}
+
+/* ── CONTACT FORM ────────────────────────────────────────────────── */
+.contact-form-area{
+  background:var(--card-bg);border-radius:10px;padding:40px;
+  border:1px solid var(--card-bdr);
+  box-shadow:var(--shadow);
+  transition:background .35s,border-color .35s;
+}
+.form-title{
+  font-family:'DM Serif Display',Georgia,serif;font-size:1.4rem;
+  color:var(--forest);margin-bottom:24px;
+}
+.form-group{margin-bottom:20px}
+.form-group label{
+  display:block;font-family:'JetBrains Mono',monospace;font-size:.68rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;
+}
+.form-group input,.form-group textarea{
+  width:100%;padding:12px 14px;border-radius:4px;
+  border:1.5px solid var(--card-bdr);background:var(--input-bg);
+  font-family:'DM Sans',system-ui,sans-serif;font-size:.9rem;color:var(--text);
+  transition:border-color .2s,background .35s,color .35s;outline:none;
+}
+.form-group input:focus,.form-group textarea:focus{border-color:var(--sage)}
+.form-group textarea{height:130px;resize:vertical}
+.form-btn{
+  width:100%;padding:14px;background:var(--forest);color:#fff;
+  border:none;border-radius:4px;
+  font-family:'DM Sans',system-ui,sans-serif;
+  font-size:.85rem;font-weight:500;letter-spacing:.05em;
+  cursor:pointer;transition:background .2s,transform .2s;
+}
+.form-btn:hover:not(:disabled){background:var(--forest2);transform:translateY(-1px)}
+.form-btn:disabled{opacity:.65;cursor:not-allowed;transform:none}
+
+/* Form status messages */
+.form-status{
+  display:none;margin-top:16px;padding:12px 16px;border-radius:6px;
+  font-size:.85rem;text-align:center;font-weight:500;
+}
+.form-status.success{
+  display:block;background:rgba(29,74,53,.12);
+  border:1px solid var(--forest);color:var(--forest);
+}
+.form-status.error{
+  display:block;background:rgba(180,50,50,.1);
+  border:1px solid #b43232;color:#b43232;
+}
+
+/* ── FOOTER ──────────────────────────────────────────────────────── */
+footer{
+  background:var(--footer-bg);color:var(--footer-text);
+  padding:32px;text-align:center;
+  transition:background .35s,color .35s;
+}
+footer a{color:rgba(255,255,255,.6);text-decoration:none;transition:color .2s}
+footer a:hover{color:#fff}
+.footer-inner{
+  max-width:1100px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;
+}
+.footer-brand{font-family:'DM Serif Display',Georgia,serif;color:rgba(255,255,255,.7);font-size:1rem}
+.footer-links{display:flex;gap:24px}
+.footer-links a{font-size:.8rem;letter-spacing:.04em}
+
+/* ── ANIMATIONS ─────────────────────────────────────────────────── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* ── RESPONSIVE ─────────────────────────────────────────────────── */
+@media(max-width:900px){
+  #hero{grid-template-columns:1fr;min-height:auto}
+  .hero-left{padding:60px 32px 48px}
+  .hero-right{padding:48px 32px 60px;min-height:360px}
+  .about-grid{grid-template-columns:1fr;gap:48px}
+  .contact-grid{grid-template-columns:1fr;gap:48px}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+}
+@media(max-width:600px){
+  .hero-stats{grid-template-columns:1fr 1fr}
+  section{padding:72px 20px}
+  .exp-timeline{padding-left:24px}
+  .contact-form-area{padding:24px}
+}
+</style>
+</head>
+
+<body>
+
+<!-- ── NAVIGATION ─────────────────────────────────────────────────── -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="#hero">David Atinga</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+          <div class="toggle-track"><div class="toggle-knob"></div></div>
+          <span class="toggle-icon" id="themeIcon">🌙</span>
+        </button>
+      </li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:12px">
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" style="display:none" id="mobileToggle">
+        <div class="toggle-track"><div class="toggle-knob"></div></div>
+        <span class="toggle-icon" id="mobileThemeIcon">🌙</span>
+      </button>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#research" onclick="closeMenu()">Research</a>
+  <a href="#experience" onclick="closeMenu()">Experience</a>
+  <a href="#teaching" onclick="closeMenu()">Teaching</a>
+  <a href="#skills" onclick="closeMenu()">Skills</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+</div>
+
+<!-- ── HERO ─────────────────────────────────────────────────────── -->
+<section id="hero">
+  <div class="hero-left">
+    <div class="hero-tag" style="display:none">PhD Economics · University of Tokyo · MEXT Scholar</div>
+    <h1 class="hero-name">David<br/><em>Atinga</em></h1>
+    <div class="hero-title">Applied Economist &nbsp;·&nbsp; Agricultural &amp; Development Economics &nbsp;·&nbsp; M&amp;E Specialist</div>
+    <p class="hero-desc">
+      Researching the intersection of climate variability, agricultural technology adoption,
+      food security, and rural livelihoods across Sub-Saharan Africa. Based in Coon Rapids, MN, USA.
+      Open to remote research, academic, and consultancy roles worldwide.
+    </p>
+    <div class="hero-badges">
+      <span class="badge">Impact Evaluation</span>
+      <span class="badge">Causal Inference</span>
+      <span class="badge">Panel Data</span>
+      <span class="badge">Survey Design</span>
+      <span class="badge">West Africa</span>
+      <span class="badge">Food Security</span>
+    </div>
+    <div class="hero-actions">
+      <a class="btn-primary" href="./resume.pdf" target="_blank" rel="noopener">
+        ↓ Download CV
+      </a>
+      <a class="btn-outline" href="#research">View Research →</a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <!-- PHOTO: upload your headshot as photo.jpg to the GitHub repo root -->
+    <div class="hero-avatar" id="avatarWrap">
+      <img id="avatarImg" src="./photo.jpg" alt="David Atinga"
+        style="width:100%;height:100%;border-radius:50%;object-fit:cover;display:block"
+        onerror="this.src='./photo.png';this.onerror=function(){this.style.display='none';document.getElementById('avatarFallback').style.display='flex';}"/>
+      <span id="avatarFallback"
+        style="display:none;width:100%;height:100%;align-items:center;justify-content:center;font-family:'DM Serif Display',Georgia,serif;font-size:3.5rem;color:#fff">DA</span>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-card">
+        <div class="stat-num">9+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">5</div>
+        <div class="stat-label">Publications</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">500+</div>
+        <div class="stat-label">Villages Surveyed</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">4</div>
+        <div class="stat-label">Working Papers</div>
+      </div>
+    </div>
+    <div class="hero-links">
+      <a href="mailto:atingad@gmail.com" title="Email" aria-label="Email">✉</a>
+      <a href="https://github.com/AtingaDavid" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">⌥</a>
+      <a href="https://www.linkedin.com/in/atingadavid" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">in</a>
+      <a href="https://orcid.org/0000-0002-3281-3175" target="_blank" rel="noopener" title="ORCID" aria-label="ORCID">iD</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ────────────────────────────────────────────────────── -->
+<section id="about">
+  <div class="container">
+    <div class="section-label">About</div>
+    <h2 class="section-title">Applied Economist &amp;<br/><em style="font-family:'DM Serif Display',Georgia,serif;font-style:italic">Development Researcher</em></h2>
+    <div class="section-divider"></div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>
+          I am an applied economist with a <strong>PhD from the University of Tokyo</strong> (MEXT Government Scholar, 2024)
+          and over 9 years of experience in applied research, impact evaluation, monitoring and evaluation, and
+          international development consulting across Sub-Saharan Africa.
+        </p>
+        <p>
+          My research sits at the intersection of <strong>agricultural economics, climate variability, and household welfare</strong>.
+          I study how weather shocks shape technology adoption decisions, input investment, food security outcomes,
+          and the structural transformation of rural economies — with a focus on smallholder farmers in
+          West and East Africa.
+        </p>
+        <p>
+          I grew up in <strong>Nyankpala, Northern Ghana</strong> — a farming and research community — which gives me
+          a grounded understanding of the realities facing smallholder households that informs all my work.
+          I have designed and supervised large-scale household surveys across 108 villages, worked with
+          JICA, the World Bank, USAID, IITA, UKAID, and FAO-connected partners, and produced
+          peer-reviewed research published in Q1/Q2 international journals.
+        </p>
+        <div class="interests-block">
+          <div class="interests-title">Research Interests</div>
+          <div class="interest-pills">
+            <span class="pill">Agricultural Technology Adoption</span>
+            <span class="pill">Climate-Agriculture Linkages</span>
+            <span class="pill">Food Security &amp; Nutrition</span>
+            <span class="pill">Impact Evaluation</span>
+            <span class="pill">Rural Livelihoods</span>
+            <span class="pill">Development Policy</span>
+            <span class="pill">Structural Transformation</span>
+            <span class="pill">Satellite Data in Economics</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-sidebar reveal">
+        <div class="edu-block">
+          <div class="edu-title">Education</div>
+          <div class="edu-item">
+            <div class="edu-dot"></div>
+            <div>
+              <div class="edu-deg">PhD in Economics</div>
+              <div class="edu-inst">University of Tokyo, Japan</div>
+              <div class="edu-year">Agricultural and Applied Economics &nbsp;·&nbsp; MEXT Scholar</div>
+            </div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-dot"></div>
+            <div>
+              <div class="edu-deg">MPhil Agricultural Economics</div>
+              <div class="edu-inst">University for Development Studies, Ghana</div>
+              <div class="edu-year">Agricultural Economics &nbsp;·&nbsp; IFDC-ATT Scholarship</div>
+            </div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-dot"></div>
+            <div>
+              <div class="edu-deg">BA Integrated Development Studies</div>
+              <div class="edu-inst">University for Development Studies, Ghana</div>
+              <div class="edu-year">Economics &amp; Entrepreneurship Development</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="awards-block">
+          <div class="edu-title">Awards &amp; Scholarships</div>
+          <div class="award-item">
+            <div class="award-icon">🏆</div>
+            <div class="award-text">
+              <strong>MEXT Scholarship</strong> — Ministry of Education, Culture, Sports, Science &amp; Technology, Japanese Government, 2021
+            </div>
+          </div>
+          <div class="award-item">
+            <div class="award-icon">🎓</div>
+            <div class="award-text">
+              <strong>ATT-IFDC Scholarship</strong> — International Fertilizer Development Centre (IFDC), Ghana, 2018
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── RESEARCH ──────────────────────────────────────────────────── -->
+<section id="research">
+  <div class="container">
+    <div class="section-label">Research</div>
+    <h2 class="section-title">Publications &amp;<br/><em style="font-family:'DM Serif Display',Georgia,serif;font-style:italic">Working Papers</em></h2>
+    <div class="section-divider"></div>
+
+    <div class="research-intro reveal">
+      <p>My research programme explores how climate variability and weather shocks shape the agricultural decisions,
+      livelihoods, and food security of smallholder farm households in Sub-Saharan Africa — using rigorous
+      microeconometrics, panel data, and field-based evidence.</p>
+      <p>Current projects extend this work to examine satellite-derived climate measures, conflict exposure,
+      and structural transformation in agriculture and rural labour markets across West and East Africa.</p>
+    </div>
+
+    <div class="pub-grid">
+
+      <div class="pub-item reveal">
+        <div class="pub-num">01</div>
+        <div>
+          <div class="pub-year">2024 · Frontiers in Environmental Economics</div>
+          <div class="pub-title">Analyzing the effect of severe weather on farmers' fertilizer usage and input investment amidst decreasing productivity in single-season agroecosystems</div>
+          <div class="pub-journal">Frontiers in Environmental Economics (Agricultural Economics Section), 3, 1360513</div>
+          <div class="pub-abstract" id="abs1">
+            This article evaluates the enduring impact of fluctuating weather patterns in a single-cropping agroecological region on rice yields, examining the consequent influence on the utilization of inorganic fertilizers and agricultural input investment among rain-fed farm households. The study investigates disparities, reasons, and underlying mechanisms driving changes in farmer input decisions under weather stress.
+          </div>
+          <button class="pub-toggle" onclick="toggleAbs('abs1',this)">▸ Abstract</button>
+        </div>
+      </div>
+
+      <div class="pub-item reveal">
+        <div class="pub-num">02</div>
+        <div>
+          <div class="pub-year">2021 · International Journal of Educational Development</div>
+          <div class="pub-title">To attend or not to attend: Examining the relationship between food hardship, school attendance and education expenditure</div>
+          <div class="pub-journal">International Journal of Educational Development, 80, 102304</div>
+          <div class="pub-abstract" id="abs2">
+            This study examines the relationship between food hardship, school attendance, and education expenditure using nationally representative data from a survey of 14,009 households in Ghana. Results reveal significant adverse pathways from household food insecurity to children's educational outcomes and investment.
+          </div>
+          <button class="pub-toggle" onclick="toggleAbs('abs2',this)">▸ Abstract</button>
+        </div>
+      </div>
+
+      <div class="pub-item reveal">
+        <div class="pub-num">03</div>
+        <div>
+          <div class="pub-year">2021 · Energy</div>
+          <div class="pub-title">Household Energy Choice for Cooking among the Time and Consumption Poor in Ghana</div>
+          <div class="pub-journal">Energy, 226, 120408</div>
+          <div class="pub-abstract" id="abs3">
+            SDG Seven recognizes access to modern energy for all. This study examines time and consumption poverty effects on the choice of cooking fuel. Time poverty reduces adoption of solid biomass fuel (SBF); consumption poverty increases it. Promotion of labour-saving technologies is necessary to reduce household drudgery and facilitate energy transitions.
+          </div>
+          <button class="pub-toggle" onclick="toggleAbs('abs3',this)">▸ Abstract</button>
+        </div>
+      </div>
+
+      <div class="pub-item reveal">
+        <div class="pub-num">04</div>
+        <div>
+          <div class="pub-year">2021 · Agricultural Systems</div>
+          <div class="pub-title">Climate change, soil water conservation, and productivity: Evidence from cocoa farmers in Ghana</div>
+          <div class="pub-journal">Agricultural Systems, 191, 103172</div>
+          <div class="pub-abstract" id="abs4">
+            Impacts of climate change on soil water make soil water conservation practices crucial in cocoa production. This study assessed the nexus between soil water conservation practices and climate change mitigation and productivity. Inter-causal synergy exists between soil water conservation and cocoa productivity under climate stress.
+          </div>
+          <button class="pub-toggle" onclick="toggleAbs('abs4',this)">▸ Abstract</button>
+        </div>
+      </div>
+
+      <div class="pub-item reveal">
+        <div class="pub-num">05</div>
+        <div>
+          <div class="pub-year">2016 · Journal of Economics, Management and Trade</div>
+          <div class="pub-title">Factors Influencing Access to Credits among Micro and Small Agro-based Enterprises in the Tamale Metropolis, Ghana</div>
+          <div class="pub-journal">Journal of Economics, Management and Trade, 20(3), 1–15</div>
+          <div class="pub-abstract" id="abs5">
+            This study investigates the factors that determine credit access among micro and small agro-based enterprises in the Tamale Metropolis, examining barriers and enablers within the credit landscape for small agricultural businesses in Northern Ghana.
+          </div>
+          <button class="pub-toggle" onclick="toggleAbs('abs5',this)">▸ Abstract</button>
+        </div>
+      </div>
+
+    </div><!-- /pub-grid -->
+
+    <div class="wip-section reveal">
+      <div class="wip-title">Working Papers &amp; Research in Progress</div>
+
+      <div class="wip-item">
+        <div class="wip-dot"></div>
+        <div class="wip-text">
+          Weather Shocks and Household Food Security: Disaggregated Impacts on Food Share, Dietary Diversity, and Consumption by Source
+          <span class="wip-status">Under Review</span>
+        </div>
+      </div>
+      <div class="wip-item">
+        <div class="wip-dot"></div>
+        <div class="wip-text">
+          Climate Change and Employment Dynamics: Sectoral Transitions in East and West Africa
+          <span class="wip-status">Under Review</span>
+        </div>
+      </div>
+      <div class="wip-item">
+        <div class="wip-dot"></div>
+        <div class="wip-text">
+          Rice Green Revolution in Sub-Saharan Africa's Rainfed Agroecologies: Long-term Impacts and Spatial Spillover Effects on Production Knowledge and Capabilities
+        </div>
+      </div>
+      <div class="wip-item">
+        <div class="wip-dot"></div>
+        <div class="wip-text">
+          Weather Variability, Resilience, and the Structural Transformation of Agriculture and Rural Economies in Africa
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── EXPERIENCE ────────────────────────────────────────────────── -->
+<section id="experience">
+  <div class="container">
+    <div class="section-label">Experience</div>
+    <h2 class="section-title">Professional<br/><em style="font-family:'DM Serif Display',Georgia,serif;font-style:italic">Track Record</em></h2>
+    <div class="section-divider"></div>
+
+    <div class="exp-timeline">
+
+      <div class="exp-item">
+        <div class="exp-dot active"></div>
+        <div class="exp-period">Jul 2025 – Present</div>
+        <div class="exp-role">Data Quality Officer — Individual Consultant</div>
+        <div class="exp-org">Sambus Geospatial Limited, Ghana</div>
+        <ul class="exp-bullets">
+          <li>Providing consultancy support on the development of a M&amp;E Management Information System for the Tree Crops Diversification Project (TCDP) by Ghana and the World Bank at COCOBOD.</li>
+          <li>Delivered technical input on data quality, system features, and monitoring to meet requirements.</li>
+          <li>Supervising daily field activities, making sure we adhere to plan, schedules, and data quality standards.</li>
+          <li>Train field team on the implementation of the research, research participant engagement, and data quality.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-dot"></div>
+        <div class="exp-period">Jan – Jun 2021</div>
+        <div class="exp-role">Youth Researcher</div>
+        <div class="exp-org">Making Cents International, USA</div>
+        <ul class="exp-bullets">
+          <li>Interviewed key informants, organized focus group discussions, and contributed to summarizing findings.</li>
+          <li>Reviewed research materials; made inputs based on review to help align research approach to the local context.</li>
+          <li>Contributed to the assessment report based on study findings and response from stakeholders of the project.</li>
+          <li>Aided fieldwork arrangement, undertook transcription and translation, and participated in team briefing sessions.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-dot"></div>
+        <div class="exp-period">May – Jun 2020</div>
+        <div class="exp-role">Consultant</div>
+        <div class="exp-org">International Institute of Tropical Agriculture (IITA), Ghana</div>
+        <ul class="exp-bullets">
+          <li>Oversaw the field implementation of the choice experiment surveys in rural Northern Ghana.</li>
+          <li>Supervised daily field activities, making sure we adhere to plan, schedules, and data quality standards.</li>
+          <li>Trained field enumerators on research implementation, participant engagement, and data quality.</li>
+          <li>Supported evaluation of agricultural projects and household preferences and economic decisions.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-dot"></div>
+        <div class="exp-period">Sep 2017</div>
+        <div class="exp-role">Technical Assistant</div>
+        <div class="exp-org">Mendez England &amp; Associates, USA</div>
+        <ul class="exp-bullets">
+          <li>Provided technical consulting services to support the evaluation of USAID's ILSSI project.</li>
+          <li>Coordinated consultancy work with stakeholders, optimizing data flows for project assessments.</li>
+          <li>Contributed to evaluation and research results to improve irrigation and food security outcomes.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-dot"></div>
+        <div class="exp-period">Jun – Dec 2016</div>
+        <div class="exp-role">Consulting Team Member</div>
+        <div class="exp-org">Market Development Programme for Northern Ghana (MADE), Ghana</div>
+        <ul class="exp-bullets">
+          <li>Assessed stakeholder views on MADE's value chains and programs through Focus Group Discussions (FGDs) and Key Informant Interviews (KIIs).</li>
+          <li>Managed data from interviews to assess adoption, satisfaction, and impact of improved technologies.</li>
+          <li>Produced reports with actionable recommendations that shaped programming under DFID's M4P framework.</li>
+          <li>Designed tools for low-literacy farmers; led validation with stakeholders across three regions.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-dot"></div>
+        <div class="exp-period">Dec 2014 – Apr 2016</div>
+        <div class="exp-role">Research, Monitoring and Evaluation Services Manager</div>
+        <div class="exp-org">Center for Insight Monitoring and Evaluation, Ghana</div>
+        <ul class="exp-bullets">
+          <li>Executed M&amp;E projects; played a key role in design, analysis, and reporting for decision making.</li>
+          <li>Facilitated technical management and led research across socio-economic sectors.</li>
+          <li>Oversaw planning and financial allocation activities at the office to meet research and organization needs.</li>
+          <li>Promoted research collaboration and application; sharing output through presentations, seminars, and publications.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── TEACHING ───────────────────────────────────────────────────── -->
+<section id="teaching">
+  <div class="container">
+    <div class="section-label">Teaching</div>
+    <h2 class="section-title">Teaching &amp;<br/><em style="font-family:'DM Serif Display',Georgia,serif;font-style:italic">Student Supervision</em></h2>
+    <div class="section-divider"></div>
+
+    <p class="teaching-intro">
+      I am committed to developing the next generation of economists and development researchers.
+      As a Graduate Tutor at the University of Tokyo (Department of Agricultural and Resource Economics),
+      I guided PhD and MSc students through academic research, tutored core economics disciplines,
+      and supervised proposal writing, fieldwork, data management, and analysis.
+    </p>
+
+    <div class="teaching-sub-title">Teaching &amp; Research — University of Tokyo</div>
+    <div class="teaching-grid">
+
+      <div class="teaching-card reveal">
+        <div class="teaching-card-header">
+          <div class="teaching-card-title">Graduate Tutor</div>
+          <span class="teaching-card-code">Oct 2021 – Feb 2024</span>
+        </div>
+        <div class="teaching-card-meta">University of Tokyo · Dept. of Agricultural &amp; Resource Economics, Japan</div>
+        <div class="teaching-card-role">🎓 Graduate Tutor</div>
+        <p class="teaching-card-desc">
+          Guided graduate students (PhD/MSc) in carrying out their academic research.
+          Supported proposal writing, fieldwork, data management, and analysis for graduate research projects.
+          Tutored graduate students in economic disciplines including Development Economics and Rural Development.
+          Explained theories and real-world applications; supported learning progress and thesis completion.
+        </p>
+      </div>
+
+      <div class="teaching-card reveal">
+        <div class="teaching-card-header">
+          <div class="teaching-card-title">PhD Research</div>
+          <span class="teaching-card-code">Jan 2022 – Feb 2024</span>
+        </div>
+        <div class="teaching-card-meta">University of Tokyo, Japan</div>
+        <div class="teaching-card-role">🔬 PhD Researcher</div>
+        <p class="teaching-card-desc">
+          Led a follow-up survey in Ghana to assess long-term impacts and spillovers on farmer capabilities.
+          Examined weather impacts on technology disadoption, input use, and yields among smallholder farmers.
+          Processed datasets, designed experiments, and managed surveys using World Bank's Survey Solutions.
+          Delivered results via LaTeX-based presentations using Overleaf; finalized knowledge products based on key findings.
+        </p>
+      </div>
+
+      <div class="teaching-card reveal">
+        <div class="teaching-card-header">
+          <div class="teaching-card-title">Research Assistant</div>
+          <span class="teaching-card-code">Oct 2017 – Jan 2021</span>
+        </div>
+        <div class="teaching-card-meta">UDS / JICA / University of Tokyo, Ghana</div>
+        <div class="teaching-card-role">📋 Research Assistant</div>
+        <p class="teaching-card-desc">
+          Supervised 30 staff for surveys across 108 villages; led recruitment and training efforts.
+          Ensured data quality using SurveyBe; delivered reliable datasets for agricultural research.
+          Conducted preliminary analysis; drafted reports to inform JICA's rice policy decisions.
+          Assisted in evaluating randomized trials; applied economics to study post-harvest and market innovations.
+        </p>
+      </div>
+
+      <div class="teaching-card reveal">
+        <div class="teaching-card-header">
+          <div class="teaching-card-title">Field Research Training</div>
+          <span class="teaching-card-code">Training</span>
+        </div>
+        <div class="teaching-card-meta">Field-Based · Ghana, 2017 – Present</div>
+        <div class="teaching-card-role">📋 Trainer &amp; Lead Facilitator</div>
+        <p class="teaching-card-desc">
+          Designed and delivered training curricula for field enumerators and research teams across
+          multiple projects in Northern Ghana, covering CAPI survey implementation, data quality assurance,
+          qualitative data collection (KIIs, FGDs), and M&amp;E framework use.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="teaching-sub-title">Student Supervision</div>
+    <div class="teaching-supervision-list">
+
+      <div class="supervision-item reveal">
+        <div class="supervision-num">01</div>
+        <div class="supervision-body">
+          <div class="supervision-level">PhD · Research Guidance &amp; Fieldwork Supervision</div>
+          <div class="supervision-title">Guided PhD students in academic research, proposal writing, and fieldwork design</div>
+          <div class="supervision-detail">University of Tokyo · Oct 2021 – Feb 2024 · Dept. of Agricultural &amp; Resource Economics</div>
+        </div>
+      </div>
+
+      <div class="supervision-item reveal">
+        <div class="supervision-num">02</div>
+        <div class="supervision-body">
+          <div class="supervision-level">MSc · Thesis Data Management &amp; Analysis</div>
+          <div class="supervision-title">Supported MSc students in data management, econometric analysis, and thesis completion</div>
+          <div class="supervision-detail">University of Tokyo · Oct 2021 – Feb 2024 · Stata, Survey Solutions &amp; data analysis guidance</div>
+        </div>
+      </div>
+
+      <div class="supervision-item reveal">
+        <div class="supervision-num">03</div>
+        <div class="supervision-body">
+          <div class="supervision-level">Graduate · Econometrics &amp; Development Economics Tutoring</div>
+          <div class="supervision-title">Tutored graduate students in Development Economics, Rural Development, and applied econometrics</div>
+          <div class="supervision-detail">University of Tokyo · Oct 2021 – Feb 2024 · Explained theories and real-world applications</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ── SKILLS ─────────────────────────────────────────────────────── -->
+<section id="skills">
+  <div class="container">
+    <div class="section-label">Skills</div>
+    <h2 class="section-title">Technical &amp;<br/><em style="font-family:'DM Serif Display',Georgia,serif;font-style:italic;color:rgba(255,255,255,.7)">Research Competencies</em></h2>
+    <div class="section-divider"></div>
+    <div class="skills-grid">
+
+      <div class="skill-card reveal">
+        <div class="skill-icon">📊</div>
+        <div class="skill-name">Technical Skills</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Applied Economics</span>
+          <span class="skill-tag">Impact Evaluation</span>
+          <span class="skill-tag">Data Analysis</span>
+          <span class="skill-tag">M&amp;E</span>
+          <span class="skill-tag">Policy / Project Analysis</span>
+          <span class="skill-tag">Survey Design</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-icon">💻</div>
+        <div class="skill-name">Software &amp; Programming</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Stata</span>
+          <span class="skill-tag">R</span>
+          <span class="skill-tag">SPSS</span>
+          <span class="skill-tag">Survey Solutions</span>
+          <span class="skill-tag">MS Office</span>
+          <span class="skill-tag">LaTeX / Overleaf</span>
+          <span class="skill-tag">CAPI Tools (Mobile Data Collection)</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-icon">📋</div>
+        <div class="skill-name">Survey &amp; Field Research</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Survey Design</span>
+          <span class="skill-tag">CAPI Tools</span>
+          <span class="skill-tag">FGDs / KIIs</span>
+          <span class="skill-tag">Data Quality Assurance</span>
+          <span class="skill-tag">Enumerator Training</span>
+          <span class="skill-tag">Large-Scale Field Ops</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-icon">🌍</div>
+        <div class="skill-name">Subject Matter Expertise</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Agricultural Economics</span>
+          <span class="skill-tag">Food Security</span>
+          <span class="skill-tag">Climate &amp; Agriculture</span>
+          <span class="skill-tag">Impact Evaluation</span>
+          <span class="skill-tag">West Africa</span>
+          <span class="skill-tag">Smallholder Farming</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-icon">🤝</div>
+        <div class="skill-name">Soft Skills</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Team Management</span>
+          <span class="skill-tag">Problem Solving</span>
+          <span class="skill-tag">Communication &amp; Presentation</span>
+          <span class="skill-tag">Research</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-icon">🗣️</div>
+        <div class="skill-name">Language Skills</div>
+        <div class="skill-tags">
+          <span class="skill-tag">English (Fluent)</span>
+          <span class="skill-tag">Japanese (Basic)</span>
+          <span class="skill-tag">Gurune (Native)</span>
+          <span class="skill-tag">Dagbani (Native)</span>
+          <span class="skill-tag">Twi (Native)</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="teaching-sub-title" style="margin-top:56px">Relevant Training</div>
+    <div class="teaching-supervision-list">
+
+      <div class="supervision-item reveal">
+        <div class="supervision-num">01</div>
+        <div class="supervision-body">
+          <div class="supervision-level">Ghana Statistical Service · 2020</div>
+          <div class="supervision-title">Data Monitors Training: Training of Trainers workshop for Data Monitors</div>
+          <div class="supervision-detail">Use of CSPro and STATA to ensure quality national census data</div>
+        </div>
+      </div>
+
+      <div class="supervision-item reveal">
+        <div class="supervision-num">02</div>
+        <div class="supervision-body">
+          <div class="supervision-level">AfricaLead, Ghana</div>
+          <div class="supervision-title">Short Course in Scaling up Food and Nutrition Security</div>
+          <div class="supervision-detail">Monitoring and Evaluation, Strategic thinking, Leading and managing change and planning</div>
+        </div>
+      </div>
+
+      <div class="supervision-item reveal">
+        <div class="supervision-num">03</div>
+        <div class="supervision-body">
+          <div class="supervision-level">Socioeconomics Division, Ghana, CSIR-SARI</div>
+          <div class="supervision-title">Data Analysis and Management (STATA, SPSS &amp; Excel)</div>
+          <div class="supervision-detail">Qualitative and Quantitative research skills, Monitoring and Evaluation, Proposal and technical writing</div>
+        </div>
+      </div>
+
+      <div class="supervision-item reveal">
+        <div class="supervision-num">04</div>
+        <div class="supervision-body">
+          <div class="supervision-level">USAID Africa Rising Project by Africa Rice Centre · Food Research Institute (FRI), Ghana</div>
+          <div class="supervision-title">In-depth Training on Automation of Baseline Data Collection in Ghana</div>
+          <div class="supervision-detail">CAPI-based baseline data collection automation</div>
+        </div>
+      </div>
+
+      <div class="supervision-item reveal">
+        <div class="supervision-num">05</div>
+        <div class="supervision-body">
+          <div class="supervision-level">International Food Policy Research Institute (IFPRI)</div>
+          <div class="supervision-title">Training on Data Collection with the use of Computer Assisted Personal Interviewing (CAPI)</div>
+          <div class="supervision-detail">Mobile data collection methodology and best practices</div>
+        </div>
+      </div>
+
+      <div class="supervision-item reveal">
+        <div class="supervision-num">06</div>
+        <div class="supervision-body">
+          <div class="supervision-level">Project Management Research Institute of Ghana</div>
+          <div class="supervision-title">Project Management Specialist Training</div>
+          <div class="supervision-detail">Project planning, implementation, and management</div>
+        </div>
+      </div>
+
+      <div class="supervision-item reveal">
+        <div class="supervision-num">07</div>
+        <div class="supervision-body">
+          <div class="supervision-level">International Food Policy Research Institute (IFPRI)</div>
+          <div class="supervision-title">Training on Field Research Techniques</div>
+          <div class="supervision-detail">Research sampling techniques, focus group discussion, use of PDA and GPS for survey, downloading questionnaire and uploading results</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section id="contact">
+  <div class="container">
+    <div class="section-label">Contact</div>
+    <h2 class="section-title">Let's Connect &amp;<br/><em style="font-family:'DM Serif Display',Georgia,serif;font-style:italic">Collaborate</em></h2>
+    <div class="section-divider"></div>
+    <div class="contact-grid">
+      <div class="contact-text reveal">
+        <p>
+          I am actively seeking remote research positions, academic roles, postdoctoral fellowships,
+          and consultancy opportunities in agricultural economics, development economics,
+          food security, and M&amp;E — in the USA and internationally.
+        </p>
+        <p>
+          If you are working on related research or have an opportunity that aligns with my background,
+          I would genuinely love to hear from you.
+        </p>
+        <div class="contact-items">
+          <a class="contact-item" href="mailto:atingad@gmail.com">
+            <div class="contact-item-icon">✉</div>
+            <div>
+              <div class="contact-item-label">Email</div>
+              <div class="contact-item-val">atingad@gmail.com</div>
+            </div>
+          </a>
+          <a class="contact-item" href="https://www.linkedin.com/in/atingadavid" target="_blank" rel="noopener">
+            <div class="contact-item-icon">in</div>
+            <div>
+              <div class="contact-item-label">LinkedIn</div>
+              <div class="contact-item-val">linkedin.com/in/atingadavid</div>
+            </div>
+          </a>
+          <a class="contact-item" href="https://github.com/AtingaDavid" target="_blank" rel="noopener">
+            <div class="contact-item-icon">⌥</div>
+            <div>
+              <div class="contact-item-label">GitHub</div>
+              <div class="contact-item-val">github.com/AtingaDavid</div>
+            </div>
+          </a>
+          <a class="contact-item" href="https://orcid.org/0000-0002-3281-3175" target="_blank" rel="noopener">
+            <div class="contact-item-icon">iD</div>
+            <div>
+              <div class="contact-item-label">ORCID</div>
+              <div class="contact-item-val">0000-0002-3281-3175</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- ── FORMSPREE CONTACT FORM ─────────────────────────────── -->
+      <!--
+        SETUP INSTRUCTIONS:
+        1. Go to https://formspree.io and create a free account
+        2. Create a new form — choose "New Form" and enter atingad@gmail.com as the email
+        3. Copy your unique Form ID (looks like: xpzgdobj)
+        4. Replace YOUR_FORMSPREE_ID below with your actual Form ID
+        5. The free plan allows 50 submissions/month with email notifications
+      -->
+      <div class="contact-form-area reveal">
+        <div class="form-title">Send a Message</div>
+        <form id="contactForm" action="https://formspree.io/f/mbdwkyry" method="POST">
+          <!-- ⚠ FORMSPREE CHECK: Log in at https://formspree.io to confirm form mbdwkyry
+               is active and receiving to atingad@gmail.com. If this was tied to the old
+               Netlify site, create a new form and replace mbdwkyry with your new Form ID. -->
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off"/>
+
+          <!-- Optional: redirect after submission (remove to use AJAX) -->
+          <!-- <input type="hidden" name="_next" value="https://atingad.netlify.app/?sent=true"/> -->
+
+          <div class="form-group">
+            <label for="fname">Your Name</label>
+            <input type="text" id="fname" name="name" placeholder="Dr. Jane Smith" required/>
+          </div>
+          <div class="form-group">
+            <label for="femail">Email Address</label>
+            <input type="email" id="femail" name="email" placeholder="jane@institution.edu" required/>
+          </div>
+          <div class="form-group">
+            <label for="fsubject">Subject</label>
+            <input type="text" id="fsubject" name="subject" placeholder="Research collaboration / Job opportunity…" required/>
+          </div>
+          <div class="form-group">
+            <label for="fmessage">Message</label>
+            <textarea id="fmessage" name="message" placeholder="Tell me about your research or opportunity…" required></textarea>
+          </div>
+          <button class="form-btn" type="submit" id="submitBtn">Send Message →</button>
+          <div class="form-status" id="formStatus"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────────────────────── -->
+<footer>
+  <div class="footer-inner">
+    <span class="footer-brand">David Atinga</span>
+    <span style="font-size:.8rem">Applied Economist · Coon Rapids, MN, USA</span>
+    <div class="footer-links">
+      <a href="mailto:atingad@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/atingadavid" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/AtingaDavid" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://orcid.org/0000-0002-3281-3175" target="_blank" rel="noopener">ORCID</a>
+    </div>
+  </div>
+  <div style="margin-top:16px;font-size:.75rem">© 2026 David Atinga · PhD Applied Economist</div>
+</footer>
+
+<script>
+// ── THEME TOGGLE ─────────────────────────────────────────────────
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('theme', theme);
+  const isDark = theme === 'dark';
+  document.querySelectorAll('#themeIcon,#mobileThemeIcon').forEach(el => {
+    el.textContent = isDark ? '☀️' : '🌙';
+  });
+}
+
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme') || 'light';
+  applyTheme(current === 'light' ? 'dark' : 'light');
+}
+
+// Restore saved preference on load
+(function() {
+  const saved = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  applyTheme(saved || (prefersDark ? 'dark' : 'light'));
+})();
+
+// Show mobile toggle button at small widths
+function checkMobileToggle() {
+  const mt = document.getElementById('mobileToggle');
+  if (mt) mt.style.display = window.innerWidth <= 900 ? 'flex' : 'none';
+}
+checkMobileToggle();
+window.addEventListener('resize', checkMobileToggle);
+
+// ── MOBILE MENU ───────────────────────────────────────────────────
+function toggleMenu(){
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+function closeMenu(){
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+
+// ── ABSTRACT TOGGLE ───────────────────────────────────────────────
+function toggleAbs(id, btn){
+  const el = document.getElementById(id);
+  el.classList.toggle('open');
+  btn.textContent = el.classList.contains('open') ? '▾ Abstract' : '▸ Abstract';
+}
+
+// ── SCROLL REVEAL ─────────────────────────────────────────────────
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal,.exp-item').forEach((el, i) => {
+  if (el.classList.contains('reveal')) el.style.transitionDelay = (i % 4) * 0.08 + 's';
+  observer.observe(el);
+});
+
+// ── NAV ACTIVE HIGHLIGHT ──────────────────────────────────────────
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let cur = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 100) cur = s.id;
+  });
+  navLinks.forEach(a => {
+    a.style.color = a.getAttribute('href') === '#' + cur ? 'var(--forest)' : '';
+  });
+}, { passive: true });
+
+// ── FORMSPREE AJAX SUBMISSION ─────────────────────────────────────
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submitBtn');
+  const status = document.getElementById('formStatus');
+
+  // Reset status
+  status.className = 'form-status';
+  status.textContent = '';
+
+  // Guard: remind to set up Formspree if ID not replaced
+  const action = this.getAttribute('action');
+  if (action.includes('YOUR_FORMSPREE_ID')) {
+    status.className = 'form-status error';
+    status.textContent = '⚠ Please replace YOUR_FORMSPREE_ID with your Formspree form ID. See setup instructions in the HTML comments.';
+    return;
+  }
+
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+
+  try {
+    const data = new FormData(this);
+    const response = await fetch(action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      status.className = 'form-status success';
+      status.textContent = '✓ Message sent successfully. I will be in touch soon — thank you!';
+      this.reset();
+    } else {
+      const json = await response.json().catch(() => ({}));
+      throw new Error(json.error || 'Submission failed');
+    }
+  } catch (err) {
+    status.className = 'form-status error';
+    status.textContent = '✗ There was a problem sending your message. Please try again or email directly at atingad@gmail.com';
+  } finally {
+    btn.textContent = 'Send Message →';
+    btn.disabled = false;
+  }
+});
+</script>
+</body>
+</html>
