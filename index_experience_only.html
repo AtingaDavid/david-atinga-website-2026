@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Experience Section — 7 Layout Options · David Atinga</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+/* ── SITE VARIABLES ─────────────────────────────────────────── */
+:root {
+  --bg:#F7F4EE; --bg2:#FFFFFF; --cream:#EDE9DF; --warm:#D9D2C3;
+  --forest:#1D4A35; --forest2:#2A6349; --sage:#4E7A63; --gold:#C4882A;
+  --text:#1A1A18; --muted:#5A5A52; --light:#8A8A80;
+  --card-bg:#FFFFFF; --card-bdr:#D9D2C3;
+  --pill-bg:#EDE9DF; --pill-c:#1D4A35;
+  --shadow:0 4px 24px rgba(0,0,0,.07);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:#111;font-family:'DM Sans',system-ui,sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden}
+
+/* ── PREVIEW NAV ──────────────────────────────────────────────── */
+.preview-nav{
+  position:sticky;top:0;z-index:200;
+  background:#1A1A18;border-bottom:1px solid #333;
+  padding:10px 24px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+}
+.preview-nav-label{
+  font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.14em;
+  text-transform:uppercase;color:#666;white-space:nowrap;margin-right:4px;
+}
+.pnav-pill{
+  font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.06em;
+  padding:5px 12px;border-radius:100px;border:1px solid #333;
+  color:#999;text-decoration:none;transition:all .2s;white-space:nowrap;
+}
+.pnav-pill:hover{background:var(--forest);color:#fff;border-color:var(--forest)}
+
+/* ── PREVIEW WRAPPER ──────────────────────────────────────────── */
+.preview-page-header{
+  padding:60px 32px 48px;text-align:center;
+  background:linear-gradient(135deg,#0a1a10 0%,#1A1A18 60%);
+  border-bottom:1px solid #222;
+}
+.preview-page-title{
+  font-family:'DM Serif Display',Georgia,serif;
+  font-size:clamp(1.8rem,3vw,2.8rem);color:#fff;line-height:1.1;margin-bottom:12px;
+}
+.preview-page-title em{font-style:italic;color:var(--sage)}
+.preview-page-sub{
+  font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.12em;
+  text-transform:uppercase;color:#555;margin-top:8px;
+}
+.preview-page-desc{font-size:.9rem;color:#666;max-width:560px;margin:16px auto 0;line-height:1.7}
+
+/* ── OPTION SECTION ───────────────────────────────────────────── */
+.option-section{margin-bottom:4px}
+.option-header{
+  padding:28px 40px 24px;
+  background:var(--forest);color:#fff;
+  display:flex;align-items:flex-start;gap:20px;
+}
+.option-num{
+  font-family:'DM Serif Display',Georgia,serif;font-size:3rem;
+  color:rgba(255,255,255,.18);line-height:1;flex-shrink:0;min-width:52px;
+  margin-top:-4px;
+}
+.option-info{}
+.option-name{
+  font-family:'DM Serif Display',Georgia,serif;font-size:1.25rem;
+  color:#fff;margin-bottom:4px;
+}
+.option-badges{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+.option-badge{
+  font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.08em;
+  text-transform:uppercase;padding:3px 10px;border-radius:100px;
+  background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.2);
+}
+.option-badge.no-toggle{background:rgba(196,136,42,.2);color:var(--gold);border-color:rgba(196,136,42,.3)}
+.option-badge.new{background:rgba(196,136,42,.25);color:#f5c97a;border-color:rgba(196,136,42,.4)}
+.option-desc{font-size:.88rem;color:rgba(255,255,255,.65);line-height:1.6;max-width:680px}
+
+/* ── DEMO FRAME (mirrors original site section) ───────────────── */
+.demo-frame{background:var(--bg2);padding:60px 40px;border-bottom:1px solid #222}
+.demo-frame .section-label{
+  font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:12px;
+}
+.demo-frame .section-title{
+  font-family:'DM Serif Display',Georgia,serif;
+  font-size:clamp(1.6rem,2.5vw,2.2rem);color:var(--forest);line-height:1.15;margin-bottom:16px;
+}
+.demo-frame .section-divider{width:48px;height:3px;background:var(--gold);border-radius:2px;margin:20px 0 40px}
+
+/* ── SHARED EXP TABS ──────────────────────────────────────────── */
+.exp-tabs{
+  display:flex;gap:0;margin-bottom:40px;
+  border-bottom:2px solid var(--warm);overflow-x:auto;
+}
+.exp-tab{
+  font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:11px 18px;cursor:pointer;color:var(--muted);background:none;border:none;
+  border-bottom:2px solid transparent;margin-bottom:-2px;
+  transition:color .2s,border-color .2s;white-space:nowrap;
+}
+.exp-tab.active,.exp-tab:hover{color:var(--forest);border-bottom-color:var(--gold)}
+.exp-panel{display:none}
+.exp-panel.active{display:block}
+
+/* ── ORIGINAL TIMELINE STYLES (shared) ───────────────────────── */
+.exp-timeline{position:relative;padding-left:32px}
+.exp-timeline::before{
+  content:'';position:absolute;left:0;top:8px;bottom:8px;
+  width:2px;background:linear-gradient(to bottom,var(--gold),var(--warm));
+}
+.exp-item{position:relative;margin-bottom:40px}
+.exp-dot{
+  position:absolute;left:-38px;top:6px;
+  width:14px;height:14px;border-radius:50%;
+  background:var(--bg2);border:2.5px solid var(--gold);
+}
+.exp-dot.active-dot{background:var(--gold)}
+.exp-period{font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+.exp-role{font-size:1rem;font-weight:600;color:var(--text);margin-bottom:2px}
+.exp-org{font-size:.88rem;color:var(--sage);margin-bottom:4px}
+.exp-location{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--light);margin-bottom:12px}
+.exp-bullets{list-style:none;padding:0;margin-top:12px}
+.exp-bullets li{font-size:.85rem;color:var(--muted);line-height:1.7;padding-left:18px;position:relative;margin-bottom:6px}
+.exp-bullets li::before{content:'→';position:absolute;left:0;color:var(--gold);font-size:.75rem;top:3px}
+.exp-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.exp-tag{
+  font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.04em;
+  padding:2px 9px;border-radius:100px;
+  background:var(--cream);color:var(--muted);border:1px solid var(--warm);
+}
+
+/* ── OPTION 1: FULL TOGGLE ────────────────────────────────────── */
+.o1-bullets{overflow:hidden;max-height:0;transition:max-height .4s ease,opacity .3s;opacity:0}
+.o1-bullets.open{max-height:600px;opacity:1}
+.o1-toggle{
+  font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--sage);cursor:pointer;background:none;border:none;padding:0;
+  display:inline-flex;align-items:center;gap:4px;margin-top:8px;
+  transition:color .2s;
+}
+.o1-toggle:hover{color:var(--forest)}
+
+/* ── OPTION 2: HEADLINE + COLLAPSE ───────────────────────────── */
+.o2-first-bullet{font-size:.85rem;color:var(--muted);line-height:1.7;padding-left:18px;position:relative;margin-top:12px}
+.o2-first-bullet::before{content:'→';position:absolute;left:0;color:var(--gold);font-size:.75rem;top:3px}
+.o2-rest{overflow:hidden;max-height:0;transition:max-height .4s ease,opacity .3s;opacity:0}
+.o2-rest.open{max-height:600px;opacity:1}
+.o2-toggle{
+  font-family:'JetBrains Mono',monospace;font-size:.64rem;letter-spacing:.06em;
+  color:var(--gold);cursor:pointer;background:none;border:none;padding:0;
+  display:inline-flex;align-items:center;gap:4px;margin-top:8px;margin-bottom:2px;
+  transition:color .2s;
+}
+.o2-toggle:hover{color:var(--forest)}
+
+/* ── OPTION 3: CARD GRID ──────────────────────────────────────── */
+.o3-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+.o3-card{
+  background:var(--bg);border:1.5px solid var(--card-bdr);border-radius:8px;
+  padding:20px 22px;cursor:pointer;transition:border-color .2s,box-shadow .2s,background .2s;
+}
+.o3-card:hover{border-color:var(--sage);box-shadow:var(--shadow)}
+.o3-card.open{border-color:var(--gold);background:#fff;box-shadow:0 6px 28px rgba(0,0,0,.08)}
+.o3-card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.o3-expand-icon{
+  font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--sage);
+  flex-shrink:0;margin-top:2px;transition:transform .25s;
+}
+.o3-card.open .o3-expand-icon{transform:rotate(45deg)}
+.o3-detail{overflow:hidden;max-height:0;transition:max-height .5s ease,opacity .3s;opacity:0;margin-top:0}
+.o3-card.open .o3-detail{max-height:800px;opacity:1;margin-top:14px;padding-top:14px;border-top:1px solid var(--cream)}
+
+/* ── OPTION 4: SPLIT PANE ─────────────────────────────────────── */
+.o4-pane{display:grid;grid-template-columns:280px 1fr;gap:0;border:1px solid var(--card-bdr);border-radius:8px;overflow:hidden;min-height:340px}
+.o4-list{border-right:1px solid var(--card-bdr);background:var(--bg);overflow-y:auto;max-height:500px}
+.o4-list-item{
+  padding:14px 18px;border-bottom:1px solid var(--cream);cursor:pointer;
+  transition:background .15s;position:relative;
+}
+.o4-list-item:hover{background:var(--cream)}
+.o4-list-item.active{background:#fff;border-right:2.5px solid var(--gold);margin-right:-1px}
+.o4-list-period{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:3px}
+.o4-list-role{font-size:.82rem;font-weight:600;color:var(--text);line-height:1.3;margin-bottom:2px}
+.o4-list-org{font-size:.75rem;color:var(--sage)}
+.o4-detail-pane{padding:28px 28px;overflow-y:auto;max-height:500px}
+.o4-detail-pane .exp-role{font-size:1.05rem}
+.o4-empty{display:flex;align-items:center;justify-content:center;color:var(--light);font-size:.85rem;height:100%;font-family:'JetBrains Mono',monospace;letter-spacing:.06em;font-size:.7rem;text-transform:uppercase}
+
+/* ── OPTION 5: TAG-ELEVATED ───────────────────────────────────── */
+.o5-tags-prominent{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px;margin-bottom:14px}
+.o5-tag-pill{
+  font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.06em;
+  padding:4px 12px;border-radius:100px;
+  background:var(--pill-bg);color:var(--pill-c);border:1px solid var(--warm);
+  font-weight:500;
+}
+.o5-bullets li{font-size:.8rem;color:var(--light);line-height:1.6}
+
+/* ── OPTION 6: KEYWORD HIGHLIGHTS ────────────────────────────── */
+.o6-bullets{}
+.kw-num{background:rgba(196,136,42,.12);color:var(--forest);border-radius:3px;padding:0 3px;font-weight:600}
+.kw-method{background:rgba(78,122,99,.1);color:var(--forest2);border-radius:3px;padding:0 3px;font-weight:500}
+.kw-org{font-weight:600;color:var(--text)}
+.kw-action{font-weight:600;color:var(--forest)}
+
+/* ── OPTION 7: TAG FILTER ─────────────────────────────────────── */
+.o7-filter-bar{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid var(--cream)}
+.o7-filter-all{
+  font-family:'JetBrains Mono',monospace;font-size:.64rem;letter-spacing:.06em;
+  padding:5px 14px;border-radius:100px;cursor:pointer;
+  background:var(--forest);color:#fff;border:1.5px solid var(--forest);transition:all .2s;
+}
+.o7-filter-tag{
+  font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.04em;
+  padding:4px 12px;border-radius:100px;cursor:pointer;
+  background:var(--cream);color:var(--muted);border:1.5px solid var(--warm);transition:all .2s;
+}
+.o7-filter-tag:hover,.o7-filter-tag.active{background:var(--forest);color:#fff;border-color:var(--forest)}
+.o7-list{display:flex;flex-direction:column;gap:0}
+.o7-item{
+  border:1.5px solid var(--card-bdr);border-radius:6px;margin-bottom:8px;
+  overflow:hidden;transition:opacity .25s,transform .25s;cursor:pointer;
+}
+.o7-item.faded{opacity:.25;pointer-events:none}
+.o7-item-head{
+  display:grid;grid-template-columns:130px 1fr auto;gap:12px;align-items:start;
+  padding:14px 18px;background:var(--bg);
+}
+.o7-item-head:hover{background:var(--cream)}
+.o7-item.open .o7-item-head{background:#fff;border-bottom:1px solid var(--cream)}
+.o7-item-detail{
+  overflow:hidden;max-height:0;transition:max-height .4s ease,opacity .3s;opacity:0;
+  background:#fff;padding:0 18px;
+}
+.o7-item.open .o7-item-detail{max-height:600px;opacity:1;padding:16px 18px}
+.o7-chevron{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--sage);transition:transform .25s;padding-top:2px}
+.o7-item.open .o7-chevron{transform:rotate(180deg)}
+
+/* ── RESPONSIVE ───────────────────────────────────────────────── */
+@media(max-width:700px){
+  .demo-frame{padding:40px 20px}
+  .option-header{padding:20px 20px 18px;gap:12px}
+  .option-num{font-size:2rem;min-width:36px}
+  .o3-grid{grid-template-columns:1fr}
+  .o4-pane{grid-template-columns:1fr;min-height:auto}
+  .o4-list{max-height:200px;border-right:none;border-bottom:1px solid var(--card-bdr)}
+  .o7-item-head{grid-template-columns:1fr auto}
+  .o7-item-period{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ── PREVIEW NAV ──────────────────────────────────────────────── -->
+<div class="preview-nav">
+  <span class="preview-nav-label">Jump to →</span>
+  <a class="pnav-pill" href="#opt1">1 · Full Toggle</a>
+  <a class="pnav-pill" href="#opt2">2 · Headline + Collapse</a>
+  <a class="pnav-pill" href="#opt3">3 · Card Grid</a>
+  <a class="pnav-pill" href="#opt4">4 · Split Pane</a>
+  <a class="pnav-pill" href="#opt5">5 · Tag-Elevated</a>
+  <a class="pnav-pill" href="#opt6">6 · Keyword Highlights ✦ new</a>
+  <a class="pnav-pill" href="#opt7">7 · Tag Filter ✦ new</a>
+</div>
+
+<!-- ── PAGE HEADER ──────────────────────────────────────────────── -->
+<div class="preview-page-header">
+  <div class="preview-page-title">Experience Section<br/><em>7 Layout Options</em></div>
+  <div class="preview-page-sub">Design Preview · David Atinga · davidatinga.netlify.app</div>
+  <p class="preview-page-desc">Every option below uses your real data. Compare them side by side and pick the one that fits — or mix ideas across options.</p>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════ -->
+<!-- OPTION 1 — FULL TOGGLE                                        -->
+<!-- ══════════════════════════════════════════════════════════════ -->
+<div class="option-section" id="opt1">
+  <div class="option-header">
+    <div class="option-num">01</div>
+    <div class="option-info">
+      <div class="option-name">Full "Show Details" Toggle</div>
+      <div class="option-badges">
+        <span class="option-badge">▸ Per-role toggle</span>
+        <span class="option-badge">Minimal change</span>
+        <span class="option-badge">Matches your Abstract pattern</span>
+      </div>
+      <div class="option-desc">All bullet points are hidden by default. Each role shows a "▸ Responsibilities" button that expands the full list. Great for quick scanning — the timeline stays clean until the reader decides to dig in.</div>
+    </div>
+  </div>
+  <div class="demo-frame" id="demo1"></div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════ -->
+<!-- OPTION 2 — HEADLINE BULLET + COLLAPSE REST                    -->
+<!-- ══════════════════════════════════════════════════════════════ -->
+<div class="option-section" id="opt2">
+  <div class="option-header">
+    <div class="option-num">02</div>
+    <div class="option-info">
+      <div class="option-name">Headline Bullet + Collapse Rest</div>
+      <div class="option-badges">
+        <span class="option-badge">▸ Per-role expand</span>
+        <span class="option-badge">Best balance of detail vs. scan</span>
+      </div>
+      <div class="option-desc">The first (most impactful) bullet is always visible. Remaining bullets are hidden behind a "▸ +N more" toggle. You never lose the hook — the reader sees value immediately and can choose to read more.</div>
+    </div>
+  </div>
+  <div class="demo-frame" id="demo2"></div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════ -->
+<!-- OPTION 3 — TWO-COLUMN CARD GRID                               -->
+<!-- ══════════════════════════════════════════════════════════════ -->
+<div class="option-section" id="opt3">
+  <div class="option-header">
+    <div class="option-num">03</div>
+    <div class="option-info">
+      <div class="option-name">Expandable Card Grid</div>
+      <div class="option-badges">
+        <span class="option-badge">Click to expand</span>
+        <span class="option-badge">Big visual change</span>
+        <span class="option-badge">Most scannable</span>
+      </div>
+      <div class="option-desc">Roles become compact cards in a 2-column grid — no bullets visible by default, just period, role, org, and tags. Clicking a card expands it in place to reveal the full detail. The "+" icon signals interactivity.</div>
+    </div>
+  </div>
+  <div class="demo-frame" id="demo3"></div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════ -->
+<!-- OPTION 4 — SPLIT PANE / MASTER-DETAIL                         -->
+<!-- ══════════════════════════════════════════════════════════════ -->
+<div class="option-section" id="opt4">
+  <div class="option-header">
+    <div class="option-num">04</div>
+    <div class="option-info">
+      <div class="option-name">Split Pane — Master / Detail</div>
+      <div class="option-badges">
+        <span class="option-badge">Click to load detail</span>
+        <span class="option-badge">Most professional</span>
+        <span class="option-badge">Like an email inbox</span>
+      </div>
+      <div class="option-desc">A compact list of roles sits on the left; clicking one populates the full detail panel on the right. Both panes are visible simultaneously — very efficient for browsing a dense track record without losing context.</div>
+    </div>
+  </div>
+  <div class="demo-frame" id="demo4"></div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════ -->
+<!-- OPTION 5 — TAG-ELEVATED SUMMARY                               -->
+<!-- ══════════════════════════════════════════════════════════════ -->
+<div class="option-section" id="opt5">
+  <div class="option-header">
+    <div class="option-num">05</div>
+    <div class="option-info">
+      <div class="option-name">Tag-Elevated Summary Layer</div>
+      <div class="option-badges">
+        <span class="option-badge no-toggle">No interaction needed</span>
+        <span class="option-badge">Zero JS change</span>
+        <span class="option-badge">Visual reweight only</span>
+      </div>
+      <div class="option-desc">No toggles or JS — just a visual reordering. Tags move above the bullets and become larger, acting as a scannable "keyword summary" for each role. Bullets are de-emphasised (lighter, smaller) below them. The eye scans tags first, reads bullets if interested.</div>
+    </div>
+  </div>
+  <div class="demo-frame" id="demo5"></div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════ -->
+<!-- OPTION 6 — KEYWORD HIGHLIGHTS (NEW)                           -->
+<!-- ══════════════════════════════════════════════════════════════ -->
+<div class="option-section" id="opt6">
+  <div class="option-header">
+    <div class="option-num">06</div>
+    <div class="option-info">
+      <div class="option-name">Inline Keyword Highlights</div>
+      <div class="option-badges">
+        <span class="option-badge new">✦ New</span>
+        <span class="option-badge no-toggle">No interaction needed</span>
+        <span class="option-badge">Full content preserved</span>
+      </div>
+      <div class="option-desc">All bullets remain fully visible — nothing is hidden. Instead, key terms are highlighted inline: numbers/scale in amber, methodology terms in green, strong action verbs in forest. The highlights become scanning anchors, so a quick pass picks up the key facts without reading every word. A newspaper-style approach.</div>
+    </div>
+  </div>
+  <div class="demo-frame" id="demo6"></div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════ -->
+<!-- OPTION 7 — TAG FILTER VIEW (NEW)                              -->
+<!-- ══════════════════════════════════════════════════════════════ -->
+<div class="option-section" id="opt7">
+  <div class="option-header">
+    <div class="option-num">07</div>
+    <div class="option-info">
+      <div class="option-name">Interactive Tag Filter</div>
+      <div class="option-badges">
+        <span class="option-badge new">✦ New</span>
+        <span class="option-badge">Filter by skill/client</span>
+        <span class="option-badge">Biggest UX upgrade</span>
+      </div>
+      <div class="option-desc">All roles across all tabs are shown together in a compact flat list. Clicking any tag (e.g. "USAID", "Field Supervision", "Impact Evaluation") instantly filters to show only matching roles — others fade away. Clicking a row expands it to reveal bullet details. Ideal for recruiters looking for specific experience types.</div>
+    </div>
+  </div>
+  <div class="demo-frame" id="demo7"></div>
+</div>
+
+<div style="height:60px;background:#111;text-align:center;padding:20px;font-family:'JetBrains Mono',monospace;font-size:.65rem;color:#444;letter-spacing:.1em;text-transform:uppercase">
+  Preview file · Experience section · 7 design options · David Atinga
+</div>
+
+<script>
+/* ══════════════════════════════════════════════════════════════════
+   DATA
+══════════════════════════════════════════════════════════════════ */
+const TABS = [
+  {
+    id:'research', label:'Research & Academia',
+    roles:[
+      { period:'Jul 2025 – Present', active:true,
+        role:'Data Quality Officer — Individual Consultant',
+        org:'Sambus Geospatial Limited', location:'Ghana',
+        bullets:[
+          'Providing consultancy support on the development of an M&E Management Information System for the Tree Crops Diversification Project (TCDP) — a Ghana–World Bank initiative at COCOBOD.',
+          'Delivered technical input on data quality frameworks, system architecture features, and monitoring design to meet World Bank requirements.',
+          'Supervising daily field activities to ensure adherence to survey plan, schedules, and data quality standards.',
+          'Training field teams on research implementation, research participant engagement, and data quality protocols.'
+        ],
+        tags:['M&E MIS','World Bank','Data Quality','Field Supervision']
+      },
+      { period:'Oct 2021 – Feb 2024', active:false,
+        role:'PhD Researcher & Graduate Tutor',
+        org:'University of Tokyo — Dept. of Agricultural and Resource Economics', location:'Tokyo, Japan · MEXT Government Scholar',
+        bullets:[
+          'Led follow-up panel survey (108 villages, 30+ field staff) in Northern Ghana assessing long-term impacts and spatial spillover effects of rice Green Revolution interventions on farmer capabilities and technology decisions.',
+          'Examined weather shocks\' effects on technology disadoption, fertilizer investment, and yields using panel econometrics, difference-in-differences, and IV methods.',
+          'Processed complex multi-source datasets; designed survey instruments; managed data using World Bank\'s Survey Solutions CAPI platform.',
+          'Delivered results via LaTeX-based academic presentations; authored and co-authored peer-reviewed papers and policy briefs.',
+          'Tutored PhD and MSc international graduate students in microeconomic theory, development economics, empirical methods, proposal writing, fieldwork, and thesis completion.'
+        ],
+        tags:['PhD Research','Panel Data','MEXT Scholar','Graduate Tutoring','Stata','Survey Solutions']
+      },
+      { period:'Oct 2017 – Jan 2021', active:false,
+        role:'Research Assistant & Teaching Assistant',
+        org:'University for Development Studies / JICA / University of Tokyo', location:'Ghana',
+        bullets:[
+          'Served as Research Associate for "The Role of Green Revolution in the Economic Development of Sub-Saharan Africa" (University of Tokyo & UDS), contributing to baseline and follow-up surveys, data management, and preliminary analysis.',
+          'Led and supervised 30 field staff across 108 villages for JICA-funded baseline and endline surveys; managed field logistics, quality control, enumerator training, and preliminary analysis.',
+          'Contributed to JICA\'s evaluation of rice market and post-harvest interventions, supporting randomised trial assessments and policy recommendations.'
+        ],
+        tags:['JICA','UDS','Field Research','Teaching Assistant','RCT Evaluation']
+      },
+      { period:'Jan 2021', active:false,
+        role:'Research Assistant — End-line Survey',
+        org:'JICA Ghana Office', location:'Northern Ghana',
+        bullets:[
+          'Supported Lead Consultant in the endline survey in northern Ghana, responsible for field staff management, quality control, preliminary analysis, and reporting.'
+        ],
+        tags:['JICA','Endline Survey','Field Management']
+      },
+      { period:'Jun 2019 – Sep 2020', active:false,
+        role:'Research Supervisor',
+        org:'FutureDAMS, University of Manchester', location:'Ghana',
+        bullets:[
+          'Trained and supervised field staff to conduct household surveys within different irrigation typologies across northern Ghana.',
+          'Responsible for addressing field challenges, technical survey issues, and ensuring data quality for an interdisciplinary international research project on dams and livelihoods.'
+        ],
+        tags:['Manchester University','Irrigation Research','Field Supervision']
+      },
+      { period:'May 2019', active:false,
+        role:'Research Assistant — Paddy Quality Analysis',
+        org:'JICA / University of Tokyo', location:'Northern Ghana',
+        bullets:[
+          'Supported lead consultant in training and supervising enumerators to undertake seed collection from 1,200 rice farmers for paddy quality analysis.'
+        ],
+        tags:['JICA','University of Tokyo','Paddy Quality']
+      }
+    ]
+  },
+  {
+    id:'me', label:'M&E & Development',
+    roles:[
+      { period:'Jan – Jun 2021', active:true,
+        role:'Youth Researcher (Consultant)',
+        org:'Making Cents International', location:'USA (Remote / Ghana fieldwork)',
+        bullets:[
+          'Conducted a Ghana Rapid Youth Assessment to support the design of the USAID/Ghana five-year (2020–2025) integrated, behaviour-led Country Development Cooperation Strategy (CDCS).',
+          'Interviewed key informants, organised focus group discussions, and contributed to summarising and contextualising findings.',
+          'Aided fieldwork arrangement, undertook transcription and translation, and participated in team briefing sessions.',
+          'Contributed to the assessment report with actionable recommendations aligned to USAID strategic objectives.'
+        ],
+        tags:['USAID','Youth Assessment','CDCS','FGDs','KIIs']
+      },
+      { period:'May – Jun 2020', active:false,
+        role:'Consultant — Choice Experiment Survey',
+        org:'International Institute of Tropical Agriculture (IITA)', location:'Tamale, Northern Ghana',
+        bullets:[
+          'Oversaw field implementation of choice experiment surveys in rural Northern Ghana for agricultural project evaluation.',
+          'Supervised daily field activities, adhering to survey plan, schedules, and data quality standards.',
+          'Trained field enumerators on research implementation, participant engagement, and data quality assurance.',
+          'Supported evaluation of agricultural project impacts on household preferences and economic decisions.'
+        ],
+        tags:['IITA','Choice Experiments','Field Supervision','CGIAR']
+      },
+      { period:'Sep 2017', active:false,
+        role:'Technical Assistant — ILSSI Evaluation',
+        org:'Mendez England & Associates (USAID)', location:'Ghana',
+        bullets:[
+          'Provided technical consulting services to support the Performance Evaluation of the USAID Feed the Future Innovation Lab on Small-Scale Irrigation (ILSSI) Project.',
+          'Coordinated consultancy work with stakeholders, optimising data flows for project assessments.',
+          'Contributed to evaluation findings to improve irrigation and food security program outcomes.'
+        ],
+        tags:['USAID','Irrigation Evaluation','Feed the Future']
+      },
+      { period:'Jun – Dec 2017', active:false,
+        role:'Research Assistant — METASIP Evaluation',
+        org:'FAO / Ministry of Food and Agriculture (MoFA), Ghana', location:'Northern Belt, Ghana',
+        bullets:[
+          'Contributed to the national data collection and regional consultations for the evaluation of the Ghana Medium Term Agricultural Investment Plan (METASIP).',
+          'Undertook stakeholder consultations, interviews, and community-level data collection across the northern belt regions.'
+        ],
+        tags:['FAO','MoFA Ghana','Policy Evaluation','METASIP']
+      },
+      { period:'Jul – Sep 2017', active:false,
+        role:'Research Assistant — NSAICU Performance Review',
+        org:'AGRA / USAID', location:'Northern Ghana, Upper East, Upper West, Brong-Ahafo',
+        bullets:[
+          'Contributed to the Performance Review of the Northern Sector Agriculture Investment Coordination Unit (NSAICU) in Ghana.',
+          'Developed data collection tools for in-depth interviews, focus group discussions, and stakeholder consultations across four regions.',
+          'Consulted with MoFA Headquarters, Regional Directors of Agriculture, Project Coordinators, private sector actors, and development partners in Northern Ghana and Accra.',
+          'Documented recommendations for improving agricultural sector coordination through establishment of agricultural coordination units.'
+        ],
+        tags:['AGRA','USAID','Agriculture Policy','Stakeholder Engagement']
+      },
+      { period:'Jun – Dec 2016', active:false,
+        role:'Consulting Team Member',
+        org:'Market Development Programme for Northern Ghana (MADE)', location:'Northern, Upper East & Upper West regions, Ghana · UKAID/DFID',
+        bullets:[
+          'Assessed agricultural value chain actors — smallholder farmers, input dealers, aggregators, extension workers, and top-of-supply-chain actors — through FGDs and KIIs under DFID\'s Market for the Poor (M4P) framework across three northern regions.',
+          'Designed data collection tools and conducted qualitative surveys among smallholder farmers and MADE partners; managed data from interviews to assess technology adoption, satisfaction, and impact.',
+          'Produced reports with actionable recommendations shaping MADE programming and informing market systems development in Northern Ghana.'
+        ],
+        tags:['UKAID/DFID','Value Chains','M4P Framework','FGDs','Qualitative Research']
+      },
+      { period:'Dec 2015 – Mar 2016', active:false,
+        role:'Team Member — Environmental & Social Impact Assessment',
+        org:'Volta River Authority (VRA) / Environmental Consultancy', location:'Ghana',
+        bullets:[
+          'Contributed to the Environmental and Social Impact Assessment (ESIA) for a 150 MW Wind Power Project by VRA in Ghana.',
+          'Led socioeconomic scoping: drafted reports, designed data collection tools, conducted KIIs, FGDs, and stakeholder and community engagement sessions.'
+        ],
+        tags:['ESIA','VRA','Socioeconomic Assessment','Energy Infrastructure']
+      },
+      { period:'Dec 2014 – Apr 2016', active:false,
+        role:'Research, Monitoring and Evaluation Services Manager',
+        org:'Center for Insight Monitoring and Evaluation (CIME)', location:'Ghana',
+        bullets:[
+          'Served as lead technical officer executing M&E projects end-to-end: designed evaluation frameworks, logframes, and monitoring tools; conducted baseline surveys and impact studies; performed data coding, analysis, and quality control for development programme decision-making.',
+          'Provided technical assistance and advisory services to partners; deployed standardised survey tools and data collection instruments across agricultural value chain and business development programmes in Northern Ghana.',
+          'Facilitated enumerator training and field data collection; produced reports with programme recommendations for development partners and clients.'
+        ],
+        tags:['M&E Management','Baseline Surveys','Impact Evaluation','Value Chains','Technical Writing']
+      }
+    ]
+  },
+  {
+    id:'early', label:'Early Career',
+    roles:[
+      { period:'Apr – Aug 2016', active:false,
+        role:'Research Assistant',
+        org:'Bioversity International / IITA', location:'Tamale, Northern Ghana',
+        bullets:[
+          'Coordinated and supervised field surveys, data collection, collation, entry, cleaning, quality checks, and preliminary analysis.',
+          'Reviewed, localised, and finalised Focused Group Discussion (FGD) interview questions and protocols for agro-biodiversity research.',
+          'Made local contacts and scientifically documented criteria applied in choosing representative villages and participating households.',
+          'Trained enumerators to pre-test protocols and conduct FGDs within Africa Rising project communities in Northern Ghana.'
+        ],
+        tags:['IITA','Bioversity International','FGDs','Africa Rising']
+      },
+      { period:'Jun – Sep 2013', active:false,
+        role:'Research Assistant / Field Coordinator',
+        org:'The Pennsylvania State University — Crop Introduction & Informal Seed Systems Project', location:'Northern Ghana',
+        bullets:[
+          'Promoted food security through agro-biodiversity research across two districts in Northern Ghana.',
+          'Helped design and implement survey instruments; recruited and trained field enumerators.',
+          'Identified and selected communities from two districts for baseline survey; scheduled community and stakeholder meetings, interviews, and FGDs.',
+          'Encouraged participation using visual symbols and locally available materials appropriate for low-literacy participants.'
+        ],
+        tags:['Penn State University','Agro-biodiversity','Seed Systems','Food Security']
+      },
+      { period:'Jul 2012 – Jan 2014', active:false,
+        role:'Research Assistant',
+        org:'USAID Africa Rising (Rice) Project — Automation of Baseline Data Collection in Rice Sector Development Hubs', location:'Northern Ghana',
+        bullets:[
+          'Conducted community entry activities, stakeholder and key informant interviews and discussions across Rice Sector Development Hubs.',
+          'Trained survey data collectors in using tablets for CAPI-based data collection; supervised field work and quality control.',
+          'Managed data using STATA; arranged logistics for multi-site survey operations.',
+          'Contributed to team decisions about research directions and methodology.'
+        ],
+        tags:['USAID Africa Rising','CAPI','Rice Research','Stata']
+      },
+      { period:'Sep 2012 – Aug 2013', active:false,
+        role:'Research Assistant — National Service',
+        org:'CSIR-Savanna Agricultural Research Institute (SARI)', location:'Northern Ghana',
+        bullets:[
+          'Assisted research scientists in socio-economic research implementation; coordinated with agricultural value chain actors.',
+          'Undertook field surveys, data cleaning and entry; assisted in training field personnel.',
+          'Performed data checks, quality control, and analysis using STATA, SPSS, and Excel; contributed to research reports.',
+          'Contributed to data analysis training workshops for the Socioeconomics Division.'
+        ],
+        tags:['CSIR-SARI','National Service','Socioeconomics','Stata / SPSS']
+      }
+    ]
+  }
+];
+
+/* ══════════════════════════════════════════════════════════════════
+   SHARED HELPERS
+══════════════════════════════════════════════════════════════════ */
+function tagsHtml(tags){ return tags.map(t=>`<span class="exp-tag">${t}</span>`).join(''); }
+
+function tabsHtml(optId, activeTab='research'){
+  return TABS.map(tab=>`
+    <button class="exp-tab${tab.id===activeTab?' active':''}"
+      onclick="switchTab('${optId}','${tab.id}',this)">${tab.label}</button>
+  `).join('');
+}
+
+function switchTab(optId, tabId, btn){
+  const scope = document.getElementById(`opt-${optId}`);
+  scope.querySelectorAll('.exp-panel').forEach(p=>p.classList.remove('active'));
+  scope.querySelectorAll('.exp-tab').forEach(t=>t.classList.remove('active'));
+  scope.querySelector(`[data-panel="${tabId}"]`).classList.add('active');
+  btn.classList.add('active');
+}
+
+function wrapSection(optId, content){
+  return `
+    <div id="opt-${optId}">
+      <div class="section-label">Experience</div>
+      <h2 class="section-title">Professional<br/><em style="font-family:'DM Serif Display',Georgia,serif;font-style:italic">Track Record</em></h2>
+      <div class="section-divider"></div>
+      ${content}
+    </div>`;
+}
+
+function tabWrapper(optId, renderFn){
+  const panels = TABS.map((tab,i)=>`
+    <div class="exp-panel${i===0?' active':''}" data-panel="${tab.id}">
+      <div class="exp-timeline">${tab.roles.map(r=>renderFn(r,optId,tab.id)).join('')}</div>
+    </div>`).join('');
+  return `<div class="exp-tabs">${tabsHtml(optId)}</div>${panels}`;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   OPTION 1 — Full Toggle
+══════════════════════════════════════════════════════════════════ */
+function renderOpt1(r, optId, tabId){
+  const uid = `o1-${optId}-${tabId}-${Math.random().toString(36).slice(2,7)}`;
+  return `
+    <div class="exp-item" style="opacity:1;transform:none">
+      <div class="exp-dot${r.active?' active-dot':''}"></div>
+      <div class="exp-period">${r.period}</div>
+      <div class="exp-role">${r.role}</div>
+      <div class="exp-org">${r.org}</div>
+      <div class="exp-location">${r.location}</div>
+      <button class="o1-toggle" onclick="this.nextElementSibling.classList.toggle('open');this.textContent=this.nextElementSibling.classList.contains('open')?'▾ Responsibilities':'▸ Responsibilities'">▸ Responsibilities</button>
+      <div class="o1-bullets" id="${uid}">
+        <ul class="exp-bullets" style="margin-top:10px">${r.bullets.map(b=>`<li>${b}</li>`).join('')}</ul>
+      </div>
+      <div class="exp-tags" style="margin-top:14px">${tagsHtml(r.tags)}</div>
+    </div>`;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   OPTION 2 — Headline + Collapse
+══════════════════════════════════════════════════════════════════ */
+function renderOpt2(r, optId, tabId){
+  const rest = r.bullets.slice(1);
+  const uid = `o2-${optId}-${tabId}-${Math.random().toString(36).slice(2,7)}`;
+  return `
+    <div class="exp-item" style="opacity:1;transform:none">
+      <div class="exp-dot${r.active?' active-dot':''}"></div>
+      <div class="exp-period">${r.period}</div>
+      <div class="exp-role">${r.role}</div>
+      <div class="exp-org">${r.org}</div>
+      <div class="exp-location">${r.location}</div>
+      <div class="o2-first-bullet">${r.bullets[0]}</div>
+      ${rest.length>0?`
+        <button class="o2-toggle" onclick="this.nextElementSibling.classList.toggle('open');this.textContent=this.nextElementSibling.classList.contains('open')?'▾ Show less':'▸ +${rest.length} more'">▸ +${rest.length} more</button>
+        <div class="o2-rest">
+          <ul class="exp-bullets">${rest.map(b=>`<li>${b}</li>`).join('')}</ul>
+        </div>`:''}
+      <div class="exp-tags" style="margin-top:12px">${tagsHtml(r.tags)}</div>
+    </div>`;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   OPTION 3 — Card Grid
+══════════════════════════════════════════════════════════════════ */
+function renderOpt3Tabs(optId){
+  const panels = TABS.map((tab,i)=>`
+    <div class="exp-panel${i===0?' active':''}" data-panel="${tab.id}">
+      <div class="o3-grid">${tab.roles.map(r=>renderOpt3Card(r,optId,tab.id)).join('')}</div>
+    </div>`).join('');
+  return `<div class="exp-tabs">${tabsHtml(optId)}</div>${panels}`;
+}
+function renderOpt3Card(r, optId, tabId){
+  return `
+    <div class="o3-card" onclick="this.classList.toggle('open')">
+      <div class="o3-card-top">
+        <div style="flex:1">
+          <div class="exp-period">${r.period}</div>
+          <div class="exp-role" style="font-size:.92rem">${r.role}</div>
+          <div class="exp-org" style="font-size:.82rem">${r.org}</div>
+          <div class="exp-location">${r.location}</div>
+          <div class="exp-tags" style="margin-top:8px">${tagsHtml(r.tags)}</div>
+        </div>
+        <div class="o3-expand-icon">✕</div>
+      </div>
+      <div class="o3-detail">
+        <ul class="exp-bullets">${r.bullets.map(b=>`<li>${b}</li>`).join('')}</ul>
+      </div>
+    </div>`;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   OPTION 4 — Split Pane
+══════════════════════════════════════════════════════════════════ */
+function renderOpt4(optId){
+  const panels = TABS.map((tab,i)=>`
+    <div class="exp-panel${i===0?' active':''}" data-panel="${tab.id}">
+      <div class="o4-pane">
+        <div class="o4-list" id="o4list-${optId}-${tab.id}">
+          ${tab.roles.map((r,ri)=>`
+            <div class="o4-list-item${ri===0?' active':''}" onclick="loadO4Detail('${optId}','${tab.id}',${ri},this)">
+              <div class="o4-list-period">${r.period}</div>
+              <div class="o4-list-role">${r.role}</div>
+              <div class="o4-list-org">${r.org.split('—')[0].split('/')[0].trim()}</div>
+            </div>`).join('')}
+        </div>
+        <div class="o4-detail-pane" id="o4detail-${optId}-${tab.id}">
+          ${buildO4Detail(tab.roles[0])}
+        </div>
+      </div>
+    </div>`).join('');
+  return `<div class="exp-tabs">${tabsHtml(optId)}</div>${panels}`;
+}
+function buildO4Detail(r){
+  return `
+    <div class="exp-period">${r.period}</div>
+    <div class="exp-role">${r.role}</div>
+    <div class="exp-org">${r.org}</div>
+    <div class="exp-location">${r.location}</div>
+    <ul class="exp-bullets" style="margin-top:14px">${r.bullets.map(b=>`<li>${b}</li>`).join('')}</ul>
+    <div class="exp-tags" style="margin-top:14px">${tagsHtml(r.tags)}</div>`;
+}
+function loadO4Detail(optId, tabId, roleIdx, clickedEl){
+  const tab = TABS.find(t=>t.id===tabId);
+  const detail = document.getElementById(`o4detail-${optId}-${tabId}`);
+  detail.innerHTML = buildO4Detail(tab.roles[roleIdx]);
+  document.querySelectorAll(`#o4list-${optId}-${tabId} .o4-list-item`).forEach(el=>el.classList.remove('active'));
+  clickedEl.classList.add('active');
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   OPTION 5 — Tag-Elevated
+══════════════════════════════════════════════════════════════════ */
+function renderOpt5(r, optId, tabId){
+  return `
+    <div class="exp-item" style="opacity:1;transform:none">
+      <div class="exp-dot${r.active?' active-dot':''}"></div>
+      <div class="exp-period">${r.period}</div>
+      <div class="exp-role">${r.role}</div>
+      <div class="exp-org">${r.org}</div>
+      <div class="exp-location">${r.location}</div>
+      <div class="o5-tags-prominent">${r.tags.map(t=>`<span class="o5-tag-pill">${t}</span>`).join('')}</div>
+      <ul class="exp-bullets o5-bullets">${r.bullets.map(b=>`<li>${b}</li>`).join('')}</ul>
+    </div>`;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   OPTION 6 — Keyword Highlights
+══════════════════════════════════════════════════════════════════ */
+const KW_ORGS = ['World Bank','JICA','USAID','FAO','IITA','AGRA','VRA','DFID','UKAID','Manchester','Penn State','CSIR','SARI','COCOBOD','WFP','IFPRI','CIME','MADE'];
+const KW_METHODS = ['difference-in-differences','instrumental variables','propensity score','panel econometrics','panel data','IV methods','RCT','CAPI','randomised trial','logframes','choice experiment','fixed effects'];
+const KW_ACTIONS = /^(Led|Managed|Supervised|Designed|Delivered|Trained|Conducted|Oversaw|Produced|Served as lead|Contributed|Assessed|Facilitated|Processed|Examined|Provided|Developed)/;
+
+function highlightBullet(text){
+  // Numbers
+  text = text.replace(/\b(\d[\d,]*\s*(?:\+\s*)?(?:villages|farmers|staff|regions|districts|countries|hubs|MW|%|years|months)?)/g,
+    m=>`<span class="kw-num">${m}</span>`);
+  // Methods
+  KW_METHODS.forEach(kw=>{
+    const re = new RegExp(kw.replace(/[-]/g,'\\-'),'gi');
+    text = text.replace(re, m=>`<span class="kw-method">${m}</span>`);
+  });
+  // Orgs
+  KW_ORGS.forEach(org=>{
+    const re = new RegExp(`\\b${org.replace(/[/]/g,'\\/')}\\b`,'g');
+    text = text.replace(re, m=>`<span class="kw-org">${m}</span>`);
+  });
+  // Action verbs at start
+  text = text.replace(KW_ACTIONS, m=>`<span class="kw-action">${m}</span>`);
+  return text;
+}
+function renderOpt6(r, optId, tabId){
+  return `
+    <div class="exp-item" style="opacity:1;transform:none">
+      <div class="exp-dot${r.active?' active-dot':''}"></div>
+      <div class="exp-period">${r.period}</div>
+      <div class="exp-role">${r.role}</div>
+      <div class="exp-org">${r.org}</div>
+      <div class="exp-location">${r.location}</div>
+      <ul class="exp-bullets o6-bullets" style="margin-top:12px">${r.bullets.map(b=>`<li>${highlightBullet(b)}</li>`).join('')}</ul>
+      <div class="exp-tags" style="margin-top:12px">${tagsHtml(r.tags)}</div>
+    </div>`;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   OPTION 7 — Tag Filter (flat list, no tabs)
+══════════════════════════════════════════════════════════════════ */
+function renderOpt7(optId){
+  // Collect all roles flat + all unique tags
+  const allRoles = TABS.flatMap(tab=>tab.roles.map(r=>({...r,tabLabel:tab.label})));
+  const allTags = [...new Set(allRoles.flatMap(r=>r.tags))].sort();
+
+  const filterBar = `
+    <div class="o7-filter-bar" id="o7filters-${optId}">
+      <button class="o7-filter-all" onclick="o7FilterAll('${optId}')">All</button>
+      ${allTags.map(t=>`<button class="o7-filter-tag" onclick="o7Filter('${optId}','${t.replace(/'/g,"\\'")}',this)">${t}</button>`).join('')}
+    </div>`;
+
+  const list = `
+    <div class="o7-list" id="o7list-${optId}">
+      ${allRoles.map((r,i)=>`
+        <div class="o7-item" data-tags="${r.tags.join('|')}" onclick="o7Toggle(this)">
+          <div class="o7-item-head">
+            <div class="o7-item-period exp-period" style="margin:0">${r.period}</div>
+            <div>
+              <div class="exp-role" style="font-size:.88rem;margin-bottom:2px">${r.role}</div>
+              <div class="exp-org" style="font-size:.78rem;margin-bottom:6px">${r.org.split('—')[0].trim()}</div>
+              <div class="exp-tags" style="margin:0">${tagsHtml(r.tags)}</div>
+            </div>
+            <div class="o7-chevron">▾</div>
+          </div>
+          <div class="o7-item-detail">
+            <ul class="exp-bullets">${r.bullets.map(b=>`<li>${b}</li>`).join('')}</ul>
+          </div>
+        </div>`).join('')}
+    </div>`;
+
+  return `
+    <div style="margin-bottom:14px">
+      <p style="font-size:.82rem;color:var(--muted);margin-bottom:18px">Click any tag to filter roles. Click a row to expand details.</p>
+      ${filterBar}${list}
+    </div>`;
+}
+
+function o7Filter(optId, tag, btn){
+  const container = document.getElementById(`o7list-${optId}`);
+  const filterBtns = document.querySelectorAll(`#o7filters-${optId} .o7-filter-tag`);
+  filterBtns.forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  container.querySelectorAll('.o7-item').forEach(item=>{
+    const tags = item.dataset.tags.split('|');
+    item.classList.toggle('faded', !tags.includes(tag));
+  });
+}
+function o7FilterAll(optId){
+  document.getElementById(`o7list-${optId}`).querySelectorAll('.o7-item').forEach(el=>el.classList.remove('faded'));
+  document.querySelectorAll(`#o7filters-${optId} .o7-filter-tag`).forEach(b=>b.classList.remove('active'));
+}
+function o7Toggle(item){
+  if(item.classList.contains('faded')) return;
+  item.classList.toggle('open');
+  const det = item.querySelector('.o7-item-detail');
+  det.style.maxHeight = item.classList.contains('open') ? det.scrollHeight+'px' : '0';
+  det.style.opacity = item.classList.contains('open') ? '1' : '0';
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   INIT — render all 7 options
+══════════════════════════════════════════════════════════════════ */
+document.addEventListener('DOMContentLoaded', ()=>{
+
+  // Option 1
+  document.getElementById('demo1').innerHTML = wrapSection('1',
+    tabWrapper('o1', renderOpt1));
+
+  // Option 2
+  document.getElementById('demo2').innerHTML = wrapSection('2',
+    tabWrapper('o2', renderOpt2));
+
+  // Option 3
+  document.getElementById('demo3').innerHTML = wrapSection('3',
+    renderOpt3Tabs('o3'));
+
+  // Option 4
+  document.getElementById('demo4').innerHTML = wrapSection('4',
+    renderOpt4('o4'));
+
+  // Option 5
+  document.getElementById('demo5').innerHTML = wrapSection('5',
+    tabWrapper('o5', renderOpt5));
+
+  // Option 6
+  document.getElementById('demo6').innerHTML = wrapSection('6',
+    tabWrapper('o6', renderOpt6));
+
+  // Option 7 — flat, no tabs
+  document.getElementById('demo7').innerHTML = wrapSection('7', renderOpt7('o7'));
+});
+</script>
+</body>
+</html>
