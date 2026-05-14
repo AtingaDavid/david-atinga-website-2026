@@ -752,10 +752,8 @@ footer a:hover{color:#fff}
     <h1 class="hero-name">David<br/><em>Atinga</em></h1>
     <div class="hero-title">Applied Economist &nbsp;·&nbsp; Agricultural &amp; Development Economics &nbsp;·&nbsp; M&amp;E Specialist</div>
     <p class="hero-desc">
-      I research how climate variability, weather shocks, and policy interventions shape technology adoption,
-      food security, and structural transformation among smallholder farm households in Sub-Saharan Africa.
-      Over a decade of applied economics research and development consulting across West and East Africa.
-      Open to academic, research, and consultancy roles.
+      Applied economist researching how climate variability and policy shape technology adoption, food security,
+      and rural transformation in Sub-Saharan Africa. Open to academic, research, and consultancy roles.
     </p>
     <div class="hero-badges">
       <span class="badge">Impact Evaluation</span>
@@ -818,44 +816,87 @@ footer a:hover{color:#fff}
     <div class="about-grid">
       <div class="about-text reveal">
         <p>
-          I am an applied economist, and over a decade of experience in applied research,
-          impact evaluation, monitoring and evaluation, and international development consulting in Africa.
+          I am an applied economist with over a decade of experience in applied research, impact evaluation,
+          monitoring &amp; evaluation, and international development consulting across Africa.
         </p>
-        <p>
-          My research sits at the intersection of <strong>agricultural economics, climate variability, and household welfare</strong>.
-          I study how weather shocks and climate change shape agricultural technology adoption and disadoption decisions,
-          input investment, food security outcomes, energy choices, and the structural transformation of rural economies —
-          with a primary focus on smallholder farmers in West and East Africa.
-        </p>
-        <p>
-          I grew up in <strong>Nyankpala, Northern Ghana</strong> — a farming and research community — which gives me
-          a grounded, firsthand understanding of the realities facing smallholder households that informs all my research and consulting work.
-          I have designed and supervised large-scale household surveys across communities, led field research teams,
-          and worked with JICA, USAID, IITA, UKAID, DFID, FAO, IFPRI, World Bank, and WFP-related partners,
-          producing research outputsto inform policy.
-        </p>
-        <p>
-          I am currently based in <strong>Coon Rapids, MN, USA</strong>, actively seeking academic positions, postdoctoral fellowships,
-          research roles, and international development consultancy opportunities in agricultural economics,
-          development economics, food security, and monitoring &amp; evaluation.
-        </p>
-        <div class="interests-block">
-          <div class="interests-title">Research Interests</div>
-          <div class="interest-pills">
-            <span class="pill">Agricultural Technology Adoption</span>
-            <span class="pill">Climate-Agriculture Linkages</span>
-            <span class="pill">Food Security &amp; Nutrition</span>
-            <span class="pill">Impact Evaluation</span>
-            <span class="pill">Rural Livelihoods</span>
-            <span class="pill">Development Policy</span>
-            <span class="pill">Structural Transformation</span>
-            <span class="pill">Satellite Data &amp; Remote Sensing</span>
-            <span class="pill">Gender-Responsive M&amp;E</span>
-            <span class="pill">Value Chain Analysis</span>
-            <span class="pill">Environmental Economics</span>
-            <span class="pill">Energy Economics</span>
+
+        <!-- Expandable section -->
+        <div id="about-more" style="display:none;animation:fadeUp .4s ease forwards">
+          <p>
+            My work sits at the intersection of <strong>agricultural economics, climate variability, and household welfare</strong> —
+            examining how weather shocks and climate change shape technology adoption, input investment, food
+            security, and the structural transformation of rural economies, with a primary focus on smallholder
+            farmers in West and East Africa.
+          </p>
+          <p>
+            I grew up in <strong>Nyankpala, Northern Ghana</strong> — a farming and research community — which
+            gives me a grounded, firsthand understanding of smallholder realities that runs through all my research
+            and consulting work. I have led large-scale household surveys, managed field research teams, and
+            collaborated with JICA, USAID, IITA, UKAID/DFID, FAO, IFPRI, the World Bank, and WFP-related partners
+            to produce evidence that informs policy. I am currently based in <strong>Coon Rapids, MN, USA</strong>,
+            actively seeking research, academic, and international development consultancy opportunities.
+          </p>
+          <p>
+            My research programme explores how climate variability and weather shocks shape the agricultural
+            decisions, livelihoods, and food security of smallholder farm households in Sub-Saharan Africa —
+            using rigorous microeconometrics, panel data, field-based evidence, and increasingly,
+            satellite-derived climate and geospatial data integrated with national, community and household
+            survey data.
+          </p>
+          <p>
+            My empirical work applies diverse methods including difference-in-differences, instrumental
+            variables, propensity score matching, panel fixed effects, and structural models — translating
+            findings into actionable policy recommendations for governments and development partners.
+          </p>
+          <p>
+            Current projects extend this work to examine weather variability and structural transformation
+            in agriculture and rural labour markets, conflict exposure, and the long-term spillover effects
+            of Green Revolution investments in Sub-Saharan Africa.
+          </p>
+          <div class="interests-block">
+            <div class="interests-title">Research Interests</div>
+            <div class="interest-pills">
+              <span class="pill">Agricultural Technology Adoption</span>
+              <span class="pill">Climate-Agriculture Linkages</span>
+              <span class="pill">Food Security &amp; Nutrition</span>
+              <span class="pill">Impact Evaluation</span>
+              <span class="pill">Rural Livelihoods</span>
+              <span class="pill">Development Policy</span>
+              <span class="pill">Structural Transformation</span>
+              <span class="pill">Satellite Data &amp; Remote Sensing</span>
+              <span class="pill">Gender-Responsive M&amp;E</span>
+              <span class="pill">Value Chain Analysis</span>
+              <span class="pill">Environmental Economics</span>
+              <span class="pill">Energy Economics</span>
+            </div>
           </div>
         </div>
+
+        <button id="about-toggle-btn" onclick="
+          var m=document.getElementById('about-more');
+          var b=document.getElementById('about-toggle-btn');
+          if(m.style.display==='none'){m.style.display='block';b.innerHTML='&#9650;&nbsp; Show less';}
+          else{m.style.display='none';b.innerHTML='&#9660;&nbsp; Research focus &amp; interests';}
+        " style="
+          margin-top:20px;
+          background:none;
+          border:1.5px solid var(--forest);
+          color:var(--forest);
+          padding:8px 20px;
+          border-radius:20px;
+          font-family:'DM Sans',sans-serif;
+          font-size:.82rem;
+          font-weight:500;
+          letter-spacing:.04em;
+          cursor:pointer;
+          transition:background .2s,color .2s,border-color .2s;
+          display:inline-flex;
+          align-items:center;
+          gap:4px;
+        " onmouseover="this.style.background='var(--forest)';this.style.color='#fff'"
+           onmouseout="this.style.background='none';this.style.color='var(--forest)'">
+          &#9660;&nbsp; Research focus &amp; interests
+        </button>
       </div>
 
       <div class="about-sidebar reveal">
@@ -927,19 +968,6 @@ footer a:hover{color:#fff}
     <h2 class="section-title">Publications &amp;<br/><em style="font-family:'DM Serif Display',Georgia,serif;font-style:italic">Working Papers</em></h2>
     <div class="section-divider"></div>
 
-    <div class="research-intro reveal">
-      <p>My research programme explores how climate variability and weather shocks shape the agricultural decisions,
-      livelihoods, and food security of smallholder farm households in Sub-Saharan Africa — using rigorous
-      microeconometrics, panel data, field-based evidence, and increasingly, satellite-derived climate and
-      geospatial data integrated with national, community and household survey data.</p>
-      <p>My empirical work applies diverse methods including difference-in-differences, instrumental variables,
-      propensity score matching, panel fixed effects, and structural models — translating findings into
-      actionable policy recommendations for governments and development partners.</p>
-      <p>Current projects extend this work to examine weather variability and structural transformation in
-      agriculture and rural labour markets, conflict exposure, and the long-term spillover effects of
-      Green Revolution investments in Sub-Saharan Africa.</p>
-    </div>
-
     <div class="pub-grid">
 
       <div class="pub-item reveal">
@@ -947,7 +975,7 @@ footer a:hover{color:#fff}
         <div>
           <div class="pub-year">2024 · Frontiers in Environmental Economics</div>
           <div class="pub-title">Analyzing the effect of severe weather on farmers' fertilizer usage and input investment amidst decreasing productivity in single-season agroecosystems</div>
-          <div class="pub-authors">Atinga, D. (2024)</div>
+          <div class="pub-authors">Atinga, D., Awuni, J. A. &amp; Sakurai, T. (2024)</div>
           <div class="pub-journal">Frontiers in Environmental Economics (Agricultural Economics Section), 3, 1360513</div>
           <div class="pub-doi"><a href="https://doi.org/10.3389/frevc.2024.1360513" target="_blank" rel="noopener">doi.org/10.3389/frevc.2024.1360513 ↗</a></div>
           <div class="pub-abstract" id="abs1">
@@ -1133,7 +1161,6 @@ footer a:hover{color:#fff}
             <li>Served as Research Associate for "The Role of Green Revolution in the Economic Development of Sub-Saharan Africa" (University of Tokyo &amp; UDS), contributing to baseline and follow-up surveys, data management, and preliminary analysis.</li>
             <li>Led and supervised 30 field staff across 108 villages for JICA-funded baseline and endline surveys; managed field logistics, quality control, enumerator training, and preliminary analysis.</li>
             <li>Contributed to JICA's evaluation of rice market and post-harvest interventions, supporting randomised trial assessments and policy recommendations.</li>
-            <li>Served as Teaching Assistant at UDS (2018–2020): supported Agricultural Marketing and International Trade (undergraduate) and International Agricultural Commodity Trade (graduate) — conducting tutorials, leading discussions, grading, and developing case-based materials.</li>
           </ul>
           <div class="exp-tags"><span class="exp-tag">JICA</span><span class="exp-tag">UDS</span><span class="exp-tag">Field Research</span><span class="exp-tag">Teaching Assistant</span><span class="exp-tag">RCT Evaluation</span></div>
         </div>
@@ -1261,10 +1288,9 @@ footer a:hover{color:#fff}
           <div class="exp-org">Market Development Programme for Northern Ghana (MADE)</div>
           <div class="exp-location">Northern, Upper East, and Upper West regions, Ghana · UKAID / DFID</div>
           <ul class="exp-bullets">
-            <li>Assessed agricultural value chain actors (smallholder farmers, input dealers, aggregators, extension workers, top-of-supply-chain actors) through FGDs and KIIs under DFID's Market for the Poor (M4P) framework.</li>
-            <li>Designed data collection tools for smallholder farmers and key informants across three regions under UKAID/DFID sponsorship.</li>
-            <li>Conducted qualitative surveys among smallholder farmers and partners of MADE; managed data from interviews to assess adoption, satisfaction, and technology impact.</li>
-            <li>Produced reports with actionable recommendations shaping MADE programming and informed market systems development in Northern Ghana.</li>
+            <li>Assessed agricultural value chain actors — smallholder farmers, input dealers, aggregators, extension workers, and top-of-supply-chain actors — through FGDs and KIIs under DFID's Market for the Poor (M4P) framework across three northern regions.</li>
+            <li>Designed data collection tools and conducted qualitative surveys among smallholder farmers and MADE partners; managed data from interviews to assess technology adoption, satisfaction, and impact.</li>
+            <li>Produced reports with actionable recommendations shaping MADE programming and informing market systems development in Northern Ghana.</li>
           </ul>
           <div class="exp-tags"><span class="exp-tag">UKAID/DFID</span><span class="exp-tag">Value Chains</span><span class="exp-tag">M4P Framework</span><span class="exp-tag">FGDs</span><span class="exp-tag">Qualitative Research</span></div>
         </div>
@@ -1289,11 +1315,9 @@ footer a:hover{color:#fff}
           <div class="exp-org">Center for Insight Monitoring and Evaluation (CIME)</div>
           <div class="exp-location">Ghana</div>
           <ul class="exp-bullets">
-            <li>Executed M&amp;E projects as lead technical officer; designed, analysed, and reported findings for programme decision-making.</li>
-            <li>Provided technical assistance to projects and advisory services to partners; designed and implemented evaluation procedures and monitoring frameworks.</li>
-            <li>Conducted baseline surveys and impact studies on development programs; developed, standardised, and deployed survey tools and data collection forms.</li>
-            <li>Contributed to agricultural value chain improvement and business development programming across Northern Ghana.</li>
-            <li>Facilitated training for data collection; performed data coding, analysis, interpretation and quality control.</li>
+            <li>Served as lead technical officer executing M&amp;E projects end-to-end: designed evaluation frameworks, logframes, and monitoring tools; conducted baseline surveys and impact studies; performed data coding, analysis, and quality control for development programme decision-making.</li>
+            <li>Provided technical assistance and advisory services to partners; deployed standardised survey tools and data collection instruments across agricultural value chain and business development programmes in Northern Ghana.</li>
+            <li>Facilitated enumerator training and field data collection; produced reports with programme recommendations for development partners and clients.</li>
           </ul>
           <div class="exp-tags"><span class="exp-tag">M&amp;E Management</span><span class="exp-tag">Baseline Surveys</span><span class="exp-tag">Impact Evaluation</span><span class="exp-tag">Value Chains</span><span class="exp-tag">Technical Writing</span></div>
         </div>
@@ -1378,29 +1402,29 @@ footer a:hover{color:#fff}
     <h2 class="section-title">Teaching and<br/><em style="font-family:'DM Serif Display',Georgia,serif;font-style:italic">Outreach Experience</em></h2>
     <div class="section-divider"></div>
 
-    <p class="teaching-intro">
-      As an applied economist, I see teaching as a transformative avenue rooted in knowledge sharing, clarity,
-      practical engagement with continuous learning, and relearning. My teaching philosophy is shaped by a deep
-      respect for inclusive and interdisciplinary learning, and the belief that economics becomes truly powerful
-      when students can connect theory with lived experiences and applied research.
-    </p>
-
     <div class="teaching-philosophy reveal">
       <div class="teaching-philosophy-title">Teaching Philosophy</div>
       <p>
-        I strive to make academic learning <strong>interactive and research-driven</strong>. I design my teaching around four core principles:
-        making economics understandable through relatable examples and real-world analogies; fostering active learning through
-        discussions, debates, and hands-on problem-solving; promoting equity and inclusion by building accessible learning environments
-        that respect diverse backgrounds; and connecting theory to lived realities by integrating current events, global issues,
-        and applied evidence into every course.
+        My teaching is rooted in <strong>inclusive, research-driven learning</strong> — making economics tangible
+        through real-world examples, active discussion, and hands-on problem-solving.
       </p>
-      <p>
-        I am prepared to teach core courses including <strong>Principles of Microeconomics</strong>, <strong>Applied Econometrics</strong>,
-        <strong>Development Economics</strong>, <strong>Environmental and Resource Economics</strong>,
-        <strong>Agricultural Economics</strong>, and <strong>Food Security Policy</strong>.
-        I welcome opportunities to supervise senior theses, collaborate on research projects, and involve students —
-        especially from first-generation or underrepresented backgrounds — in hands-on, data-driven research.
-      </p>
+      <button class="pub-toggle" style="margin-top:14px" onclick="
+        var d=this.nextElementSibling;
+        d.classList.toggle('open');
+        this.textContent=d.classList.contains('open')?'▾ Show less':'▸ More details';
+      ">▸ More details</button>
+      <div class="pub-abstract">
+        I believe economics becomes truly powerful when students connect theory to lived experience and applied
+        evidence, and I welcome opportunities to supervise theses and involve students — especially from
+        first-generation or underrepresented backgrounds — in data-driven research.
+        I approach every classroom and tutorial as a space where curiosity is rewarded and rigour is accessible.
+        Drawing on my own experience navigating rural Ghana, international graduate study, and cross-cultural
+        teaching in Japan, I bring diverse perspectives into my instruction. I use <strong>real African datasets,
+        policy cases, and field examples</strong> to ground abstract theory, and I integrate applied econometrics
+        progressively — from intuition to formal identification — so students build confidence alongside competence.
+        I am committed to mentoring students from underrepresented backgrounds and to connecting classroom learning
+        with the broader questions of development, equity, and agricultural transformation that define my research.
+      </div>
     </div>
 
     <div class="teaching-sub-title">Teaching, Outreach &amp; Research Experience</div>
@@ -1414,12 +1438,18 @@ footer a:hover{color:#fff}
         <div class="teaching-card-meta">University of Tokyo · Dept. of Agricultural &amp; Resource Economics, Japan</div>
         <div class="teaching-card-role">🎓 Graduate Tutor</div>
         <p class="teaching-card-desc">
-          Mentored PhD and MSc international graduate students through all stages of academic research:
-          refining research questions, proposal writing, field research implementation, data analysis, and
-          thesis completion. Offered one-on-one tutorials on microeconomic theory, development economics,
-          and empirical methods. Guided students from more than six nationalities; contributions were
-          consistently appreciated and recognised by the department.
+          Mentored PhD and MSc international students through all stages of academic research, from proposal writing to thesis completion.
         </p>
+        <button class="pub-toggle" style="margin-top:10px" onclick="
+          var d=this.nextElementSibling;
+          d.classList.toggle('open');
+          this.textContent=d.classList.contains('open')?'▾ Show less':'▸ More details';
+        ">▸ More details</button>
+        <div class="pub-abstract">
+          Offered one-on-one tutorials on microeconomic theory, development economics, and empirical methods.
+          Guided students from more than six nationalities; contributions were consistently appreciated and
+          recognised by the department.
+        </div>
       </div>
 
       <div class="teaching-card reveal">
@@ -1430,12 +1460,18 @@ footer a:hover{color:#fff}
         <div class="teaching-card-meta">University for Development Studies, Ghana</div>
         <div class="teaching-card-role">📚 Teaching Assistant</div>
         <p class="teaching-card-desc">
-          Supported teaching in graduate and undergraduate courses: Agricultural Marketing and International Trade
-          (undergraduate, 2018–2020) and International Agricultural Commodity Trade (graduate, 2019).
+          Supported graduate and undergraduate courses in Agricultural Marketing, International Trade, and Agricultural Commodity Trade.
+        </p>
+        <button class="pub-toggle" style="margin-top:10px" onclick="
+          var d=this.nextElementSibling;
+          d.classList.toggle('open');
+          this.textContent=d.classList.contains('open')?'▾ Show less':'▸ More details';
+        ">▸ More details</button>
+        <div class="pub-abstract">
           Conducted tutorials, led group discussions, graded assignments, and prepared case-based materials
           that encouraged practical learning. Developed materials connecting trade theory to Sub-Saharan
           African agricultural market dynamics.
-        </p>
+        </div>
       </div>
 
       <div class="teaching-card reveal">
@@ -1446,29 +1482,17 @@ footer a:hover{color:#fff}
         <div class="teaching-card-meta">Tokyo Global Gateway (TGG) · Odaiba, Tokyo, Japan</div>
         <div class="teaching-card-role">🌐 English Language Instructor</div>
         <p class="teaching-card-desc">
-          Delivered immersive, communicative English instruction to Japanese students from elementary through senior
-          high school level at a flagship facility operated in partnership with the Tokyo Metropolitan Board of Education.
+          Delivered immersive English instruction to Japanese students from elementary through senior high school level at a flagship Tokyo Metropolitan Board of Education facility.
+        </p>
+        <button class="pub-toggle" style="margin-top:10px" onclick="
+          var d=this.nextElementSibling;
+          d.classList.toggle('open');
+          this.textContent=d.classList.contains('open')?'▾ Show less':'▸ More details';
+        ">▸ More details</button>
+        <div class="pub-abstract">
           Facilitated small-group, role-play based sessions across themed real-world environments — airport, hotel, clinic,
-          and business settings — building learners' practical English communication skills. Guided students through
-          experience-oriented language activities designed to simulate international settings, fostering cross-cultural
-          awareness and learner confidence. Supported TGG's outreach mission of equipping Japanese youth with English
-          as a functional tool for participation in a globalised world.
-        </p>
-      </div>
-
-      <div class="teaching-card reveal">
-        <div class="teaching-card-header">
-          <div class="teaching-card-title">PhD Research</div>
-          <span class="teaching-card-code">Jan 2022 – Feb 2024</span>
+          and business settings — building practical English communication skills and cross-cultural awareness.
         </div>
-        <div class="teaching-card-meta">University of Tokyo, Japan</div>
-        <div class="teaching-card-role">🔬 PhD Researcher</div>
-        <p class="teaching-card-desc">
-          Led a follow-up panel survey in Ghana to assess long-term weather shock impacts and spatial spillovers
-          on farmer capabilities. Examined technology disadoption, fertilizer disinvestment, and yield decline
-          under weather stress. Processed datasets using Stata and R; designed survey experiments using World Bank's
-          Survey Solutions; delivered results via LaTeX/Overleaf presentations at academic conferences and workshops.
-        </p>
       </div>
 
       <div class="teaching-card reveal">
@@ -1479,11 +1503,18 @@ footer a:hover{color:#fff}
         <div class="teaching-card-meta">Multiple Organisations · Ghana</div>
         <div class="teaching-card-role">📋 Trainer &amp; Lead Facilitator</div>
         <p class="teaching-card-desc">
-          Designed and delivered training curricula for field enumerators and research teams across more than
-          12 projects in Northern Ghana. Topics covered include CAPI survey implementation using Survey CTO,
-          Survey Solutions, and Mlax; data quality assurance; qualitative data collection (KIIs, FGDs);
-          M&amp;E framework application; and research ethics and participant protection.
+          Designed and delivered field research training for enumerators and research teams across more than 12 projects in Northern Ghana.
         </p>
+        <button class="pub-toggle" style="margin-top:10px" onclick="
+          var d=this.nextElementSibling;
+          d.classList.toggle('open');
+          this.textContent=d.classList.contains('open')?'▾ Show less':'▸ More details';
+        ">▸ More details</button>
+        <div class="pub-abstract">
+          Topics covered include CAPI survey implementation using Survey CTO, Survey Solutions, and Mlax;
+          data quality assurance; qualitative data collection (KIIs, FGDs); M&amp;E framework application;
+          and research ethics and participant protection.
+        </div>
       </div>
 
       <div class="teaching-card reveal">
@@ -1494,19 +1525,18 @@ footer a:hover{color:#fff}
         <div class="teaching-card-meta">University for Development Studies (UDS) · Bullu Community, Tumu District, Upper West Region, Ghana</div>
         <div class="teaching-card-role">🌍 Community Outreach &amp; Participatory Field Research</div>
         <p class="teaching-card-desc">
-          As part of UDS's mandatory Third Trimester Field Practical Programme (TTFPP) — a university-wide
-          community outreach and development initiative mandated under PNDC Law 279 — participated as a
-          member of a multidisciplinary team of students drawn from different faculties and programmes, living
-          in and working directly with the Bullu community across two consecutive eight-week field years.
-          Conducted community entry and a reconnaissance survey to establish rapport and gain first-hand
-          knowledge of the settlement's layout, amenities, geology, and infrastructure. Applied a multi-method
-          data collection approach: transect walk, focus group discussions (FGDs), key informant interviews
-          (KIIs), structured household questionnaires, SWOT analysis, and direct participatory observation —
-          documenting livelihoods, farming systems, economic activities, and socioeconomic conditions.
-          Actively participated in local community activities, blending traditional knowledge with scientific
-          methods; compiled findings into a community profile report submitted to UDS and deposited with the
-          community as a development reference for NGOs and government agencies.
+          Lived and worked with the Bullu community for eight weeks annually, applying participatory methods to document livelihoods, farming systems, and socioeconomic conditions.
         </p>
+        <button class="pub-toggle" style="margin-top:10px" onclick="
+          var d=this.nextElementSibling;
+          d.classList.toggle('open');
+          this.textContent=d.classList.contains('open')?'▾ Show less':'▸ More details';
+        ">▸ More details</button>
+        <div class="pub-abstract">
+          Applied a multi-method approach — community entry, reconnaissance survey, transect walk, FGDs, KIIs,
+          structured household questionnaires, SWOT analysis, and participatory observation. Findings compiled
+          into a profile report deposited with UDS and the community as a development reference.
+        </div>
       </div>
 
     </div>
@@ -1517,23 +1547,14 @@ footer a:hover{color:#fff}
       <div class="supervision-item reveal">
         <div class="supervision-num">01</div>
         <div class="supervision-body">
-          <div class="supervision-level">PhD · Research Guidance &amp; Fieldwork Supervision</div>
-          <div class="supervision-title">Guided PhD students in academic research design, proposal writing, fieldwork supervision, and data management</div>
-          <div class="supervision-detail">University of Tokyo · Oct 2021 – Feb 2024 · Dept. of Agricultural &amp; Resource Economics · International students from multiple nationalities</div>
+          <div class="supervision-level">PhD &amp; MSc · Research Guidance, Fieldwork &amp; Thesis Supervision</div>
+          <div class="supervision-title">Guided PhD and MSc international students through research design, proposal writing, fieldwork, econometric analysis, and thesis completion</div>
+          <div class="supervision-detail">University of Tokyo · Oct 2021 – Feb 2024 · Dept. of Agricultural &amp; Resource Economics · Students from more than six nationalities; contributed to several successful thesis defences</div>
         </div>
       </div>
 
       <div class="supervision-item reveal">
         <div class="supervision-num">02</div>
-        <div class="supervision-body">
-          <div class="supervision-level">MSc · Thesis Data Management &amp; Econometric Analysis</div>
-          <div class="supervision-title">Supported MSc students in data management, applied econometric analysis, and thesis completion</div>
-          <div class="supervision-detail">University of Tokyo · Oct 2021 – Feb 2024 · Stata, R, Survey Solutions guidance; contributed to several students' successful defences</div>
-        </div>
-      </div>
-
-      <div class="supervision-item reveal">
-        <div class="supervision-num">03</div>
         <div class="supervision-body">
           <div class="supervision-level">Graduate &amp; Undergraduate · Econometrics &amp; Development Economics Tutoring</div>
           <div class="supervision-title">Tutored students in Development Economics, Rural Development, Agricultural Trade, and applied econometrics</div>
@@ -1542,7 +1563,7 @@ footer a:hover{color:#fff}
       </div>
 
       <div class="supervision-item reveal">
-        <div class="supervision-num">04</div>
+        <div class="supervision-num">03</div>
         <div class="supervision-body">
           <div class="supervision-level">Home Tutor · Secondary &amp; Basic Level</div>
           <div class="supervision-title">High School: Mathematics and Economics (2013) · Basic Level: English, Mathematics, Science (2007–2008)</div>
@@ -1562,11 +1583,7 @@ footer a:hover{color:#fff}
     <div class="section-divider"></div>
 
     <p class="consult-intro reveal">
-      With over a decade of applied work with international development organisations, bilateral donors, and
-      research institutions across Sub-Saharan Africa, I provide high-quality technical consulting services
-      in monitoring and evaluation, impact evaluation, agricultural value chain analysis, survey design,
-      and development programme evaluation — meeting the standards of IFAD, World Bank, USAID, FAO, WFP,
-      CGIAR, and bilateral development partners.
+      Over a decade of high-quality technical consulting in M&amp;E, impact evaluation, agricultural value chain analysis, survey design, and programme evaluation.
     </p>
 
     <div class="consult-grid">
@@ -1648,54 +1665,6 @@ footer a:hover{color:#fff}
         <span class="client-tag">MoFA Ghana</span>
         <span class="client-tag">WAAPP / ECOWAS</span>
         <span class="client-tag">IPA Ghana</span>
-      </div>
-    </div>
-
-    <div class="field-experience-section reveal">
-      <div class="clients-title">Selected Field Survey Experience</div>
-      <div class="field-grid">
-        <div class="field-item">
-          <div>
-            <div class="field-year">May 2017</div>
-            <div class="field-desc">Evaluation of vegetable value chain actors in Northern Ghana</div>
-            <div class="field-org">International Water Management Institute (IWMI)</div>
-          </div>
-        </div>
-        <div class="field-item">
-          <div>
-            <div class="field-year">Feb 2016</div>
-            <div class="field-desc">Evaluation of value chain actors for the Market Development Programme (MADE)</div>
-            <div class="field-org">UKAID/DFID · Northern Ghana</div>
-          </div>
-        </div>
-        <div class="field-item">
-          <div>
-            <div class="field-year">2016</div>
-            <div class="field-desc">Large Scale and Medium-Scale Farmers, Agriculture Mechanisation, Tractor Ownership and Use Survey</div>
-            <div class="field-org">MoFA Ghana / GSS / CSIR-SARI / IFPRI</div>
-          </div>
-        </div>
-        <div class="field-item">
-          <div>
-            <div class="field-year">Feb 2016</div>
-            <div class="field-desc">System of Rice Intensification (SRI) — WAAPP Mid-term Data Analysis</div>
-            <div class="field-org">West Africa Agricultural Productivity Programme</div>
-          </div>
-        </div>
-        <div class="field-item">
-          <div>
-            <div class="field-year">2020</div>
-            <div class="field-desc">Training of Trainers — Data Monitors for National Population Census</div>
-            <div class="field-org">Ghana Statistical Service · CSPro &amp; Stata</div>
-          </div>
-        </div>
-        <div class="field-item">
-          <div>
-            <div class="field-year">2019–2020</div>
-            <div class="field-desc">Household surveys within irrigation typologies across Northern Ghana</div>
-            <div class="field-org">FutureDAMS, University of Manchester</div>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -1881,11 +1850,8 @@ footer a:hover{color:#fff}
     <div class="contact-grid">
       <div class="contact-text reveal">
         <p>
-          I am actively seeking <strong>research and academic positions</strong>, <strong>postdoctoral fellowships</strong>,
-          and <strong>international development consultancy</strong> roles in agricultural economics, development economics,
-          food security, impact evaluation, and M&amp;E — in the USA and internationally. My background in rigorous applied
-          econometrics, large-scale field research, and policy-relevant development consulting means I bring both academic
-          rigour and practical experience to research and programme evaluation teams.
+          I am seeking <strong>research and academic opportunities</strong>, and <strong>development consultancy roles</strong>
+          in agricultural economics, development economics, food security, impact evaluation, and M&amp;E.
         </p>
         <p>
           If you are working on related research, evaluating a development programme, or have an opportunity
