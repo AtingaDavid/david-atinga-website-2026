@@ -1,0 +1,2144 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="description" content="David Atinga — Applied Economist · Agricultural, Development & Environmental Economics · Impact Evaluation · M&E Specialist "/>
+<meta name="keywords" content="David Atinga, agricultural economist, development economics, impact evaluation, food security, Ghana, Africa, M&E consultant"/>
+<meta property="og:title" content="David Atinga | Applied Economist"/>
+<meta property="og:description" content="Applied Economist specialising in agricultural economics, climate-agriculture linkages, food security and impact evaluation across Sub-Saharan Africa."/>
+<meta property="og:url" content="https://davidatinga.netlify.app/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="https://davidatinga.netlify.app/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="twitter:card" content="summary_large_image"/>
+<meta property="twitter:title" content="David Atinga | Applied Economist"/>
+<meta property="twitter:description" content="Applied Economist specialising in agricultural economics, climate-agriculture linkages, food security and impact evaluation across Sub-Saharan Africa."/>
+<meta property="twitter:image" content="https://davidatinga.netlify.app/og-image.png"/>
+<title>David Atinga | Applied Economist</title>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B32FW2WLLG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-B32FW2WLLG');
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+
+<style>
+/* ── LIGHT MODE ─────────────────────────────────────────────────── */
+:root,
+[data-theme="light"] {
+  --bg:      #F7F4EE;
+  --bg2:     #FFFFFF;
+  --cream:   #EDE9DF;
+  --warm:    #D9D2C3;
+  --forest:  #1D4A35;
+  --forest2: #2A6349;
+  --sage:    #4E7A63;
+  --gold:    #C4882A;
+  --text:    #1A1A18;
+  --muted:   #5A5A52;
+  --light:   #8A8A80;
+  --white:   #FFFFFF;
+  --nav-bg:  rgba(247,244,238,.94);
+  --nav-bdr: #D9D2C3;
+  --card-bg: #FFFFFF;
+  --card-bdr:#D9D2C3;
+  --input-bg:#F7F4EE;
+  --footer-bg:#1A1A18;
+  --footer-text:rgba(255,255,255,.4);
+  --hero-panel:#1D4A35;
+  --pill-bg: #EDE9DF;
+  --pill-c:  #1D4A35;
+  --skills-section-bg:#1D4A35;
+  --award-bg:#F7F4EE;
+  --shadow:  0 4px 24px rgba(0,0,0,.07);
+  --toggle-bg:#D9D2C3;
+  --toggle-knob:#1D4A35;
+}
+
+[data-theme="dark"] {
+  --bg:      #0F1510;
+  --bg2:     #162019;
+  --cream:   #1E2A22;
+  --warm:    #2A3830;
+  --forest:  #6DBF8A;
+  --forest2: #85D4A0;
+  --sage:    #7DBFA0;
+  --gold:    #E0A84A;
+  --text:    #E8E4DC;
+  --muted:   #A8A89E;
+  --light:   #6A6A60;
+  --white:   #E8E4DC;
+  --nav-bg:  rgba(15,21,16,.96);
+  --nav-bdr: #2A3830;
+  --card-bg: #162019;
+  --card-bdr:#2A3830;
+  --input-bg:#0F1510;
+  --footer-bg:#080D09;
+  --footer-text:rgba(232,228,220,.4);
+  --hero-panel:#0A1A10;
+  --pill-bg: #1E2A22;
+  --pill-c:  #7DBFA0;
+  --skills-section-bg:#0A1A10;
+  --award-bg:#1E2A22;
+  --shadow:  0 4px 24px rgba(0,0,0,.35);
+  --toggle-bg:#2A3830;
+  --toggle-knob:#E0A84A;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'DM Sans',system-ui,sans-serif;
+  font-weight:300;
+  line-height:1.7;
+  overflow-x:hidden;
+  transition:background .35s ease, color .35s ease;
+}
+
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--cream)}
+::-webkit-scrollbar-thumb{background:var(--sage);border-radius:3px}
+::selection{background:var(--forest);color:#fff}
+
+/* ── NAV ─────────────────────────────────────────────────────────── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  height:64px;
+  background:var(--nav-bg);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--nav-bdr);
+  display:flex;align-items:center;
+  transition:background .35s ease, border-color .35s ease;
+}
+.nav-inner{
+  max-width:1140px;margin:0 auto;padding:0 32px;
+  display:flex;align-items:center;justify-content:space-between;
+  width:100%;
+}
+.nav-brand{
+  font-family:'DM Serif Display',Georgia,serif;font-size:1.15rem;
+  color:var(--forest);text-decoration:none;letter-spacing:.01em;
+  transition:color .2s;
+}
+.nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+.nav-links a{
+  font-size:.82rem;font-weight:500;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--muted);
+  text-decoration:none;transition:color .2s;
+}
+.nav-links a:hover{color:var(--forest)}
+
+.theme-toggle{
+  display:flex;align-items:center;gap:8px;
+  cursor:pointer;padding:4px;
+  background:none;border:none;
+  font-size:.75rem;font-family:'JetBrains Mono',monospace;
+  color:var(--muted);letter-spacing:.06em;
+  text-transform:uppercase;transition:color .2s;
+}
+.theme-toggle:hover{color:var(--forest)}
+.toggle-track{
+  width:36px;height:20px;border-radius:10px;
+  background:var(--toggle-bg);position:relative;
+  transition:background .3s;flex-shrink:0;
+}
+.toggle-knob{
+  position:absolute;top:3px;left:3px;
+  width:14px;height:14px;border-radius:50%;
+  background:var(--toggle-knob);
+  transition:transform .3s, background .3s;
+}
+[data-theme="dark"] .toggle-knob{transform:translateX(16px)}
+.toggle-icon{font-size:.9rem}
+
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+.hamburger span{width:22px;height:2px;background:var(--forest);transition:.3s;display:block}
+.mobile-menu{
+  display:none;position:fixed;top:64px;left:0;right:0;z-index:99;
+  background:var(--bg);border-bottom:1px solid var(--warm);
+  padding:24px 32px;flex-direction:column;gap:20px;
+  transition:background .35s;
+}
+.mobile-menu a{
+  font-size:1rem;font-weight:500;color:var(--text);text-decoration:none;
+  letter-spacing:.04em;padding:8px 0;border-bottom:1px solid var(--cream);
+}
+.mobile-menu.open{display:flex}
+
+/* ── HERO ────────────────────────────────────────────────────────── */
+#hero{
+  min-height:100vh;
+  display:grid;grid-template-columns:1fr 1fr;
+  padding-top:64px;overflow:hidden;position:relative;
+}
+.hero-left{
+  display:flex;flex-direction:column;justify-content:center;
+  padding:80px 60px 80px 64px;position:relative;z-index:2;
+}
+.hero-tag{
+  font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--gold);
+  margin-bottom:20px;
+  opacity:0;animation:fadeUp .6s .1s cubic-bezier(.4,0,.2,1) forwards;
+}
+.hero-name{
+  font-family:'DM Serif Display',Georgia,serif;
+  font-size:clamp(2.8rem,4.5vw,4.4rem);
+  line-height:1.05;color:var(--forest);
+  margin-bottom:16px;
+  opacity:0;animation:fadeUp .7s .2s cubic-bezier(.4,0,.2,1) forwards;
+}
+.hero-name em{font-style:italic;color:var(--sage)}
+.hero-title{
+  font-size:1rem;font-weight:400;color:var(--muted);
+  margin-bottom:28px;line-height:1.5;
+  opacity:0;animation:fadeUp .7s .3s cubic-bezier(.4,0,.2,1) forwards;
+}
+.hero-desc{
+  font-size:.95rem;color:var(--muted);max-width:460px;
+  line-height:1.8;margin-bottom:40px;
+  opacity:0;animation:fadeUp .7s .4s cubic-bezier(.4,0,.2,1) forwards;
+}
+.hero-badges{
+  display:flex;flex-wrap:wrap;gap:8px;margin-bottom:40px;
+  opacity:0;animation:fadeUp .7s .5s cubic-bezier(.4,0,.2,1) forwards;
+}
+.badge{
+  font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.06em;
+  padding:4px 12px;border-radius:100px;
+  border:1px solid var(--warm);color:var(--muted);
+  background:var(--cream);
+  transition:background .35s,border-color .35s,color .35s;
+}
+.hero-actions{
+  display:flex;gap:16px;flex-wrap:wrap;
+  opacity:0;animation:fadeUp .7s .6s cubic-bezier(.4,0,.2,1) forwards;
+}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--forest);color:#fff;
+  padding:13px 28px;border-radius:4px;
+  font-size:.85rem;font-weight:500;letter-spacing:.04em;
+  text-decoration:none;transition:background .25s,transform .2s;
+}
+.btn-primary:hover{background:var(--forest2);transform:translateY(-1px)}
+.btn-outline{
+  display:inline-flex;align-items:center;gap:8px;
+  border:1.5px solid var(--forest);color:var(--forest);
+  padding:12px 24px;border-radius:4px;
+  font-size:.85rem;font-weight:500;letter-spacing:.04em;
+  text-decoration:none;transition:all .25s;
+}
+.btn-outline:hover{background:var(--forest);color:#fff;transform:translateY(-1px)}
+
+.hero-right{
+  background:var(--hero-panel);
+  display:flex;flex-direction:column;justify-content:center;align-items:center;
+  padding:80px 60px;position:relative;overflow:hidden;
+  transition:background .35s;
+}
+.hero-right::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 30% 70%,rgba(78,122,99,.5) 0%,transparent 60%),
+             radial-gradient(ellipse at 80% 20%,rgba(196,136,42,.15) 0%,transparent 50%);
+}
+.hero-avatar{
+  width:168px;height:168px;border-radius:50%;
+  border:4px solid rgba(255,255,255,.18);
+  background:var(--sage);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'DM Serif Display',Georgia,serif;font-size:3.5rem;color:#fff;
+  margin-bottom:32px;position:relative;z-index:1;
+  box-shadow:0 20px 60px rgba(0,0,0,.35);
+  overflow:hidden;
+  opacity:0;animation:fadeIn .8s .5s cubic-bezier(.4,0,.2,1) forwards;
+}
+.hero-stats{
+  display:grid;grid-template-columns:1fr 1fr;gap:20px;
+  position:relative;z-index:1;width:100%;max-width:340px;
+  opacity:0;animation:fadeIn .8s .7s cubic-bezier(.4,0,.2,1) forwards;
+}
+.stat-card{
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:8px;padding:20px 16px;
+  transition:background .2s;
+}
+.stat-card:hover{background:rgba(255,255,255,.11)}
+.stat-num{
+  font-family:'DM Serif Display',Georgia,serif;font-size:2.2rem;
+  color:#fff;line-height:1;margin-bottom:4px;
+}
+.stat-label{
+  font-family:'JetBrains Mono',monospace;font-size:.63rem;letter-spacing:.1em;
+  text-transform:uppercase;color:rgba(255,255,255,.5);
+}
+.hero-links{
+  display:flex;gap:16px;margin-top:32px;position:relative;z-index:1;
+  opacity:0;animation:fadeIn .8s .9s cubic-bezier(.4,0,.2,1) forwards;
+}
+.hero-links a{
+  width:40px;height:40px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.2);
+  display:flex;align-items:center;justify-content:center;
+  color:rgba(255,255,255,.7);text-decoration:none;font-size:.85rem;
+  transition:all .25s;
+}
+.hero-links a:hover{background:rgba(255,255,255,.15);color:#fff;border-color:rgba(255,255,255,.4)}
+
+/* ── SECTIONS ───────────────────────────────────────────────────── */
+section{padding:100px 32px}
+.container{max-width:1140px;margin:0 auto}
+.section-label{
+  font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:12px;
+}
+.section-title{
+  font-family:'DM Serif Display',Georgia,serif;
+  font-size:clamp(1.8rem,3vw,2.6rem);
+  color:var(--forest);line-height:1.15;margin-bottom:16px;
+}
+.section-sub{font-size:.95rem;color:var(--muted);max-width:560px;line-height:1.7}
+.section-divider{width:48px;height:3px;background:var(--gold);border-radius:2px;margin:20px 0 60px}
+
+/* ── ABOUT ──────────────────────────────────────────────────────── */
+#about{background:var(--bg2);transition:background .35s}
+.about-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:80px;align-items:start}
+.about-text p{font-size:1rem;color:var(--muted);line-height:1.85;margin-bottom:20px}
+.about-text strong{color:var(--forest);font-weight:600}
+.interests-block{margin-top:32px}
+.interests-title{
+  font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--light);margin-bottom:16px;
+}
+.interest-pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{
+  font-size:.8rem;padding:6px 14px;border-radius:100px;
+  background:var(--pill-bg);color:var(--pill-c);
+  border:1px solid var(--warm);font-weight:400;
+  transition:background .35s,color .35s,border-color .35s;
+}
+.edu-block{margin-bottom:48px}
+.edu-title{
+  font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--light);margin-bottom:20px;
+}
+.edu-item{
+  display:flex;gap:16px;margin-bottom:24px;padding-bottom:24px;
+  border-bottom:1px solid var(--cream);transition:border-color .35s;
+}
+.edu-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.edu-dot{width:10px;height:10px;border-radius:50%;background:var(--gold);margin-top:6px;flex-shrink:0}
+.edu-deg{font-weight:600;font-size:.9rem;color:var(--text);margin-bottom:2px}
+.edu-inst{font-size:.82rem;color:var(--muted)}
+.edu-year{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--light);margin-top:2px;line-height:1.5}
+.edu-thesis{font-size:.78rem;color:var(--sage);margin-top:4px;font-style:italic;line-height:1.4}
+.award-item{
+  display:flex;align-items:flex-start;gap:12px;
+  margin-bottom:14px;padding:14px 16px;
+  background:var(--award-bg);border-radius:6px;border-left:3px solid var(--gold);
+  transition:background .35s;
+}
+.award-icon{font-size:1rem;margin-top:1px;flex-shrink:0}
+.award-text{font-size:.85rem;color:var(--muted);line-height:1.55}
+.award-text strong{color:var(--text);font-weight:500}
+
+/* ── RESEARCH ───────────────────────────────────────────────────── */
+#research{background:var(--bg);transition:background .35s}
+.research-intro{font-size:.95rem;color:var(--muted);max-width:720px;line-height:1.85;margin-bottom:60px}
+.research-intro p{margin-bottom:14px}
+.pub-grid{display:flex;flex-direction:column;gap:0}
+.pub-item{
+  display:grid;grid-template-columns:52px 1fr;gap:24px;
+  padding:30px 0;border-bottom:1px solid var(--warm);
+  transition:border-color .35s;
+}
+.pub-item:first-child{border-top:1px solid var(--warm)}
+.pub-num{
+  font-family:'DM Serif Display',Georgia,serif;font-size:1.6rem;
+  color:var(--warm);margin-top:2px;user-select:none;transition:color .35s;
+}
+.pub-year{
+  font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:6px;
+}
+.pub-title{font-size:.95rem;font-weight:500;color:var(--text);line-height:1.55;margin-bottom:8px}
+.pub-authors{font-size:.8rem;color:var(--light);margin-bottom:4px}
+.pub-journal{font-size:.82rem;color:var(--sage);font-style:italic}
+.pub-doi{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--light);margin-top:4px}
+.pub-doi a{color:var(--sage);text-decoration:none}
+.pub-doi a:hover{color:var(--forest);text-decoration:underline}
+.pub-abstract{
+  font-size:.82rem;color:var(--muted);line-height:1.7;margin-top:10px;
+  max-height:0;overflow:hidden;transition:max-height .4s,opacity .3s;opacity:0;
+}
+.pub-abstract.open{max-height:400px;opacity:1}
+.pub-actions{display:flex;gap:12px;margin-top:8px;align-items:center;flex-wrap:wrap}
+.pub-toggle{
+  font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.08em;
+  color:var(--sage);cursor:pointer;
+  display:inline-flex;align-items:center;gap:4px;
+  background:none;border:none;padding:0;text-transform:uppercase;
+}
+.pub-toggle:hover{color:var(--forest)}
+.pub-link{
+  font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.08em;
+  color:var(--gold);text-decoration:none;text-transform:uppercase;
+  display:inline-flex;align-items:center;gap:4px;
+}
+.pub-link:hover{color:var(--forest)}
+.wip-section{margin-top:56px}
+.wip-title{
+  font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--light);margin-bottom:20px;
+}
+.wip-item{display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid var(--cream)}
+.wip-dot{width:8px;height:8px;border-radius:50%;border:2px solid var(--sage);margin-top:6px;flex-shrink:0}
+.wip-text{font-size:.88rem;color:var(--muted);line-height:1.6;font-style:italic}
+.wip-status{
+  font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--gold);margin-left:8px;
+  white-space:nowrap;
+}
+
+/* ── EXPERIENCE ─────────────────────────────────────────────────── */
+#experience{background:var(--bg2);transition:background .35s}
+.exp-tabs{display:flex;gap:0;margin-bottom:48px;border-bottom:2px solid var(--warm);overflow-x:auto}
+.exp-tab{
+  font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:12px 20px;cursor:pointer;color:var(--muted);background:none;border:none;
+  border-bottom:2px solid transparent;margin-bottom:-2px;
+  transition:color .2s,border-color .2s;white-space:nowrap;
+}
+.exp-tab.active,.exp-tab:hover{color:var(--forest);border-bottom-color:var(--gold)}
+.exp-panel{display:none}
+.exp-panel.active{display:block}
+.exp-timeline{position:relative;padding-left:32px}
+.exp-timeline::before{
+  content:'';position:absolute;left:0;top:8px;bottom:8px;
+  width:2px;background:linear-gradient(to bottom,var(--gold),var(--warm));
+}
+.exp-item{
+  position:relative;margin-bottom:48px;
+  opacity:0;transform:translateX(-10px);
+  transition:opacity .5s,transform .5s;
+}
+.exp-item.visible{opacity:1;transform:translateX(0)}
+.exp-dot{
+  position:absolute;left:-38px;top:6px;
+  width:14px;height:14px;border-radius:50%;
+  background:var(--bg2);border:2.5px solid var(--gold);
+  transition:background .35s;
+}
+.exp-dot.active{background:var(--gold)}
+.exp-period{font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+.exp-role{font-size:1rem;font-weight:600;color:var(--text);margin-bottom:2px}
+.exp-org{font-size:.88rem;color:var(--sage);margin-bottom:4px}
+.exp-location{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--light);margin-bottom:12px}
+.exp-bullets{list-style:none;padding:0}
+.exp-bullets li{font-size:.85rem;color:var(--muted);line-height:1.7;padding-left:18px;position:relative;margin-bottom:6px}
+.exp-bullets li::before{content:'→';position:absolute;left:0;color:var(--gold);font-size:.75rem;top:3px}
+.exp-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.exp-tag{
+  font-family:'JetBrains Mono',monospace;font-size:.63rem;letter-spacing:.04em;
+  padding:2px 9px;border-radius:100px;
+  background:var(--cream);color:var(--muted);
+  border:1px solid var(--warm);transition:background .35s,color .35s;
+}
+
+/* ── TEACHING ────────────────────────────────────────────────────── */
+#teaching{background:var(--bg);transition:background .35s}
+.teaching-intro{font-size:.95rem;color:var(--muted);max-width:720px;line-height:1.85;margin-bottom:48px}
+.teaching-philosophy{
+  background:var(--card-bg);border:1px solid var(--card-bdr);border-radius:8px;
+  padding:36px;margin-bottom:56px;
+  border-left:4px solid var(--forest);
+  box-shadow:var(--shadow);
+  transition:background .35s,border-color .35s;
+}
+.teaching-philosophy-title{
+  font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:16px;
+}
+.teaching-philosophy p{font-size:.9rem;color:var(--muted);line-height:1.85;margin-bottom:12px}
+.teaching-philosophy p:last-child{margin-bottom:0}
+.teaching-philosophy strong{color:var(--forest);font-weight:600}
+.teaching-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-bottom:56px}
+.teaching-card{
+  background:var(--card-bg);border:1px solid var(--card-bdr);border-radius:8px;
+  padding:28px;transition:border-color .25s,transform .2s,background .35s;
+  box-shadow:var(--shadow);
+}
+.teaching-card:hover{border-color:var(--sage);transform:translateY(-2px)}
+.teaching-card-header{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:12px}
+.teaching-card-title{font-size:.95rem;font-weight:600;color:var(--text);line-height:1.4}
+.teaching-card-code{
+  font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.08em;
+  padding:3px 10px;border-radius:100px;
+  background:var(--cream);color:var(--forest);border:1px solid var(--warm);
+  white-space:nowrap;flex-shrink:0;transition:background .35s,color .35s,border-color .35s;
+}
+.teaching-card-meta{font-size:.8rem;color:var(--sage);font-style:italic;margin-bottom:10px}
+.teaching-card-role{
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:10px;
+}
+.teaching-card-desc{font-size:.83rem;color:var(--muted);line-height:1.7}
+.teaching-sub-title{
+  font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--light);margin-bottom:24px;margin-top:40px;
+}
+.teaching-supervision-list{display:flex;flex-direction:column;gap:0}
+.supervision-item{
+  display:flex;align-items:flex-start;gap:16px;
+  padding:20px 0;border-bottom:1px solid var(--cream);transition:border-color .35s;
+}
+.supervision-item:first-child{border-top:1px solid var(--cream)}
+.supervision-num{
+  font-family:'DM Serif Display',Georgia,serif;font-size:1.3rem;
+  color:var(--warm);margin-top:2px;user-select:none;flex-shrink:0;min-width:32px;
+  transition:color .35s;
+}
+.supervision-body{}
+.supervision-level{
+  font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:4px;
+}
+.supervision-title{font-size:.9rem;font-weight:500;color:var(--text);line-height:1.5;margin-bottom:4px}
+.supervision-detail{font-size:.8rem;color:var(--muted)}
+
+/* ── CONSULTING ─────────────────────────────────────────────────── */
+#consulting{background:var(--bg2);transition:background .35s}
+.consult-intro{font-size:.95rem;color:var(--muted);max-width:680px;line-height:1.85;margin-bottom:60px}
+.consult-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-bottom:60px}
+.consult-card{
+  background:var(--card-bg);border:1px solid var(--card-bdr);border-radius:8px;
+  padding:28px;transition:border-color .25s,transform .2s,background .35s,box-shadow .25s;
+  box-shadow:var(--shadow);
+}
+.consult-card:hover{border-color:var(--sage);transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,0,0,.1)}
+.consult-icon{font-size:1.6rem;margin-bottom:14px}
+.consult-title{font-size:.95rem;font-weight:600;color:var(--text);margin-bottom:10px}
+.consult-desc{font-size:.83rem;color:var(--muted);line-height:1.7}
+
+.clients-section{margin-top:56px}
+.clients-title{
+  font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--light);margin-bottom:24px;
+}
+.client-logos{
+  display:flex;flex-wrap:wrap;gap:12px;
+}
+.client-tag{
+  font-size:.82rem;padding:8px 18px;border-radius:6px;
+  background:var(--cream);color:var(--forest);
+  border:1px solid var(--warm);font-weight:500;
+  transition:background .35s,color .35s,border-color .35s,transform .2s;
+}
+.client-tag:hover{background:var(--forest);color:#fff;transform:translateY(-1px)}
+
+.field-experience-section{margin-top:56px}
+.field-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.field-item{
+  display:flex;gap:14px;padding:16px;
+  background:var(--award-bg);border-radius:6px;border-left:3px solid var(--sage);
+  transition:background .35s;
+}
+.field-year{
+  font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:4px;
+}
+.field-desc{font-size:.82rem;color:var(--muted);line-height:1.55}
+.field-org{font-size:.75rem;color:var(--sage);font-style:italic;margin-top:2px}
+
+/* ── SKILLS ──────────────────────────────────────────────────────── */
+#skills{background:var(--skills-section-bg);color:#fff;transition:background .35s}
+#skills .section-title{color:#fff}
+#skills .section-label{color:var(--gold)}
+#skills .section-sub{color:rgba(255,255,255,.6)}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:48px}
+.skill-card{
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+  border-radius:8px;padding:28px;transition:background .25s,transform .2s;
+}
+.skill-card:hover{background:rgba(255,255,255,.1);transform:translateY(-2px)}
+.skill-icon{font-size:1.4rem;margin-bottom:12px}
+.skill-name{font-size:.85rem;font-weight:600;color:#fff;letter-spacing:.03em;margin-bottom:12px}
+.skill-tags{display:flex;flex-wrap:wrap;gap:6px}
+.skill-tag{
+  font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.04em;
+  padding:3px 10px;border-radius:100px;
+  background:rgba(255,255,255,.08);color:rgba(255,255,255,.65);
+  border:1px solid rgba(255,255,255,.1);
+}
+
+/* ── CONTACT ─────────────────────────────────────────────────────── */
+#contact{background:var(--bg);transition:background .35s}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.contact-text p{font-size:.95rem;color:var(--muted);line-height:1.85;margin-bottom:20px}
+.contact-items{margin-top:32px;display:flex;flex-direction:column;gap:14px}
+.contact-item{
+  display:flex;align-items:center;gap:16px;
+  padding:16px 20px;background:var(--card-bg);
+  border-radius:6px;border:1px solid var(--card-bdr);
+  text-decoration:none;color:var(--text);
+  transition:border-color .2s,transform .2s,background .35s;
+}
+.contact-item:hover{border-color:var(--sage);transform:translateX(4px)}
+.contact-item-icon{
+  width:36px;height:36px;border-radius:50%;
+  background:var(--cream);display:flex;align-items:center;justify-content:center;
+  font-size:.9rem;flex-shrink:0;transition:background .35s;
+}
+.contact-item-label{font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--light);margin-bottom:2px}
+.contact-item-val{font-size:.85rem;color:var(--text)}
+.open-to-block{
+  margin-top:32px;padding:24px;background:var(--card-bg);
+  border-radius:8px;border:1px solid var(--card-bdr);
+  transition:background .35s,border-color .35s;
+}
+.open-to-title{
+  font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:14px;
+}
+.open-to-list{display:flex;flex-wrap:wrap;gap:8px}
+.open-to-pill{
+  font-size:.8rem;padding:6px 14px;border-radius:100px;
+  background:var(--pill-bg);color:var(--pill-c);
+  border:1px solid var(--warm);
+  transition:background .35s,color .35s;
+}
+
+/* ── CONTACT FORM ────────────────────────────────────────────────── */
+.contact-form-area{
+  background:var(--card-bg);border-radius:10px;padding:40px;
+  border:1px solid var(--card-bdr);
+  box-shadow:var(--shadow);
+  transition:background .35s,border-color .35s;
+}
+.form-title{
+  font-family:'DM Serif Display',Georgia,serif;font-size:1.4rem;
+  color:var(--forest);margin-bottom:24px;
+}
+.form-group{margin-bottom:20px}
+.form-group label{
+  display:block;font-family:'JetBrains Mono',monospace;font-size:.68rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;
+}
+.form-group input,.form-group textarea,.form-group select{
+  width:100%;padding:12px 14px;border-radius:4px;
+  border:1.5px solid var(--card-bdr);background:var(--input-bg);
+  font-family:'DM Sans',system-ui,sans-serif;font-size:.9rem;color:var(--text);
+  transition:border-color .2s,background .35s,color .35s;outline:none;
+  appearance:none;
+}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--sage)}
+.form-group textarea{height:130px;resize:vertical}
+.form-btn{
+  width:100%;padding:14px;background:var(--forest);color:#fff;
+  border:none;border-radius:4px;
+  font-family:'DM Sans',system-ui,sans-serif;
+  font-size:.85rem;font-weight:500;letter-spacing:.05em;
+  cursor:pointer;transition:background .2s,transform .2s;
+}
+.form-btn:hover:not(:disabled){background:var(--forest2);transform:translateY(-1px)}
+.form-btn:disabled{opacity:.65;cursor:not-allowed;transform:none}
+.form-status{
+  display:none;margin-top:16px;padding:12px 16px;border-radius:6px;
+  font-size:.85rem;text-align:center;font-weight:500;
+}
+.form-status.success{display:block;background:rgba(29,74,53,.12);border:1px solid var(--forest);color:var(--forest)}
+.form-status.error{display:block;background:rgba(180,50,50,.1);border:1px solid #b43232;color:#b43232}
+
+/* ── FOOTER ──────────────────────────────────────────────────────── */
+footer{
+  background:var(--footer-bg);color:var(--footer-text);
+  padding:32px;text-align:center;
+  transition:background .35s,color .35s;
+}
+footer a{color:rgba(255,255,255,.6);text-decoration:none;transition:color .2s}
+footer a:hover{color:#fff}
+.footer-inner{
+  max-width:1140px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;
+}
+.footer-brand{font-family:'DM Serif Display',Georgia,serif;color:rgba(255,255,255,.7);font-size:1rem}
+.footer-links{display:flex;gap:24px}
+.footer-links a{font-size:.8rem;letter-spacing:.04em}
+
+/* ── ANIMATIONS ─────────────────────────────────────────────────── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* ── RESPONSIVE ─────────────────────────────────────────────────── */
+@media(max-width:900px){
+  #hero{grid-template-columns:1fr;min-height:auto}
+  .hero-left{padding:60px 32px 48px}
+  .hero-right{padding:48px 32px 60px;min-height:360px}
+  .about-grid{grid-template-columns:1fr;gap:48px}
+  .contact-grid{grid-template-columns:1fr;gap:48px}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+}
+@media(max-width:600px){
+  .hero-stats{grid-template-columns:1fr 1fr}
+  section{padding:72px 20px}
+  .exp-timeline{padding-left:24px}
+  .contact-form-area{padding:24px}
+  .pub-item{grid-template-columns:36px 1fr;gap:12px}
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ─────────────────────────────────────────────────────── -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="#hero">David Atinga</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#consulting">Consulting</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+          <div class="toggle-track"><div class="toggle-knob"></div></div>
+          <span class="toggle-icon" id="themeIcon">🌙</span>
+        </button>
+      </li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:12px">
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" style="display:none" id="mobileToggle">
+        <div class="toggle-track"><div class="toggle-knob"></div></div>
+        <span class="toggle-icon" id="mobileThemeIcon">🌙</span>
+      </button>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#research" onclick="closeMenu()">Research</a>
+  <a href="#experience" onclick="closeMenu()">Experience</a>
+  <a href="#teaching" onclick="closeMenu()">Teaching</a>
+  <a href="#consulting" onclick="closeMenu()">Consulting</a>
+  <a href="#skills" onclick="closeMenu()">Skills</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+</div>
+
+<!-- ── HERO ─────────────────────────────────────────────────────── -->
+<section id="hero">
+  <div class="hero-left">
+    <div class="hero-tag" style="display:none">PhD Economics · University of Tokyo · MEXT Scholar</div>
+    <h1 class="hero-name">David<br/><em>Atinga</em></h1>
+    <div class="hero-title">Applied Economist &nbsp;·&nbsp; Agricultural &amp; Development Economics &nbsp;·&nbsp; M&amp;E Specialist</div>
+    <p class="hero-desc">
+      I research how climate variability, weather shocks, and policy interventions shape technology adoption,
+      food security, and structural transformation among smallholder farm households in Sub-Saharan Africa.
+      Over a decade of applied economics research and development consulting across West and East Africa.
+      Open to academic, research, and consultancy roles.
+    </p>
+    <div class="hero-badges">
+      <span class="badge">Impact Evaluation</span>
+      <span class="badge">Causal Inference</span>
+      <span class="badge">Panel Data</span>
+      <span class="badge">Survey Design</span>
+      <span class="badge">Climate &amp; Agriculture</span>
+      <span class="badge">Food Security</span>
+      <span class="badge">M&amp;E Systems</span>
+      <span class="badge">West &amp; East Africa</span>
+    </div>
+    <div class="hero-actions">
+      <a class="btn-primary" href="./resume.pdf" target="_blank" rel="noopener">↓ Download CV</a>
+      <a class="btn-outline" href="#research">View Research →</a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-avatar" id="avatarWrap">
+      <img id="avatarImg" src="./photo.jpg" alt="David Atinga"
+        style="width:100%;height:100%;border-radius:50%;object-fit:cover;display:block"
+        onerror="this.src='./photo.png';this.onerror=function(){this.style.display='none';document.getElementById('avatarFallback').style.display='flex';}"/>
+      <span id="avatarFallback"
+        style="display:none;width:100%;height:100%;align-items:center;justify-content:center;font-family:'DM Serif Display',Georgia,serif;font-size:3.5rem;color:#fff">DA</span>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-card">
+        <div class="stat-num">10+</div>
+        <div class="stat-label">Years Research</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">5</div>
+        <div class="stat-label">Publications</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">500+</div>
+        <div class="stat-label">Villages Surveyed</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">4+</div>
+        <div class="stat-label">Working Papers</div>
+      </div>
+    </div>
+    <div class="hero-links">
+      <a href="mailto:atingad@gmail.com" title="Email" aria-label="Email">✉</a>
+      <a href="https://davidatinga.netlify.app/" target="_blank" rel="noopener" title="Website" aria-label="Website">◉</a>
+      <a href="https://github.com/AtingaDavid" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">⌥</a>
+      <a href="https://www.linkedin.com/in/atingadavid" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">in</a>
+      <a href="https://orcid.org/0000-0002-3281-3175" target="_blank" rel="noopener" title="ORCID" aria-label="ORCID">iD</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ────────────────────────────────────────────────────── -->
+<section id="about">
+  <div class="container">
+    <div class="section-label">About</div>
+    <h2 class="section-title">Applied Economist &amp;<br/><em style="font-family:'DM Serif Display',Georgia,serif;font-style:italic">Development Researcher</em></h2>
+    <div class="section-divider"></div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>
+          I am an applied economist, and over a decade of experience in applied research,
+          impact evaluation, monitoring and evaluation, and international development consulting in Africa.
+        </p>
+        <p>
+          My research sits at the intersection of <strong>agricultural economics, climate variability, and household welfare</strong>.
+          I study how weather shocks and climate change shape agricultural technology adoption and disadoption decisions,
+          input investment, food security outcomes, energy choices, and the structural transformation of rural economies —
+          with a primary focus on smallholder farmers in West and East Africa.
+        </p>
+        <p>
+          I grew up in <strong>Nyankpala, Northern Ghana</strong> — a farming and research community — which gives me
+          a grounded, firsthand understanding of the realities facing smallholder households that informs all my research and consulting work.
+          I have designed and supervised large-scale household surveys across communities, led field research teams,
+          and worked with JICA, USAID, IITA, UKAID, DFID, FAO, IFPRI, World Bank, and WFP-related partners,
+          producing research outputsto inform policy.
+        </p>
+        <p>
+          I am currently based in <strong>Coon Rapids, MN, USA</strong>, actively seeking academic positions, postdoctoral fellowships,
+          research roles, and international development consultancy opportunities in agricultural economics,
+          development economics, food security, and monitoring &amp; evaluation.
+        </p>
+        <div class="interests-block">
+          <div class="interests-title">Research Interests</div>
+          <div class="interest-pills">
+            <span class="pill">Agricultural Technology Adoption</span>
+            <span class="pill">Climate-Agriculture Linkages</span>
+            <span class="pill">Food Security &amp; Nutrition</span>
+            <span class="pill">Impact Evaluation</span>
+            <span class="pill">Rural Livelihoods</span>
+            <span class="pill">Development Policy</span>
+            <span class="pill">Structural Transformation</span>
+            <span class="pill">Satellite Data &amp; Remote Sensing</span>
+            <span class="pill">Gender-Responsive M&amp;E</span>
+            <span class="pill">Value Chain Analysis</span>
+            <span class="pill">Environmental Economics</span>
+            <span class="pill">Energy Economics</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-sidebar reveal">
+        <div class="edu-block">
+          <div class="edu-title">Education</div>
+          <div class="edu-item">
+            <div class="edu-dot"></div>
+            <div>
+              <div class="edu-deg">PhD in Economics</div>
+              <div class="edu-inst">University of Tokyo, Japan</div>
+              <div class="edu-year"style="display:none" >Department of Agricultural and Resource Economics · 2021–2024</div>
+              <div class="edu-year">MEXT (Japanese Government) Scholarship Recipient</div>
+              <div class="edu-thesis">Dissertation: Weather Shocks, Technology Adoption, and Agricultural Transformation in Sub-Saharan Africa</div>
+            </div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-dot"></div>
+            <div>
+              <div class="edu-deg">MPhil Agricultural Economics</div>
+              <div class="edu-inst">University for Development Studies, Ghana</div>
+              <div class="edu-year"style="display:none">Agricultural Economics · 2016–2019</div>
+              <div class="edu-year">IFDC-ATT Exceptional Scholarship Recipient</div>
+              <div class="edu-thesis">Thesis: Agricultural Technology Adoption and Market Participation among Smallholder Rice Farmers in Northern Ghana</div>
+            </div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-dot"></div>
+            <div>
+              <div class="edu-deg">BA Integrated Development Studies</div>
+              <div class="edu-inst">University for Development Studies, Ghana</div>
+              <div class="edu-year">Major: Economics &amp; Entrepreneurship Development </div>
+              <div class="edu-thesis">Thesis: Customer Satisfaction and Loyalty — An Analysis of Banks in Upper West, Ghana</div>
+            </div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-dot"></div>
+            <div>
+              <div class="edu-deg">WASSCE / High School Certificate</div>
+              <div class="edu-inst">Saint Charles Seminary Senior High School, Tamale, Ghana </div>
+              <div class="edu-year">Economics, Additional Mathematics, Geography </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="awards-block">
+          <div class="edu-title">Awards &amp; Scholarships</div>
+          <div class="award-item">
+            <div class="award-icon">🏆</div>
+            <div class="award-text">
+              <strong>MEXT Scholarship</strong> — Japanese Government (Ministry of Education, Culture, Sports, Science &amp; Technology). PhD at University of Tokyo.
+            </div>
+          </div>
+          <div class="award-item">
+            <div class="award-icon">🎓</div>
+            <div class="award-text">
+              <strong>ATT-IFDC Exceptional Scholarship</strong> — International Fertilizer Development Centre (IFDC), Ghana. MPhil Agricultural Economics.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── RESEARCH ──────────────────────────────────────────────────── -->
+<section id="research">
+  <div class="container">
+    <div class="section-label">Research</div>
+    <h2 class="section-title">Publications &amp;<br/><em style="font-family:'DM Serif Display',Georgia,serif;font-style:italic">Working Papers</em></h2>
+    <div class="section-divider"></div>
+
+    <div class="research-intro reveal">
+      <p>My research programme explores how climate variability and weather shocks shape the agricultural decisions,
+      livelihoods, and food security of smallholder farm households in Sub-Saharan Africa — using rigorous
+      microeconometrics, panel data, field-based evidence, and increasingly, satellite-derived climate and
+      geospatial data integrated with national, community and household survey data.</p>
+      <p>My empirical work applies diverse methods including difference-in-differences, instrumental variables,
+      propensity score matching, panel fixed effects, and structural models — translating findings into
+      actionable policy recommendations for governments and development partners.</p>
+      <p>Current projects extend this work to examine weather variability and structural transformation in
+      agriculture and rural labour markets, conflict exposure, and the long-term spillover effects of
+      Green Revolution investments in Sub-Saharan Africa.</p>
+    </div>
+
+    <div class="pub-grid">
+
+      <div class="pub-item reveal">
+        <div class="pub-num">01</div>
+        <div>
+          <div class="pub-year">2024 · Frontiers in Environmental Economics</div>
+          <div class="pub-title">Analyzing the effect of severe weather on farmers' fertilizer usage and input investment amidst decreasing productivity in single-season agroecosystems</div>
+          <div class="pub-authors">Atinga, D. (2024)</div>
+          <div class="pub-journal">Frontiers in Environmental Economics (Agricultural Economics Section), 3, 1360513</div>
+          <div class="pub-doi"><a href="https://doi.org/10.3389/frevc.2024.1360513" target="_blank" rel="noopener">doi.org/10.3389/frevc.2024.1360513 ↗</a></div>
+          <div class="pub-abstract" id="abs1">
+            This article evaluates the enduring impact of fluctuating weather patterns in a single-cropping agroecological region on rice yields, examining the consequent influence on the utilisation of inorganic fertilizers and agricultural input investment among rain-fed farm households. The study investigates disparities, reasons, and underlying mechanisms driving changes in farmer input decisions under weather stress — with critical implications for climate-smart agriculture policy in West Africa.
+          </div>
+          <div class="pub-actions">
+            <button class="pub-toggle" onclick="toggleAbs('abs1',this)">▸ Abstract</button>
+            <a class="pub-link" href="https://doi.org/10.3389/frevc.2024.1360513" target="_blank" rel="noopener">↗ Full Paper</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-item reveal">
+        <div class="pub-num">02</div>
+        <div>
+          <div class="pub-year">2021 · International Journal of Educational Development</div>
+          <div class="pub-title">To attend or not to attend: Examining the relationship between food hardship, school attendance and education expenditure</div>
+          <div class="pub-authors">Martey, E., Etwire, P.M. &amp; Atinga, D. (2021)</div>
+          <div class="pub-journal">International Journal of Educational Development, 80, 102304</div>
+          <div class="pub-doi"><a href="https://doi.org/10.1016/j.ijedudev.2020.102304" target="_blank" rel="noopener">doi.org/10.1016/j.ijedudev.2020.102304 ↗</a></div>
+          <div class="pub-abstract" id="abs2">
+            This study examines the relationship between food hardship, school attendance, and education expenditure using nationally representative data from a survey of 14,009 households in Ghana. Results reveal significant adverse pathways from household food insecurity to children's educational outcomes and investment — demonstrating the cross-sectoral spillover costs of food insecurity for human capital development.
+          </div>
+          <div class="pub-actions">
+            <button class="pub-toggle" onclick="toggleAbs('abs2',this)">▸ Abstract</button>
+            <a class="pub-link" href="https://doi.org/10.1016/j.ijedudev.2020.102304" target="_blank" rel="noopener">↗ Full Paper</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-item reveal">
+        <div class="pub-num">03</div>
+        <div>
+          <div class="pub-year">2021 · Energy</div>
+          <div class="pub-title">Household Energy Choice for Cooking among the Time and Consumption Poor in Ghana</div>
+          <div class="pub-authors">Martey, E., Etwire, P.M., Atinga, D. &amp; Yevu, M. (2021)</div>
+          <div class="pub-journal">Energy, 226, 120408</div>
+          <div class="pub-doi"><a href="https://doi.org/10.1016/j.energy.2021.120408" target="_blank" rel="noopener">doi.org/10.1016/j.energy.2021.120408 ↗</a></div>
+          <div class="pub-abstract" id="abs3">
+            SDG Seven recognises access to modern energy for all. This study examines how time poverty and consumption poverty jointly determine the choice of cooking fuel among Ghanaian households. Time poverty reduces adoption of solid biomass fuel (SBF) while consumption poverty increases it. Promotion of labour-saving technologies is necessary to reduce household drudgery and facilitate energy transitions among the poor — with clear implications for SDG 7 policy design.
+          </div>
+          <div class="pub-actions">
+            <button class="pub-toggle" onclick="toggleAbs('abs3',this)">▸ Abstract</button>
+            <a class="pub-link" href="https://doi.org/10.1016/j.energy.2021.120408" target="_blank" rel="noopener">↗ Full Paper</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-item reveal">
+        <div class="pub-num">04</div>
+        <div>
+          <div class="pub-year">2021 · Agricultural Systems</div>
+          <div class="pub-title">Climate change, soil water conservation, and productivity: Evidence from cocoa farmers in Ghana</div>
+          <div class="pub-authors">Amfo, B., Ali, E. B. &amp; Atinga, D. (2021)</div>
+          <div class="pub-journal">Agricultural Systems, 191, 103172</div>
+          <div class="pub-doi"><a href="https://doi.org/10.1016/j.agsy.2021.103172" target="_blank" rel="noopener">doi.org/10.1016/j.agsy.2021.103172 ↗</a></div>
+          <div class="pub-abstract" id="abs4">
+            Impacts of climate change on soil water make soil water conservation practices crucial in cocoa production. This study assessed the nexus between soil water conservation practices, climate change mitigation, and cocoa productivity in Ghana. A positive inter-causal synergy exists between soil water conservation and cocoa productivity under climate stress — with direct relevance for IFAD's and World Bank's sustainable agriculture investments in West Africa.
+          </div>
+          <div class="pub-actions">
+            <button class="pub-toggle" onclick="toggleAbs('abs4',this)">▸ Abstract</button>
+            <a class="pub-link" href="https://doi.org/10.1016/j.agsy.2021.103172" target="_blank" rel="noopener">↗ Full Paper</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-item reveal">
+        <div class="pub-num">05</div>
+        <div>
+          <div class="pub-year">2017 · Journal of Economics, Management and Trade</div>
+          <div class="pub-title">Factors Influencing Access to Credits among Micro and Small Agro-based Enterprises in the Tamale Metropolis, Ghana</div>
+          <div class="pub-authors">Sulemana, S., Ayambila, S. &amp; Atinga, D. (2017)</div>
+          <div class="pub-journal">Journal of Economics, Management and Trade, 20(3), 1–15</div>
+          <div class="pub-doi"><a href="http://www.journaljemt.com/index.php/JEMT/article/view/12760" target="_blank" rel="noopener">journaljemt.com ↗</a></div>
+          <div class="pub-abstract" id="abs5">
+            This study investigates the factors that determine credit access among micro and small agro-based enterprises in the Tamale Metropolis of Northern Ghana. Using primary survey data, the study identifies key determinants of credit access and the barriers faced by smallholder agribusiness operators — generating evidence directly relevant to agricultural finance and rural development policy.
+          </div>
+          <div class="pub-actions">
+            <button class="pub-toggle" onclick="toggleAbs('abs5',this)">▸ Abstract</button>
+            <a class="pub-link" href="http://www.journaljemt.com/index.php/JEMT/article/view/12760" target="_blank" rel="noopener">↗ Full Paper</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="wip-section reveal">
+      <div class="wip-title">Working Papers &amp; Research in Progress</div>
+      <div class="wip-item">
+        <div class="wip-dot"></div>
+        <div class="wip-text">
+          Weather Shocks and Household Food Security: Disaggregated Impacts on Food Share, Dietary Diversity, and Consumption by Source
+          <span class="wip-status">Under Review</span>
+        </div>
+      </div>
+      <div class="wip-item">
+        <div class="wip-dot"></div>
+        <div class="wip-text">
+          Climate Change and Employment Dynamics: Sectoral Transitions in East and West Africa
+          <span class="wip-status">Under Review</span>
+        </div>
+      </div>
+      <div class="wip-item">
+        <div class="wip-dot"></div>
+        <div class="wip-text">
+          Rice Green Revolution in Sub-Saharan Africa's Rainfed Agroecologies: Long-term Impacts and Spatial Spillover Effects on Production Knowledge and Capabilities
+          <span class="wip-status">In Progress</span>
+        </div>
+      </div>
+      <div class="wip-item">
+        <div class="wip-dot"></div>
+        <div class="wip-text">
+          Weather Variability, Resilience, and the Structural Transformation of Agriculture and Rural Economies in Africa
+          <span class="wip-status">In Progress</span>
+        </div>
+      </div>
+      <div class="wip-item">
+        <div class="wip-dot"></div>
+        <div class="wip-text">
+          Technology Disadoption, Input Disinvestment, and Productivity Decline: Evidence from Smallholder Rice Farmers in Northern Ghana
+          <span class="wip-status">In Progress</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── EXPERIENCE ────────────────────────────────────────────────── -->
+<section id="experience">
+  <div class="container">
+    <div class="section-label">Experience</div>
+    <h2 class="section-title">Professional<br/><em style="font-family:'DM Serif Display',Georgia,serif;font-style:italic">Track Record</em></h2>
+    <div class="section-divider"></div>
+
+    <div class="exp-tabs">
+      <button class="exp-tab active" onclick="showTab('tab-research')">Research &amp; Academia</button>
+      <button class="exp-tab" onclick="showTab('tab-me')">M&amp;E &amp; Development</button>
+      <button class="exp-tab" onclick="showTab('tab-early')">Early Career</button>
+    </div>
+
+    <!-- Research & Academia Tab -->
+    <div id="tab-research" class="exp-panel active">
+      <div class="exp-timeline">
+
+        <div class="exp-item">
+          <div class="exp-dot active"></div>
+          <div class="exp-period">Jul 2025 – Present</div>
+          <div class="exp-role">Data Quality Officer — Individual Consultant</div>
+          <div class="exp-org">Sambus Geospatial Limited</div>
+          <div class="exp-location">Ghana</div>
+          <ul class="exp-bullets">
+            <li>Providing consultancy support on the development of an M&amp;E Management Information System for the Tree Crops Diversification Project (TCDP) — a Ghana–World Bank initiative at COCOBOD.</li>
+            <li>Delivered technical input on data quality frameworks, system architecture features, and monitoring design to meet World Bank requirements.</li>
+            <li>Supervising daily field activities to ensure adherence to survey plan, schedules, and data quality standards.</li>
+            <li>Training field teams on research implementation, research participant engagement, and data quality protocols.</li>
+          </ul>
+          <div class="exp-tags"><span class="exp-tag">M&amp;E MIS</span><span class="exp-tag">World Bank</span><span class="exp-tag">Data Quality</span><span class="exp-tag">Field Supervision</span></div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-dot"></div>
+          <div class="exp-period">Oct 2021 – Feb 2024</div>
+          <div class="exp-role">PhD Researcher &amp; Graduate Tutor</div>
+          <div class="exp-org">University of Tokyo — Department of Agricultural and Resource Economics</div>
+          <div class="exp-location">Tokyo, Japan · MEXT Government Scholar</div>
+          <ul class="exp-bullets">
+            <li>Led follow-up panel survey (108 villages, 30+ field staff) in Northern Ghana assessing long-term impacts and spatial spillover effects of rice Green Revolution interventions on farmer capabilities and technology decisions.</li>
+            <li>Examined weather shocks' effects on technology disadoption, fertilizer investment, and yields using panel econometrics, difference-in-differences, and IV methods.</li>
+            <li>Processed complex multi-source datasets; designed survey instruments; managed data using World Bank's Survey Solutions CAPI platform.</li>
+            <li>Delivered results via LaTeX-based academic presentations; authored and co-authored peer-reviewed papers and policy briefs.</li>
+            <li>Tutored PhD and MSc international graduate students in microeconomic theory, development economics, empirical methods, proposal writing, fieldwork, and thesis completion.</li>
+          </ul>
+          <div class="exp-tags"><span class="exp-tag">PhD Research</span><span class="exp-tag">Panel Data</span><span class="exp-tag">MEXT Scholar</span><span class="exp-tag">Graduate Tutoring</span><span class="exp-tag">Stata</span><span class="exp-tag">Survey Solutions</span></div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-dot"></div>
+          <div class="exp-period">Oct 2017 – Jan 2021</div>
+          <div class="exp-role">Research Assistant &amp; Teaching Assistant</div>
+          <div class="exp-org">University for Development Studies / JICA / University of Tokyo</div>
+          <div class="exp-location">Ghana</div>
+          <ul class="exp-bullets">
+            <li>Served as Research Associate for "The Role of Green Revolution in the Economic Development of Sub-Saharan Africa" (University of Tokyo &amp; UDS), contributing to baseline and follow-up surveys, data management, and preliminary analysis.</li>
+            <li>Led and supervised 30 field staff across 108 villages for JICA-funded baseline and endline surveys; managed field logistics, quality control, enumerator training, and preliminary analysis.</li>
+            <li>Contributed to JICA's evaluation of rice market and post-harvest interventions, supporting randomised trial assessments and policy recommendations.</li>
+            <li>Served as Teaching Assistant at UDS (2018–2020): supported Agricultural Marketing and International Trade (undergraduate) and International Agricultural Commodity Trade (graduate) — conducting tutorials, leading discussions, grading, and developing case-based materials.</li>
+          </ul>
+          <div class="exp-tags"><span class="exp-tag">JICA</span><span class="exp-tag">UDS</span><span class="exp-tag">Field Research</span><span class="exp-tag">Teaching Assistant</span><span class="exp-tag">RCT Evaluation</span></div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-dot"></div>
+          <div class="exp-period">Jan 2021</div>
+          <div class="exp-role">Research Assistant — End-line Survey</div>
+          <div class="exp-org">JICA Ghana Office</div>
+          <div class="exp-location">Northern Ghana</div>
+          <ul class="exp-bullets">
+            <li>Supported Lead Consultant in the endline survey in northern Ghana, responsible for field staff management, quality control, preliminary analysis, and reporting.</li>
+          </ul>
+          <div class="exp-tags"><span class="exp-tag">JICA</span><span class="exp-tag">Endline Survey</span><span class="exp-tag">Field Management</span></div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-dot"></div>
+          <div class="exp-period">Jun 2019 – Sep 2020</div>
+          <div class="exp-role">Research Supervisor</div>
+          <div class="exp-org">FutureDAMS, University of Manchester</div>
+          <div class="exp-location">Ghana</div>
+          <ul class="exp-bullets">
+            <li>Trained and supervised field staff to conduct household surveys within different irrigation typologies across northern Ghana.</li>
+            <li>Responsible for addressing field challenges, technical survey issues, and ensuring data quality for an interdisciplinary international research project on dams and livelihoods.</li>
+          </ul>
+          <div class="exp-tags"><span class="exp-tag">Manchester University</span><span class="exp-tag">Irrigation Research</span><span class="exp-tag">Field Supervision</span></div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-dot"></div>
+          <div class="exp-period">May 2019</div>
+          <div class="exp-role">Research Assistant — Paddy Quality Analysis</div>
+          <div class="exp-org">JICA / University of Tokyo</div>
+          <div class="exp-location">Northern Ghana</div>
+          <ul class="exp-bullets">
+            <li>Supported lead consultant in training and supervising enumerators to undertake seed collection from 1,200 rice farmers for paddy quality analysis.</li>
+          </ul>
+          <div class="exp-tags"><span class="exp-tag">JICA</span><span class="exp-tag">University of Tokyo</span><span class="exp-tag">Paddy Quality</span></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- M&E & Development Tab -->
+    <div id="tab-me" class="exp-panel">
+      <div class="exp-timeline">
+
+        <div class="exp-item">
+          <div class="exp-dot active"></div>
+          <div class="exp-period">Jan – Jun 2021</div>
+          <div class="exp-role">Youth Researcher (Consultant)</div>
+          <div class="exp-org">Making Cents International</div>
+          <div class="exp-location">USA (Remote/Ghana fieldwork)</div>
+          <ul class="exp-bullets">
+            <li>Conducted a Ghana Rapid Youth Assessment to support the design of the USAID/Ghana five-year (2020–2025) integrated, behaviour-led Country Development Cooperation Strategy (CDCS).</li>
+            <li>Interviewed key informants, organised focus group discussions, and contributed to summarising and contextualising findings.</li>
+            <li>Aided fieldwork arrangement, undertook transcription and translation, and participated in team briefing sessions.</li>
+            <li>Contributed to the assessment report with actionable recommendations aligned to USAID strategic objectives.</li>
+          </ul>
+          <div class="exp-tags"><span class="exp-tag">USAID</span><span class="exp-tag">Youth Assessment</span><span class="exp-tag">CDCS</span><span class="exp-tag">FGDs</span><span class="exp-tag">KIIs</span></div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-dot"></div>
+          <div class="exp-period">May – Jun 2020</div>
+          <div class="exp-role">Consultant — Choice Experiment Survey</div>
+          <div class="exp-org">International Institute of Tropical Agriculture (IITA)</div>
+          <div class="exp-location">Tamale, Northern Ghana</div>
+          <ul class="exp-bullets">
+            <li>Oversaw field implementation of choice experiment surveys in rural Northern Ghana for agricultural project evaluation.</li>
+            <li>Supervised daily field activities, adhering to survey plan, schedules, and data quality standards.</li>
+            <li>Trained field enumerators on research implementation, participant engagement, and data quality assurance.</li>
+            <li>Supported evaluation of agricultural project impacts on household preferences and economic decisions.</li>
+          </ul>
+          <div class="exp-tags"><span class="exp-tag">IITA</span><span class="exp-tag">Choice Experiments</span><span class="exp-tag">Field Supervision</span><span class="exp-tag">CGIAR</span></div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-dot"></div>
+          <div class="exp-period">Sep 2017</div>
+          <div class="exp-role">Technical Assistant — ILSSI Evaluation</div>
+          <div class="exp-org">Mendez England &amp; Associates (USAID)</div>
+          <div class="exp-location">Ghana</div>
+          <ul class="exp-bullets">
+            <li>Provided technical consulting services to support the Performance Evaluation of the USAID Feed the Future Innovation Lab on Small-Scale Irrigation (ILSSI) Project.</li>
+            <li>Coordinated consultancy work with stakeholders, optimising data flows for project assessments.</li>
+            <li>Contributed to evaluation findings to improve irrigation and food security program outcomes.</li>
+          </ul>
+          <div class="exp-tags"><span class="exp-tag">USAID</span><span class="exp-tag">Irrigation Evaluation</span><span class="exp-tag">Feed the Future</span></div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-dot"></div>
+          <div class="exp-period">Jun – Dec 2017</div>
+          <div class="exp-role">Research Assistant — METASIP Evaluation</div>
+          <div class="exp-org">FAO / Ministry of Food and Agriculture (MoFA), Ghana</div>
+          <div class="exp-location">Northern Belt, Ghana</div>
+          <ul class="exp-bullets">
+            <li>Contributed to the national data collection and regional consultations for the evaluation of the Ghana Medium Term Agricultural Investment Plan (METASIP).</li>
+            <li>Undertook stakeholder consultations, interviews, and community-level data collection across the northern belt regions.</li>
+          </ul>
+          <div class="exp-tags"><span class="exp-tag">FAO</span><span class="exp-tag">MoFA Ghana</span><span class="exp-tag">Policy Evaluation</span><span class="exp-tag">METASIP</span></div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-dot"></div>
+          <div class="exp-period">Jul – Sep 2017</div>
+          <div class="exp-role">Research Assistant — NSAICU Performance Review</div>
+          <div class="exp-org">AGRA / USAID</div>
+          <div class="exp-location">Northern Ghana, Upper East, Upper West, Brong-Ahafo</div>
+          <ul class="exp-bullets">
+            <li>Contributed to the Performance Review of the Northern Sector Agriculture Investment Coordination Unit (NSAICU) in Ghana.</li>
+            <li>Developed data collection tools for in-depth interviews, focus group discussions, and stakeholder consultations across four regions.</li>
+            <li>Consulted with MoFA Headquarters, Regional Directors of Agriculture, Project Coordinators, private sector actors, and development partners in Northern Ghana and Accra.</li>
+            <li>Documented recommendations for improving agricultural sector coordination through establishment of agricultural coordination units.</li>
+          </ul>
+          <div class="exp-tags"><span class="exp-tag">AGRA</span><span class="exp-tag">USAID</span><span class="exp-tag">Agriculture Policy</span><span class="exp-tag">Stakeholder Engagement</span></div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-dot"></div>
+          <div class="exp-period">Jun – Dec 2016</div>
+          <div class="exp-role">Consulting Team Member</div>
+          <div class="exp-org">Market Development Programme for Northern Ghana (MADE)</div>
+          <div class="exp-location">Northern, Upper East, and Upper West regions, Ghana · UKAID / DFID</div>
+          <ul class="exp-bullets">
+            <li>Assessed agricultural value chain actors (smallholder farmers, input dealers, aggregators, extension workers, top-of-supply-chain actors) through FGDs and KIIs under DFID's Market for the Poor (M4P) framework.</li>
+            <li>Designed data collection tools for smallholder farmers and key informants across three regions under UKAID/DFID sponsorship.</li>
+            <li>Conducted qualitative surveys among smallholder farmers and partners of MADE; managed data from interviews to assess adoption, satisfaction, and technology impact.</li>
+            <li>Produced reports with actionable recommendations shaping MADE programming and informed market systems development in Northern Ghana.</li>
+          </ul>
+          <div class="exp-tags"><span class="exp-tag">UKAID/DFID</span><span class="exp-tag">Value Chains</span><span class="exp-tag">M4P Framework</span><span class="exp-tag">FGDs</span><span class="exp-tag">Qualitative Research</span></div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-dot"></div>
+          <div class="exp-period">Dec 2015 – Mar 2016</div>
+          <div class="exp-role">Team Member — Environmental &amp; Social Impact Assessment</div>
+          <div class="exp-org">Volta River Authority (VRA) / Environmental Consultancy</div>
+          <div class="exp-location">Ghana</div>
+          <ul class="exp-bullets">
+            <li>Contributed to the Environmental and Social Impact Assessment (ESIA) for a 150 MW Wind Power Project by VRA in Ghana.</li>
+            <li>Led socioeconomic scoping: drafted reports, designed data collection tools, conducted KIIs, FGDs, and stakeholder and community engagement sessions.</li>
+          </ul>
+          <div class="exp-tags"><span class="exp-tag">ESIA</span><span class="exp-tag">VRA</span><span class="exp-tag">Socioeconomic Assessment</span><span class="exp-tag">Energy Infrastructure</span></div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-dot"></div>
+          <div class="exp-period">Dec 2014 – Apr 2016</div>
+          <div class="exp-role">Research, Monitoring and Evaluation Services Manager</div>
+          <div class="exp-org">Center for Insight Monitoring and Evaluation (CIME)</div>
+          <div class="exp-location">Ghana</div>
+          <ul class="exp-bullets">
+            <li>Executed M&amp;E projects as lead technical officer; designed, analysed, and reported findings for programme decision-making.</li>
+            <li>Provided technical assistance to projects and advisory services to partners; designed and implemented evaluation procedures and monitoring frameworks.</li>
+            <li>Conducted baseline surveys and impact studies on development programs; developed, standardised, and deployed survey tools and data collection forms.</li>
+            <li>Contributed to agricultural value chain improvement and business development programming across Northern Ghana.</li>
+            <li>Facilitated training for data collection; performed data coding, analysis, interpretation and quality control.</li>
+          </ul>
+          <div class="exp-tags"><span class="exp-tag">M&amp;E Management</span><span class="exp-tag">Baseline Surveys</span><span class="exp-tag">Impact Evaluation</span><span class="exp-tag">Value Chains</span><span class="exp-tag">Technical Writing</span></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Early Career Tab -->
+    <div id="tab-early" class="exp-panel">
+      <div class="exp-timeline">
+
+        <div class="exp-item">
+          <div class="exp-dot"></div>
+          <div class="exp-period">Apr – Aug 2016</div>
+          <div class="exp-role">Research Assistant</div>
+          <div class="exp-org">Bioversity International / International Institute of Tropical Agriculture (IITA)</div>
+          <div class="exp-location">Tamale, Northern Ghana</div>
+          <ul class="exp-bullets">
+            <li>Coordinated and supervised field surveys, data collection, collation, entry, cleaning, quality checks, and preliminary analysis.</li>
+            <li>Reviewed, localised, and finalised Focused Group Discussion (FGD) interview questions and protocols for agro-biodiversity research.</li>
+            <li>Made local contacts and scientifically documented criteria applied in choosing representative villages and participating households.</li>
+            <li>Trained enumerators to pre-test protocols and conduct FGDs within Africa Rising project communities in Northern Ghana.</li>
+          </ul>
+          <div class="exp-tags"><span class="exp-tag">IITA</span><span class="exp-tag">Bioversity International</span><span class="exp-tag">FGDs</span><span class="exp-tag">Africa Rising</span></div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-dot"></div>
+          <div class="exp-period">Jun – Sep 2013</div>
+          <div class="exp-role">Research Assistant / Field Coordinator</div>
+          <div class="exp-org">The Pennsylvania State University — Crop Introduction &amp; Informal Seed Systems Project</div>
+          <div class="exp-location">Northern Ghana</div>
+          <ul class="exp-bullets">
+            <li>Promoted food security through agro-biodiversity research across two districts in Northern Ghana.</li>
+            <li>Helped design and implement survey instruments; recruited and trained field enumerators.</li>
+            <li>Identified and selected communities from two districts for baseline survey; scheduled community and stakeholder meetings, interviews, and FGDs.</li>
+            <li>Encouraged participation using visual symbols and locally available materials appropriate for low-literacy participants.</li>
+          </ul>
+          <div class="exp-tags"><span class="exp-tag">Penn State University</span><span class="exp-tag">Agro-biodiversity</span><span class="exp-tag">Seed Systems</span><span class="exp-tag">Food Security</span></div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-dot"></div>
+          <div class="exp-period">Jul 2012 – Jan 2014</div>
+          <div class="exp-role">Research Assistant</div>
+          <div class="exp-org">USAID Africa Rising (Rice) Project — Automation of Baseline Data Collection in Rice Sector Development Hubs</div>
+          <div class="exp-location">Northern Ghana</div>
+          <ul class="exp-bullets">
+            <li>Conducted community entry activities, stakeholder and key informant interviews and discussions across Rice Sector Development Hubs.</li>
+            <li>Trained survey data collectors in using tablets for CAPI-based data collection; supervised field work and quality control.</li>
+            <li>Managed data using STATA; arranged logistics for multi-site survey operations.</li>
+            <li>Contributed to team decisions about research directions and methodology.</li>
+          </ul>
+          <div class="exp-tags"><span class="exp-tag">USAID Africa Rising</span><span class="exp-tag">CAPI</span><span class="exp-tag">Rice Research</span><span class="exp-tag">Stata</span></div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-dot"></div>
+          <div class="exp-period">Sep 2012 – Aug 2013</div>
+          <div class="exp-role">Research Assistant — National Service</div>
+          <div class="exp-org">CSIR-Savanna Agricultural Research Institute (SARI)</div>
+          <div class="exp-location">Northern Ghana</div>
+          <ul class="exp-bullets">
+            <li>Assisted research scientists in socio-economic research implementation; coordinated with agricultural value chain actors.</li>
+            <li>Undertook field surveys, data cleaning and entry; assisted in training field personnel.</li>
+            <li>Performed data checks, quality control, and analysis using STATA, SPSS, and Excel; contributed to research reports.</li>
+            <li>Contributed to data analysis training workshops for the Socioeconomics Division.</li>
+          </ul>
+          <div class="exp-tags"><span class="exp-tag">CSIR-SARI</span><span class="exp-tag">National Service</span><span class="exp-tag">Socioeconomics</span><span class="exp-tag">Stata / SPSS</span></div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── TEACHING ───────────────────────────────────────────────────── -->
+<section id="teaching">
+  <div class="container">
+    <div class="section-label">Teaching</div>
+    <h2 class="section-title">Teaching and<br/><em style="font-family:'DM Serif Display',Georgia,serif;font-style:italic">Outreach Experience</em></h2>
+    <div class="section-divider"></div>
+
+    <p class="teaching-intro">
+      As an applied economist, I see teaching as a transformative avenue rooted in knowledge sharing, clarity,
+      practical engagement with continuous learning, and relearning. My teaching philosophy is shaped by a deep
+      respect for inclusive and interdisciplinary learning, and the belief that economics becomes truly powerful
+      when students can connect theory with lived experiences and applied research.
+    </p>
+
+    <div class="teaching-philosophy reveal">
+      <div class="teaching-philosophy-title">Teaching Philosophy</div>
+      <p>
+        I strive to make academic learning <strong>interactive and research-driven</strong>. I design my teaching around four core principles:
+        making economics understandable through relatable examples and real-world analogies; fostering active learning through
+        discussions, debates, and hands-on problem-solving; promoting equity and inclusion by building accessible learning environments
+        that respect diverse backgrounds; and connecting theory to lived realities by integrating current events, global issues,
+        and applied evidence into every course.
+      </p>
+      <p>
+        I am prepared to teach core courses including <strong>Principles of Microeconomics</strong>, <strong>Applied Econometrics</strong>,
+        <strong>Development Economics</strong>, <strong>Environmental and Resource Economics</strong>,
+        <strong>Agricultural Economics</strong>, and <strong>Food Security Policy</strong>.
+        I welcome opportunities to supervise senior theses, collaborate on research projects, and involve students —
+        especially from first-generation or underrepresented backgrounds — in hands-on, data-driven research.
+      </p>
+    </div>
+
+    <div class="teaching-sub-title">Teaching, Outreach &amp; Research Experience</div>
+    <div class="teaching-grid">
+
+      <div class="teaching-card reveal">
+        <div class="teaching-card-header">
+          <div class="teaching-card-title">Graduate Tutor</div>
+          <span class="teaching-card-code">Oct 2021 – Feb 2024</span>
+        </div>
+        <div class="teaching-card-meta">University of Tokyo · Dept. of Agricultural &amp; Resource Economics, Japan</div>
+        <div class="teaching-card-role">🎓 Graduate Tutor</div>
+        <p class="teaching-card-desc">
+          Mentored PhD and MSc international graduate students through all stages of academic research:
+          refining research questions, proposal writing, field research implementation, data analysis, and
+          thesis completion. Offered one-on-one tutorials on microeconomic theory, development economics,
+          and empirical methods. Guided students from more than six nationalities; contributions were
+          consistently appreciated and recognised by the department.
+        </p>
+      </div>
+
+      <div class="teaching-card reveal">
+        <div class="teaching-card-header">
+          <div class="teaching-card-title">Teaching Assistant</div>
+          <span class="teaching-card-code">2018 – 2020</span>
+        </div>
+        <div class="teaching-card-meta">University for Development Studies, Ghana</div>
+        <div class="teaching-card-role">📚 Teaching Assistant</div>
+        <p class="teaching-card-desc">
+          Supported teaching in graduate and undergraduate courses: Agricultural Marketing and International Trade
+          (undergraduate, 2018–2020) and International Agricultural Commodity Trade (graduate, 2019).
+          Conducted tutorials, led group discussions, graded assignments, and prepared case-based materials
+          that encouraged practical learning. Developed materials connecting trade theory to Sub-Saharan
+          African agricultural market dynamics.
+        </p>
+      </div>
+
+      <div class="teaching-card reveal">
+        <div class="teaching-card-header">
+          <div class="teaching-card-title">English Language Instructor</div>
+          <span class="teaching-card-code">Aug 2022 – Sep 2023</span>
+        </div>
+        <div class="teaching-card-meta">Tokyo Global Gateway (TGG) · Odaiba, Tokyo, Japan</div>
+        <div class="teaching-card-role">🌐 English Language Instructor</div>
+        <p class="teaching-card-desc">
+          Delivered immersive, communicative English instruction to Japanese students from elementary through senior
+          high school level at a flagship facility operated in partnership with the Tokyo Metropolitan Board of Education.
+          Facilitated small-group, role-play based sessions across themed real-world environments — airport, hotel, clinic,
+          and business settings — building learners' practical English communication skills. Guided students through
+          experience-oriented language activities designed to simulate international settings, fostering cross-cultural
+          awareness and learner confidence. Supported TGG's outreach mission of equipping Japanese youth with English
+          as a functional tool for participation in a globalised world.
+        </p>
+      </div>
+
+      <div class="teaching-card reveal">
+        <div class="teaching-card-header">
+          <div class="teaching-card-title">PhD Research</div>
+          <span class="teaching-card-code">Jan 2022 – Feb 2024</span>
+        </div>
+        <div class="teaching-card-meta">University of Tokyo, Japan</div>
+        <div class="teaching-card-role">🔬 PhD Researcher</div>
+        <p class="teaching-card-desc">
+          Led a follow-up panel survey in Ghana to assess long-term weather shock impacts and spatial spillovers
+          on farmer capabilities. Examined technology disadoption, fertilizer disinvestment, and yield decline
+          under weather stress. Processed datasets using Stata and R; designed survey experiments using World Bank's
+          Survey Solutions; delivered results via LaTeX/Overleaf presentations at academic conferences and workshops.
+        </p>
+      </div>
+
+      <div class="teaching-card reveal">
+        <div class="teaching-card-header">
+          <div class="teaching-card-title">Enumerator &amp; Staff Training</div>
+          <span class="teaching-card-code">2013 – Present</span>
+        </div>
+        <div class="teaching-card-meta">Multiple Organisations · Ghana</div>
+        <div class="teaching-card-role">📋 Trainer &amp; Lead Facilitator</div>
+        <p class="teaching-card-desc">
+          Designed and delivered training curricula for field enumerators and research teams across more than
+          12 projects in Northern Ghana. Topics covered include CAPI survey implementation using Survey CTO,
+          Survey Solutions, and Mlax; data quality assurance; qualitative data collection (KIIs, FGDs);
+          M&amp;E framework application; and research ethics and participant protection.
+        </p>
+      </div>
+
+      <div class="teaching-card reveal">
+        <div class="teaching-card-header">
+          <div class="teaching-card-title">Community Field Practitioner — TTFPP</div>
+          <span class="teaching-card-code">May – Jul (2009 &amp; 2010)</span>
+        </div>
+        <div class="teaching-card-meta">University for Development Studies (UDS) · Bullu Community, Tumu District, Upper West Region, Ghana</div>
+        <div class="teaching-card-role">🌍 Community Outreach &amp; Participatory Field Research</div>
+        <p class="teaching-card-desc">
+          As part of UDS's mandatory Third Trimester Field Practical Programme (TTFPP) — a university-wide
+          community outreach and development initiative mandated under PNDC Law 279 — participated as a
+          member of a multidisciplinary team of students drawn from different faculties and programmes, living
+          in and working directly with the Bullu community across two consecutive eight-week field years.
+          Conducted community entry and a reconnaissance survey to establish rapport and gain first-hand
+          knowledge of the settlement's layout, amenities, geology, and infrastructure. Applied a multi-method
+          data collection approach: transect walk, focus group discussions (FGDs), key informant interviews
+          (KIIs), structured household questionnaires, SWOT analysis, and direct participatory observation —
+          documenting livelihoods, farming systems, economic activities, and socioeconomic conditions.
+          Actively participated in local community activities, blending traditional knowledge with scientific
+          methods; compiled findings into a community profile report submitted to UDS and deposited with the
+          community as a development reference for NGOs and government agencies.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="teaching-sub-title">Student Supervision &amp; Mentorship</div>
+    <div class="teaching-supervision-list">
+
+      <div class="supervision-item reveal">
+        <div class="supervision-num">01</div>
+        <div class="supervision-body">
+          <div class="supervision-level">PhD · Research Guidance &amp; Fieldwork Supervision</div>
+          <div class="supervision-title">Guided PhD students in academic research design, proposal writing, fieldwork supervision, and data management</div>
+          <div class="supervision-detail">University of Tokyo · Oct 2021 – Feb 2024 · Dept. of Agricultural &amp; Resource Economics · International students from multiple nationalities</div>
+        </div>
+      </div>
+
+      <div class="supervision-item reveal">
+        <div class="supervision-num">02</div>
+        <div class="supervision-body">
+          <div class="supervision-level">MSc · Thesis Data Management &amp; Econometric Analysis</div>
+          <div class="supervision-title">Supported MSc students in data management, applied econometric analysis, and thesis completion</div>
+          <div class="supervision-detail">University of Tokyo · Oct 2021 – Feb 2024 · Stata, R, Survey Solutions guidance; contributed to several students' successful defences</div>
+        </div>
+      </div>
+
+      <div class="supervision-item reveal">
+        <div class="supervision-num">03</div>
+        <div class="supervision-body">
+          <div class="supervision-level">Graduate &amp; Undergraduate · Econometrics &amp; Development Economics Tutoring</div>
+          <div class="supervision-title">Tutored students in Development Economics, Rural Development, Agricultural Trade, and applied econometrics</div>
+          <div class="supervision-detail">University of Tokyo &amp; University for Development Studies · 2018–2024 · Explained theories and real-world applications; connected global evidence to African development contexts</div>
+        </div>
+      </div>
+
+      <div class="supervision-item reveal">
+        <div class="supervision-num">04</div>
+        <div class="supervision-body">
+          <div class="supervision-level">Home Tutor · Secondary &amp; Basic Level</div>
+          <div class="supervision-title">High School: Mathematics and Economics (2013) · Basic Level: English, Mathematics, Science (2007–2008)</div>
+          <div class="supervision-detail">Private tutoring — developed foundational teaching skills and commitment to inclusive, accessible instruction</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── CONSULTING ────────────────────────────────────────────────── -->
+<section id="consulting">
+  <div class="container">
+    <div class="section-label">Consulting</div>
+    <h2 class="section-title">Development<br/><em style="font-family:'DM Serif Display',Georgia,serif;font-style:italic">Consulting Expertise</em></h2>
+    <div class="section-divider"></div>
+
+    <p class="consult-intro reveal">
+      With over a decade of applied work with international development organisations, bilateral donors, and
+      research institutions across Sub-Saharan Africa, I provide high-quality technical consulting services
+      in monitoring and evaluation, impact evaluation, agricultural value chain analysis, survey design,
+      and development programme evaluation — meeting the standards of IFAD, World Bank, USAID, FAO, WFP,
+      CGIAR, and bilateral development partners.
+    </p>
+
+    <div class="consult-grid">
+      <div class="consult-card reveal">
+        <div class="consult-icon">📊</div>
+        <div class="consult-title">M&amp;E Systems Design &amp; Management</div>
+        <div class="consult-desc">
+          Design and manage results-based M&amp;E frameworks integrating quantitative and qualitative methods.
+          Develop Theory of Change, logframes, results matrices, and indicator tracking systems.
+          Experienced with IFAD Core Outcome Indicators, USAID CDCS, World Bank M&amp;E requirements,
+          and donor-compliant reporting standards.
+        </div>
+      </div>
+      <div class="consult-card reveal">
+        <div class="consult-icon">🔍</div>
+        <div class="consult-title">Impact Evaluation &amp; Programme Assessment</div>
+        <div class="consult-desc">
+          Design and implement rigorous impact evaluations — baselines, midlines, and endlines —
+          using experimental and quasi-experimental methods (RCTs, DID, IV, PSM, regression discontinuity).
+          Experienced in USAID, JICA, AGRA, FAO, and World Bank evaluation frameworks across Ghana and East Africa.
+        </div>
+      </div>
+      <div class="consult-card reveal">
+        <div class="consult-icon">🌾</div>
+        <div class="consult-title">Agricultural &amp; Rural Development Research</div>
+        <div class="consult-desc">
+          Research on technology adoption, value chain analysis, fertiliser investment, market participation,
+          agro-biodiversity, seed systems, irrigation, and smallholder food security.
+          Deep expertise in Northern Ghana's agricultural systems and broader West and East African smallholder contexts.
+        </div>
+      </div>
+      <div class="consult-card reveal">
+        <div class="consult-icon">🗺️</div>
+        <div class="consult-title">Survey Design &amp; Field Research Management</div>
+        <div class="consult-desc">
+          End-to-end survey management: questionnaire design, sampling, CAPI implementation, enumerator training,
+          quality assurance, data management, and analysis. Experienced with Survey Solutions, Survey CTO, Mlax,
+          ODK, GPS-based sampling, and large-scale multi-regional field operations.
+        </div>
+      </div>
+      <div class="consult-card reveal">
+        <div class="consult-icon">📈</div>
+        <div class="consult-title">Data Analysis &amp; Econometrics</div>
+        <div class="consult-desc">
+          Advanced quantitative analysis using Stata, R, SPSS, and Google Earth Engine.
+          Specialised in panel data econometrics, causal inference, structural models, and integration of
+          household survey data with satellite-derived climate and geospatial datasets for impact measurement.
+        </div>
+      </div>
+      <div class="consult-card reveal">
+        <div class="consult-icon">📝</div>
+        <div class="consult-title">Policy Analysis &amp; Report Writing</div>
+        <div class="consult-desc">
+          Translating complex research findings into accessible policy briefs, evaluation reports,
+          and strategic recommendations for government ministries, donor agencies, and international organisations.
+          Experience with FAO, MoFA Ghana, AGRA, USAID, UKAID/DFID, and JICA reporting standards.
+        </div>
+      </div>
+    </div>
+
+    <div class="clients-section reveal">
+      <div class="clients-title">Partner Organisations &amp; Clients</div>
+      <div class="client-logos">
+        <span class="client-tag">JICA</span>
+        <span class="client-tag">USAID</span>
+        <span class="client-tag">UKAID / DFID</span>
+        <span class="client-tag">FAO</span>
+        <span class="client-tag">World Bank</span>
+        <span class="client-tag">IITA / CGIAR</span>
+        <span class="client-tag">IFPRI</span>
+        <span class="client-tag">Bioversity International</span>
+        <span class="client-tag">Making Cents International</span>
+        <span class="client-tag">AGRA</span>
+        <span class="client-tag">Penn State University</span>
+        <span class="client-tag">University of Manchester</span>
+        <span class="client-tag">VRA Ghana</span>
+        <span class="client-tag">Sambus Geospatial</span>
+        <span class="client-tag">CSIR-SARI</span>
+        <span class="client-tag">MoFA Ghana</span>
+        <span class="client-tag">WAAPP / ECOWAS</span>
+        <span class="client-tag">IPA Ghana</span>
+      </div>
+    </div>
+
+    <div class="field-experience-section reveal">
+      <div class="clients-title">Selected Field Survey Experience</div>
+      <div class="field-grid">
+        <div class="field-item">
+          <div>
+            <div class="field-year">May 2017</div>
+            <div class="field-desc">Evaluation of vegetable value chain actors in Northern Ghana</div>
+            <div class="field-org">International Water Management Institute (IWMI)</div>
+          </div>
+        </div>
+        <div class="field-item">
+          <div>
+            <div class="field-year">Feb 2016</div>
+            <div class="field-desc">Evaluation of value chain actors for the Market Development Programme (MADE)</div>
+            <div class="field-org">UKAID/DFID · Northern Ghana</div>
+          </div>
+        </div>
+        <div class="field-item">
+          <div>
+            <div class="field-year">2016</div>
+            <div class="field-desc">Large Scale and Medium-Scale Farmers, Agriculture Mechanisation, Tractor Ownership and Use Survey</div>
+            <div class="field-org">MoFA Ghana / GSS / CSIR-SARI / IFPRI</div>
+          </div>
+        </div>
+        <div class="field-item">
+          <div>
+            <div class="field-year">Feb 2016</div>
+            <div class="field-desc">System of Rice Intensification (SRI) — WAAPP Mid-term Data Analysis</div>
+            <div class="field-org">West Africa Agricultural Productivity Programme</div>
+          </div>
+        </div>
+        <div class="field-item">
+          <div>
+            <div class="field-year">2020</div>
+            <div class="field-desc">Training of Trainers — Data Monitors for National Population Census</div>
+            <div class="field-org">Ghana Statistical Service · CSPro &amp; Stata</div>
+          </div>
+        </div>
+        <div class="field-item">
+          <div>
+            <div class="field-year">2019–2020</div>
+            <div class="field-desc">Household surveys within irrigation typologies across Northern Ghana</div>
+            <div class="field-org">FutureDAMS, University of Manchester</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── SKILLS ─────────────────────────────────────────────────────── -->
+<section id="skills">
+  <div class="container">
+    <div class="section-label">Skills</div>
+    <h2 class="section-title">Technical &amp;<br/><em style="font-family:'DM Serif Display',Georgia,serif;font-style:italic;color:rgba(255,255,255,.75)">Research Competencies</em></h2>
+    <div class="section-divider"></div>
+    <div class="skills-grid">
+
+      <div class="skill-card reveal">
+        <div class="skill-icon">📊</div>
+        <div class="skill-name">Econometrics &amp; Empirical Methods</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Panel Data Econometrics</span>
+          <span class="skill-tag">Difference-in-Differences</span>
+          <span class="skill-tag">IV / 2SLS</span>
+          <span class="skill-tag">Propensity Score Matching</span>
+          <span class="skill-tag">RCT Evaluation</span>
+          <span class="skill-tag">Regression Discontinuity</span>
+          <span class="skill-tag">Structural Models</span>
+          <span class="skill-tag">Causal Inference</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-icon">💻</div>
+        <div class="skill-name">Software &amp; Programming</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Stata (Advanced)</span>
+          <span class="skill-tag">R</span>
+          <span class="skill-tag">SPSS</span>
+          <span class="skill-tag">Google Earth Engine</span>
+          <span class="skill-tag">Survey Solutions (World Bank)</span>
+          <span class="skill-tag">LaTeX / Overleaf</span>
+          <span class="skill-tag">MS Office Suite</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-icon">📋</div>
+        <div class="skill-name">Survey &amp; Field Research</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Questionnaire Design</span>
+          <span class="skill-tag">CAPI Tools</span>
+          <span class="skill-tag">Sampling Methods</span>
+          <span class="skill-tag">FGDs / KIIs</span>
+          <span class="skill-tag">GPS / PDA Survey</span>
+          <span class="skill-tag">Data Quality Assurance</span>
+          <span class="skill-tag">Enumerator Training</span>
+          <span class="skill-tag">Multi-Regional Field Ops</span>
+          <span class="skill-tag">Participatory Research</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-icon">🌍</div>
+        <div class="skill-name">Subject Matter Expertise</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Agricultural Economics</span>
+          <span class="skill-tag">Development Economics</span>
+          <span class="skill-tag">Food Security &amp; Nutrition</span>
+          <span class="skill-tag">Climate &amp; Agriculture</span>
+          <span class="skill-tag">Impact Evaluation</span>
+          <span class="skill-tag">Value Chain Analysis</span>
+          <span class="skill-tag">Smallholder Farming</span>
+          <span class="skill-tag">Rural Livelihoods</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-icon">🏗️</div>
+        <div class="skill-name">M&amp;E &amp; Programme Management</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Results-Based M&amp;E</span>
+          <span class="skill-tag">Theory of Change</span>
+          <span class="skill-tag">Logframe Design</span>
+          <span class="skill-tag">Indicator Development</span>
+          <span class="skill-tag">Baseline / Endline Surveys</span>
+          <span class="skill-tag">IFAD M&amp;E Standards</span>
+          <span class="skill-tag">USAID Evaluation</span>
+          <span class="skill-tag">Project Cycle Support</span>
+          <span class="skill-tag">Project Management</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-icon">🗣️</div>
+        <div class="skill-name">Languages</div>
+        <div class="skill-tags">
+          <span class="skill-tag">English (Fluent)</span>
+          <span class="skill-tag">Gurune / Frafra (Native)</span>
+          <span class="skill-tag">Dagbani (Very Good)</span>
+          <span class="skill-tag">Twi (Very Good)</span>
+          <span class="skill-tag">Japanese (Basic)</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="margin-top:56px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:28px">Relevant Professional Training</div>
+      <div class="teaching-supervision-list" style="--cream:#2A3830">
+
+        <div class="supervision-item reveal" style="border-color:rgba(255,255,255,.1)">
+          <div class="supervision-num" style="color:rgba(255,255,255,.25)">01</div>
+          <div class="supervision-body">
+            <div class="supervision-level" style="color:var(--gold)">Project Management Research Institute of Ghana</div>
+            <div class="supervision-title" style="color:rgba(255,255,255,.85)">Project Management Specialist Training</div>
+            <div class="supervision-detail" style="color:rgba(255,255,255,.5)">Project planning, implementation, monitoring and management</div>
+          </div>
+        </div>
+
+        <div class="supervision-item reveal" style="border-color:rgba(255,255,255,.1)">
+          <div class="supervision-num" style="color:rgba(255,255,255,.25)">02</div>
+          <div class="supervision-body">
+            <div class="supervision-level" style="color:var(--gold)">AfricaLead, Ghana</div>
+            <div class="supervision-title" style="color:rgba(255,255,255,.85)">Short Course in Scaling up Food and Nutrition Security</div>
+            <div class="supervision-detail" style="color:rgba(255,255,255,.5)">M&amp;E, strategic thinking, leading and managing change, advocacy development, leadership for change</div>
+          </div>
+        </div>
+
+        <div class="supervision-item reveal" style="border-color:rgba(255,255,255,.1)">
+          <div class="supervision-num" style="color:rgba(255,255,255,.25)">03</div>
+          <div class="supervision-body">
+            <div class="supervision-level" style="color:var(--gold)">Socioeconomics Division, CSIR-SARI, Ghana</div>
+            <div class="supervision-title" style="color:rgba(255,255,255,.85)">Data Analysis and Management (STATA, SPSS &amp; Excel)</div>
+            <div class="supervision-detail" style="color:rgba(255,255,255,.5)">Qualitative and quantitative research skills, M&amp;E, proposal and technical writing</div>
+          </div>
+        </div>
+
+        <div class="supervision-item reveal" style="border-color:rgba(255,255,255,.1)">
+          <div class="supervision-num" style="color:rgba(255,255,255,.25)">04</div>
+          <div class="supervision-body">
+            <div class="supervision-level" style="color:var(--gold)">USAID Africa Rising / Africa Rice Centre — Food Research Institute (FRI), Accra</div>
+            <div class="supervision-title" style="color:rgba(255,255,255,.85)">In-depth Training on Automation of Baseline Data Collection in Ghana</div>
+            <div class="supervision-detail" style="color:rgba(255,255,255,.5)">CAPI-based baseline data collection automation; Mlax survey application on tablets and smartphones</div>
+          </div>
+        </div>
+
+        <div class="supervision-item reveal" style="border-color:rgba(255,255,255,.1)">
+          <div class="supervision-num" style="color:rgba(255,255,255,.25)">05</div>
+          <div class="supervision-body">
+            <div class="supervision-level" style="color:var(--gold)">International Food Policy Research Institute (IFPRI)</div>
+            <div class="supervision-title" style="color:rgba(255,255,255,.85)">Training on Data Collection using CAPI and Field Research Techniques</div>
+            <div class="supervision-detail" style="color:rgba(255,255,255,.5)">Research sampling techniques, FGDs, use of PDA and GPS for survey, questionnaire uploading and downloading</div>
+          </div>
+        </div>
+
+        <div class="supervision-item reveal" style="border-color:rgba(255,255,255,.1)">
+          <div class="supervision-num" style="color:rgba(255,255,255,.25)">06</div>
+          <div class="supervision-body">
+            <div class="supervision-level" style="color:var(--gold)">Innovations for Poverty Action (IPA), Ghana</div>
+            <div class="supervision-title" style="color:rgba(255,255,255,.85)">Training Using Survey CTO Application — Field Survey &amp; Research Ethics</div>
+            <div class="supervision-detail" style="color:rgba(255,255,255,.5)">Survey CTO on Samsung tablets for field survey; research ethics and participant protection protocols</div>
+          </div>
+        </div>
+
+        <div class="supervision-item reveal" style="border-color:rgba(255,255,255,.1)">
+          <div class="supervision-num" style="color:rgba(255,255,255,.25)">07</div>
+          <div class="supervision-body">
+            <div class="supervision-level" style="color:var(--gold)">Ghana Statistical Service · 2020</div>
+            <div class="supervision-title" style="color:rgba(255,255,255,.85)">Training of Trainers Workshop for Data Monitors — National Population Census</div>
+            <div class="supervision-detail" style="color:rgba(255,255,255,.5)">Use of CSPro and STATA to ensure quality national census data collection and management</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ─────────────────────────────────────────────────────── -->
+<section id="contact">
+  <div class="container">
+    <div class="section-label">Contact</div>
+    <h2 class="section-title">Let's Connect &amp;<br/><em style="font-family:'DM Serif Display',Georgia,serif;font-style:italic">Collaborate</em></h2>
+    <div class="section-divider"></div>
+    <div class="contact-grid">
+      <div class="contact-text reveal">
+        <p>
+          I am actively seeking <strong>research and academic positions</strong>, <strong>postdoctoral fellowships</strong>,
+          and <strong>international development consultancy</strong> roles in agricultural economics, development economics,
+          food security, impact evaluation, and M&amp;E — in the USA and internationally. My background in rigorous applied
+          econometrics, large-scale field research, and policy-relevant development consulting means I bring both academic
+          rigour and practical experience to research and programme evaluation teams.
+        </p>
+        <p>
+          If you are working on related research, evaluating a development programme, or have an opportunity
+          that aligns with my background, I would genuinely love to hear from you.
+        </p>
+
+        <div class="open-to-block">
+          <div class="open-to-title">Open To</div>
+          <div class="open-to-list">
+            <span class="open-to-pill">Research &amp; Academic Positions</span>
+            <span class="open-to-pill">M&amp;E Consultancy</span>
+            <span class="open-to-pill">Impact Evaluation</span>
+            <span class="open-to-pill">Development Consulting</span>
+            <span class="open-to-pill">Remote Research Roles</span>
+            <span class="open-to-pill">International Assignments</span>
+          </div>
+        </div>
+
+        <div class="contact-items" style="margin-top:24px">
+          <a class="contact-item" href="mailto:atingad@gmail.com">
+            <div class="contact-item-icon">✉</div>
+            <div>
+              <div class="contact-item-label">Primary Email</div>
+              <div class="contact-item-val">atingad@gmail.com</div>
+            </div>
+          </a>
+          <a class="contact-item" href="mailto:atingadavid@yahoo.com">
+            <div class="contact-item-icon">✉</div>
+            <div>
+              <div class="contact-item-label">Secondary Email</div>
+              <div class="contact-item-val">atingadavid@yahoo.com</div>
+            </div>
+          </a>
+          <a class="contact-item" href="https://www.linkedin.com/in/atingadavid" target="_blank" rel="noopener">
+            <div class="contact-item-icon">in</div>
+            <div>
+              <div class="contact-item-label">LinkedIn</div>
+              <div class="contact-item-val">linkedin.com/in/atingadavid</div>
+            </div>
+          </a>
+          <a class="contact-item" href="https://davidatinga.netlify.app/" target="_blank" rel="noopener">
+            <div class="contact-item-icon">◉</div>
+            <div>
+              <div class="contact-item-label">Website</div>
+              <div class="contact-item-val">davidatinga.netlify.app</div>
+            </div>
+          </a>
+          <a class="contact-item" href="https://github.com/AtingaDavid" target="_blank" rel="noopener">
+            <div class="contact-item-icon">⌥</div>
+            <div>
+              <div class="contact-item-label">GitHub</div>
+              <div class="contact-item-val">github.com/AtingaDavid</div>
+            </div>
+          </a>
+          <a class="contact-item" href="https://orcid.org/0000-0002-3281-3175" target="_blank" rel="noopener">
+            <div class="contact-item-icon">iD</div>
+            <div>
+              <div class="contact-item-label">ORCID</div>
+              <div class="contact-item-val">0000-0002-3281-3175</div>
+            </div>
+          </a>
+          <div class="contact-item" style="cursor:default">
+            <div class="contact-item-icon">📍</div>
+            <div>
+              <div class="contact-item-label">Location</div>
+              <div class="contact-item-val">Coon Rapids, MN 55433, USA</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="contact-form-area reveal">
+        <div class="form-title">Send a Message</div>
+        <form id="contactForm" action="https://formspree.io/f/mbdwkyry" method="POST">
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off"/>
+          <div class="form-group">
+            <label for="fname">Your Name</label>
+            <input type="text" id="fname" name="name" placeholder="Dr. Jane Smith" required/>
+          </div>
+          <div class="form-group">
+            <label for="femail">Email Address</label>
+            <input type="email" id="femail" name="email" placeholder="jane@institution.edu" required/>
+          </div>
+          <div class="form-group">
+            <label for="forg">Organisation / Institution</label>
+            <input type="text" id="forg" name="organisation" placeholder="University / IFAD / World Bank…"/>
+          </div>
+          <div class="form-group">
+            <label for="ftype">Enquiry Type</label>
+            <select id="ftype" name="enquiry_type">
+              <option value="">Select…</option>
+              <option>Academic Position / Fellowship</option>
+              <option>Research Collaboration</option>
+              <option>M&amp;E Consultancy</option>
+              <option>Impact Evaluation</option>
+              <option>Development Consulting</option>
+              <option>Teaching &amp; Mentorship</option>
+              <option>Media / Interview</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="fsubject">Subject</label>
+            <input type="text" id="fsubject" name="subject" placeholder="Research collaboration / Job opportunity…" required/>
+          </div>
+          <div class="form-group">
+            <label for="fmessage">Message</label>
+            <textarea id="fmessage" name="message" placeholder="Tell me about your research or opportunity…" required></textarea>
+          </div>
+          <button class="form-btn" type="submit" id="submitBtn">Send Message →</button>
+          <div class="form-status" id="formStatus"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────────────────────── -->
+<footer>
+  <div class="footer-inner">
+    <span class="footer-brand">David Atinga</span>
+    <span style="font-size:.8rem">Coon Rapids, MN, USA</span>
+    <div class="footer-links">
+      <a href="mailto:atingad@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/atingadavid" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/AtingaDavid" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://orcid.org/0000-0002-3281-3175" target="_blank" rel="noopener">ORCID</a>
+      <a href="https://davidatinga.netlify.app/" target="_blank" rel="noopener">Website</a>
+    </div>
+  </div>
+  <div style="margin-top:16px;font-size:.75rem">© 2026 David Atinga</div>
+</footer>
+
+<script>
+// ── THEME TOGGLE ─────────────────────────────────────────────────
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('theme', theme);
+  const isDark = theme === 'dark';
+  document.querySelectorAll('#themeIcon,#mobileThemeIcon').forEach(el => {
+    el.textContent = isDark ? '☀️' : '🌙';
+  });
+}
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme') || 'light';
+  applyTheme(current === 'light' ? 'dark' : 'light');
+}
+(function() {
+  const saved = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  applyTheme(saved || (prefersDark ? 'dark' : 'light'));
+})();
+function checkMobileToggle() {
+  const mt = document.getElementById('mobileToggle');
+  if (mt) mt.style.display = window.innerWidth <= 900 ? 'flex' : 'none';
+}
+checkMobileToggle();
+window.addEventListener('resize', checkMobileToggle);
+
+// ── MOBILE MENU ───────────────────────────────────────────────────
+function toggleMenu(){
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+function closeMenu(){
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+
+// ── EXPERIENCE TABS ───────────────────────────────────────────────
+function showTab(tabId) {
+  document.querySelectorAll('.exp-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.exp-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(tabId).classList.add('active');
+  event.currentTarget.classList.add('active');
+  // Re-trigger animation for newly visible items
+  document.querySelectorAll('#' + tabId + ' .exp-item').forEach((el, i) => {
+    el.style.transitionDelay = i * 0.08 + 's';
+    observer.observe(el);
+  });
+}
+
+// ── ABSTRACT TOGGLE ───────────────────────────────────────────────
+function toggleAbs(id, btn){
+  const el = document.getElementById(id);
+  el.classList.toggle('open');
+  btn.textContent = el.classList.contains('open') ? '▾ Abstract' : '▸ Abstract';
+}
+
+// ── SCROLL REVEAL ─────────────────────────────────────────────────
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal,.exp-item').forEach((el, i) => {
+  if (el.classList.contains('reveal')) el.style.transitionDelay = (i % 4) * 0.07 + 's';
+  observer.observe(el);
+});
+
+// ── NAV ACTIVE HIGHLIGHT ──────────────────────────────────────────
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let cur = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 100) cur = s.id;
+  });
+  navLinks.forEach(a => {
+    a.style.color = a.getAttribute('href') === '#' + cur ? 'var(--forest)' : '';
+  });
+}, { passive: true });
+
+// ── CONTACT FORM ──────────────────────────────────────────────────
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submitBtn');
+  const status = document.getElementById('formStatus');
+  status.className = 'form-status';
+  status.textContent = '';
+  const action = this.getAttribute('action');
+  if (action.includes('YOUR_FORMSPREE_ID')) {
+    status.className = 'form-status error';
+    status.textContent = '⚠ Please replace YOUR_FORMSPREE_ID with your Formspree form ID.';
+    return;
+  }
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+  try {
+    const data = new FormData(this);
+    const response = await fetch(action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (response.ok) {
+      status.className = 'form-status success';
+      status.textContent = '✓ Message sent successfully. I will be in touch soon — thank you!';
+      this.reset();
+    } else {
+      const json = await response.json().catch(() => ({}));
+      throw new Error(json.error || 'Submission failed');
+    }
+  } catch (err) {
+    status.className = 'form-status error';
+    status.textContent = '✗ There was a problem sending your message. Please email directly at atingad@gmail.com';
+  } finally {
+    btn.textContent = 'Send Message →';
+    btn.disabled = false;
+  }
+});
+</script>
+</body>
+</html>
