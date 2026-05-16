@@ -175,15 +175,15 @@ nav{
 }
 .mobile-menu.open{display:flex}
 
-/* ── HERO ────────────────────────────────────────────────────────── */
+/* ── HERO — L1 Portrait Centre ───────────────────────────────────── */
 #hero{
   min-height:100vh;
-  display:grid;grid-template-columns:1fr 1fr;
+  display:grid;grid-template-columns:55fr 45fr;
   padding-top:64px;overflow:hidden;position:relative;
 }
 .hero-left{
   display:flex;flex-direction:column;justify-content:center;
-  padding:80px 60px 80px 64px;position:relative;z-index:2;
+  padding:80px 52px 80px 64px;position:relative;z-index:2;
 }
 .hero-tag{
   font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.14em;
@@ -241,60 +241,123 @@ nav{
 }
 .btn-outline:hover{background:var(--forest);color:#fff;transform:translateY(-1px)}
 
+/* Right panel — forest background, centred column layout */
 .hero-right{
   background:var(--hero-panel);
-  display:flex;flex-direction:column;justify-content:center;align-items:center;
-  padding:80px 60px;position:relative;overflow:hidden;
+  display:flex;flex-direction:column;align-items:center;
+  padding:52px 36px 44px;position:relative;overflow:hidden;
   transition:background .35s;
+  gap:0;
 }
 .hero-right::before{
   content:'';position:absolute;inset:0;
-  background:radial-gradient(ellipse at 30% 70%,rgba(78,122,99,.5) 0%,transparent 60%),
-             radial-gradient(ellipse at 80% 20%,rgba(196,136,42,.15) 0%,transparent 50%);
+  background:radial-gradient(ellipse at 50% 85%,rgba(78,122,99,.5) 0%,transparent 55%),
+             radial-gradient(ellipse at 80% 10%,rgba(196,136,42,.12) 0%,transparent 45%);
 }
-.hero-avatar{
-  width:168px;height:168px;border-radius:50%;
-  border:4px solid rgba(255,255,255,.18);
-  background:var(--sage);
-  display:flex;align-items:center;justify-content:center;
-  font-family:'DM Serif Display',Georgia,serif;font-size:3.5rem;color:#fff;
-  margin-bottom:32px;position:relative;z-index:1;
-  box-shadow:0 20px 60px rgba(0,0,0,.35);
-  overflow:hidden;
+
+/* Avatar with decorative gold ring + label — L1 portrait treatment */
+.hero-avatar-wrap{
+  position:relative;z-index:1;
+  display:flex;flex-direction:column;align-items:center;
+  margin-bottom:28px;
   opacity:0;animation:fadeIn .8s .5s cubic-bezier(.4,0,.2,1) forwards;
 }
+.hero-avatar-ring{
+  width:152px;height:152px;border-radius:50%;
+  border:2px solid rgba(196,136,42,.48);
+  display:flex;align-items:center;justify-content:center;
+}
+.hero-avatar{
+  width:136px;height:136px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.2);
+  background:var(--sage);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'DM Serif Display',Georgia,serif;font-size:3rem;color:#fff;
+  box-shadow:0 16px 52px rgba(0,0,0,.38);
+  overflow:hidden;
+  /* no margin-bottom here — label handles spacing */
+}
+.hero-avatar-label{
+  font-family:'JetBrains Mono',monospace;font-size:.54rem;letter-spacing:.14em;
+  text-transform:uppercase;color:rgba(255,255,255,.38);
+  margin-top:12px;text-align:center;
+}
+
+/* Stats grid */
 .hero-stats{
-  display:grid;grid-template-columns:1fr 1fr;gap:20px;
-  position:relative;z-index:1;width:100%;max-width:340px;
+  display:grid;grid-template-columns:1fr 1fr;gap:10px;
+  position:relative;z-index:1;width:100%;max-width:300px;
+  margin-bottom:16px;
   opacity:0;animation:fadeIn .8s .7s cubic-bezier(.4,0,.2,1) forwards;
 }
 .stat-card{
   background:rgba(255,255,255,.07);
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:8px;padding:20px 16px;
+  border:1px solid rgba(255,255,255,.11);
+  border-radius:7px;padding:14px 10px;text-align:center;
   transition:background .2s;
 }
 .stat-card:hover{background:rgba(255,255,255,.11)}
 .stat-num{
-  font-family:'DM Serif Display',Georgia,serif;font-size:2.2rem;
+  font-family:'DM Serif Display',Georgia,serif;font-size:1.8rem;
   color:#fff;line-height:1;margin-bottom:4px;
 }
 .stat-label{
-  font-family:'JetBrains Mono',monospace;font-size:.63rem;letter-spacing:.1em;
-  text-transform:uppercase;color:rgba(255,255,255,.5);
+  font-family:'JetBrains Mono',monospace;font-size:.52rem;letter-spacing:.1em;
+  text-transform:uppercase;color:rgba(255,255,255,.44);
 }
+
+/* Research impact box */
+.hero-impact{
+  width:100%;max-width:300px;
+  position:relative;z-index:1;border-radius:8px;overflow:hidden;
+  background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.1);
+  margin-bottom:18px;
+  opacity:0;animation:fadeIn .8s .82s cubic-bezier(.4,0,.2,1) forwards;
+}
+.hero-impact-title{
+  font-family:'JetBrains Mono',monospace;font-size:.56rem;letter-spacing:.14em;
+  text-transform:uppercase;padding:8px 12px 7px;
+  color:rgba(255,255,255,.4);border-bottom:1px solid rgba(255,255,255,.08);
+}
+.hero-impact-row{display:grid;grid-template-columns:1fr 1fr}
+.hero-impact-plat{padding:10px 12px}
+.hero-impact-plat+.hero-impact-plat{border-left:1px solid rgba(255,255,255,.08)}
+.hero-impact-platname{
+  font-family:'JetBrains Mono',monospace;font-size:.49rem;letter-spacing:.1em;
+  text-transform:uppercase;color:rgba(255,255,255,.38);
+  margin-bottom:6px;display:flex;align-items:center;gap:4px;
+}
+.hero-impact-dot{width:5px;height:5px;border-radius:50%;display:inline-block;flex-shrink:0}
+.hero-impact-dot.rg{background:#00CCBB}
+.hero-impact-dot.gs{background:#4285F4}
+.hero-impact-metrics{display:flex;flex-direction:column;gap:3px}
+.hero-impact-pm{display:flex;align-items:baseline;gap:4px}
+.hero-impact-pm-num{font-family:'DM Serif Display',Georgia,serif;font-size:1.1rem;color:#fff;line-height:1}
+.hero-impact-pm-lbl{font-family:'JetBrains Mono',monospace;font-size:.44rem;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.33)}
+.hero-impact-link{
+  display:block;font-family:'JetBrains Mono',monospace;font-size:.44rem;
+  letter-spacing:.05em;text-decoration:none;margin-top:5px;padding:4px 0;
+  border-top:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.32);
+  transition:color .2s;
+}
+.hero-impact-link:hover{color:rgba(255,255,255,.62)}
+
+/* Social icons row */
 .hero-links{
-  display:flex;gap:16px;margin-top:32px;position:relative;z-index:1;
-  opacity:0;animation:fadeIn .8s .9s cubic-bezier(.4,0,.2,1) forwards;
+  display:flex;gap:10px;align-items:center;
+  position:relative;z-index:1;
+  opacity:0;animation:fadeIn .8s .96s cubic-bezier(.4,0,.2,1) forwards;
 }
 .hero-links a{
-  width:40px;height:40px;border-radius:50%;
-  border:1px solid rgba(255,255,255,.2);
+  width:34px;height:34px;border-radius:50%;
+  border:1.5px solid rgba(255,255,255,.18);
   display:flex;align-items:center;justify-content:center;
-  color:rgba(255,255,255,.7);text-decoration:none;font-size:.85rem;
-  transition:all .25s;
+  color:rgba(255,255,255,.5);text-decoration:none;
+  font-family:'JetBrains Mono',monospace;font-size:.6rem;font-weight:700;
+  transition:border-color .2s,color .2s,background .2s;
 }
-.hero-links a:hover{background:rgba(255,255,255,.15);color:#fff;border-color:rgba(255,255,255,.4)}
+.hero-links a:hover{border-color:var(--gold);color:#fff;background:rgba(196,136,42,.15)}
+.hero-links a svg{width:13px;height:13px;fill:currentColor}
 
 /* ── SECTIONS ───────────────────────────────────────────────────── */
 section{padding:100px 32px}
@@ -707,65 +770,12 @@ footer a:hover{color:#fff}
 }
 .exp-more-btn:hover{color:var(--forest)}
 
-/* ── RESEARCH PROFILE STATS ──────────────────────────────────────── */
-.rstat-section{margin-top:72px}
-.rstat-tabs{
-  display:flex;gap:0;margin-bottom:0;
-  border-bottom:2px solid var(--warm);overflow-x:auto;
-}
-.rstat-tab{
-  font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.1em;
-  text-transform:uppercase;padding:10px 22px;cursor:pointer;
-  color:var(--muted);background:none;border:none;
-  border-bottom:2px solid transparent;margin-bottom:-2px;
-  transition:color .2s,border-color .2s;white-space:nowrap;
-  display:flex;align-items:center;gap:8px;
-}
-.rstat-tab.active,.rstat-tab:hover{color:var(--forest);border-bottom-color:var(--gold)}
-.rstat-tab-logo{
-  font-size:.75rem;font-weight:700;
-  padding:1px 6px;border-radius:3px;letter-spacing:.02em;
-}
-.rstat-tab-logo.rg{background:#00CCBB;color:#fff}
-.rstat-tab-logo.gs{background:#4285F4;color:#fff}
-.rstat-panel{display:none;padding:36px 0 0}
-.rstat-panel.active{display:block}
-.rstat-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-  gap:16px;
-}
-.rstat-card{
-  background:var(--card-bg);border:1px solid var(--card-bdr);
-  border-radius:8px;padding:24px 20px;
-  text-align:center;
-  transition:border-color .25s,transform .2s,background .35s,box-shadow .25s;
-  box-shadow:var(--shadow);
-}
-.rstat-card:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.09)}
-.rstat-num{
-  font-family:'DM Serif Display',Georgia,serif;
-  font-size:2.4rem;color:var(--forest);line-height:1;margin-bottom:6px;
-}
-.rstat-lbl{
-  font-family:'JetBrains Mono',monospace;font-size:.63rem;
-  letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
-  line-height:1.4;
-}
-.rstat-source-note{
-  margin-top:20px;
-  font-family:'JetBrains Mono',monospace;font-size:.65rem;
-  letter-spacing:.06em;color:var(--light);
-  display:flex;align-items:center;gap:8px;
-}
-.rstat-source-note a{color:var(--sage);text-decoration:none}
-.rstat-source-note a:hover{color:var(--forest);text-decoration:underline}
 
 /* ── RESPONSIVE ─────────────────────────────────────────────────── */
 @media(max-width:900px){
   #hero{grid-template-columns:1fr;min-height:auto}
   .hero-left{padding:60px 32px 48px}
-  .hero-right{padding:48px 32px 60px;min-height:360px}
+  .hero-right{padding:52px 32px 52px;min-height:auto;gap:0}
   .about-grid{grid-template-columns:1fr;gap:48px}
   .contact-grid{grid-template-columns:1fr;gap:48px}
   .nav-links{display:none}
@@ -850,13 +860,21 @@ footer a:hover{color:#fff}
   </div>
 
   <div class="hero-right">
-    <div class="hero-avatar" id="avatarWrap">
-      <img id="avatarImg" src="./photo.jpg" alt="David Atinga"
-        style="width:100%;height:100%;border-radius:50%;object-fit:cover;display:block"
-        onerror="this.src='./photo.png';this.onerror=function(){this.style.display='none';document.getElementById('avatarFallback').style.display='flex';}"/>
-      <span id="avatarFallback"
-        style="display:none;width:100%;height:100%;align-items:center;justify-content:center;font-family:'DM Serif Display',Georgia,serif;font-size:3.5rem;color:#fff">DA</span>
+    <!-- Avatar with decorative gold ring + label — L1 Portrait Centre -->
+    <div class="hero-avatar-wrap">
+      <div class="hero-avatar-ring">
+        <div class="hero-avatar" id="avatarWrap">
+          <img id="avatarImg" src="./photo.jpg" alt="David Atinga"
+            style="width:100%;height:100%;border-radius:50%;object-fit:cover;display:block"
+            onerror="this.src='./photo.png';this.onerror=function(){this.style.display='none';document.getElementById('avatarFallback').style.display='flex';}"/>
+          <span id="avatarFallback"
+            style="display:none;width:100%;height:100%;align-items:center;justify-content:center;font-family:'DM Serif Display',Georgia,serif;font-size:3rem;color:#fff">DA</span>
+        </div>
+      </div>
+      <div class="hero-avatar-label">David Atinga · PhD</div>
     </div>
+
+    <!-- 2×2 Stats -->
     <div class="hero-stats">
       <div class="stat-card">
         <div class="stat-num">10+</div>
@@ -875,12 +893,46 @@ footer a:hover{color:#fff}
         <div class="stat-label">Working Papers</div>
       </div>
     </div>
+
+    <!-- Research Impact box -->
+    <div class="hero-impact">
+      <div class="hero-impact-title">Research Impact</div>
+      <div class="hero-impact-row">
+        <div class="hero-impact-plat">
+          <div class="hero-impact-platname"><span class="hero-impact-dot rg"></span>ResearchGate</div>
+          <div class="hero-impact-metrics">
+            <div class="hero-impact-pm"><span class="hero-impact-pm-num">49.9</span><span class="hero-impact-pm-lbl">RG Score</span></div>
+            <div class="hero-impact-pm"><span class="hero-impact-pm-num">140</span><span class="hero-impact-pm-lbl">Reads</span></div>
+            <div class="hero-impact-pm"><span class="hero-impact-pm-num">87</span><span class="hero-impact-pm-lbl">Citations</span></div>
+          </div>
+          <a class="hero-impact-link" href="https://www.researchgate.net/profile/David-Atinga" target="_blank" rel="noopener">researchgate.net ↗</a>
+        </div>
+        <div class="hero-impact-plat">
+          <div class="hero-impact-platname"><span class="hero-impact-dot gs"></span>Google Scholar</div>
+          <div class="hero-impact-metrics">
+            <div class="hero-impact-pm"><span class="hero-impact-pm-num">117</span><span class="hero-impact-pm-lbl">Citations</span></div>
+            <div class="hero-impact-pm"><span class="hero-impact-pm-num">4</span><span class="hero-impact-pm-lbl">H-Index</span></div>
+            <div class="hero-impact-pm"><span class="hero-impact-pm-num">2</span><span class="hero-impact-pm-lbl">I10-Index</span></div>
+          </div>
+          <a class="hero-impact-link" href="https://scholar.google.com/citations?user=jdGp7Q4AAAAJ&hl=en" target="_blank" rel="noopener">scholar.google.com ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Social icons -->
     <div class="hero-links">
-      <a href="mailto:atingad@gmail.com" title="Email" aria-label="Email">✉</a>
-      <a href="https://davidatinga.netlify.app/" target="_blank" rel="noopener" title="Website" aria-label="Website">◉</a>
-      <a href="https://github.com/AtingaDavid" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">⌥</a>
-      <a href="https://www.linkedin.com/in/atingadavid" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">in</a>
+      <a href="mailto:atingad@gmail.com" title="Email" aria-label="Email">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      </a>
       <a href="https://orcid.org/0000-0002-3281-3175" target="_blank" rel="noopener" title="ORCID" aria-label="ORCID">iD</a>
+      <a href="https://www.researchgate.net/profile/David-Atinga" target="_blank" rel="noopener" title="ResearchGate" aria-label="ResearchGate">RG</a>
+      <a href="https://www.linkedin.com/in/atingadavid" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      <a href="https://github.com/AtingaDavid" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
+        <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.089-.745.083-.729.083-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.775.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+      </a>
+      <a href="https://scholar.google.com/citations?user=jdGp7Q4AAAAJ&hl=en" target="_blank" rel="noopener" title="Google Scholar" aria-label="Google Scholar">GS</a>
     </div>
   </div>
 </section>
@@ -1179,66 +1231,6 @@ footer a:hover{color:#fff}
       </div>
     </div>
 
-    <!-- ── RESEARCH PROFILE STATS ──────────────────────────────── -->
-    <div class="rstat-section reveal">
-      <div class="section-label" style="margin-bottom:8px;margin-top:0">Research Impact</div>
-      <h3 style="font-family:'DM Serif Display',Georgia,serif;font-size:1.4rem;color:var(--forest);margin-bottom:6px">
-        Scholarly Profile <em style="font-style:italic;color:var(--sage)">Metrics</em>
-      </h3>
-      <p style="font-size:.85rem;color:var(--muted);margin-bottom:24px;max-width:540px;line-height:1.7">
-        Citation and impact metrics across academic platforms — updated periodically.
-      </p>
-      <div class="rstat-tabs">
-        <button class="rstat-tab active" onclick="showRstatTab('rstat-rg', this)">
-          <span class="rstat-tab-logo rg">RG</span>ResearchGate
-        </button>
-        <button class="rstat-tab" onclick="showRstatTab('rstat-gs', this)">
-          <span class="rstat-tab-logo gs">GS</span>Google Scholar
-        </button>
-      </div>
-
-      <div id="rstat-rg" class="rstat-panel active">
-        <div class="rstat-grid">
-          <div class="rstat-card">
-            <div class="rstat-num">49.9</div>
-            <div class="rstat-lbl">ResearchGate Score</div>
-          </div>
-          <div class="rstat-card">
-            <div class="rstat-num">140</div>
-            <div class="rstat-lbl">Publication Reads</div>
-          </div>
-          <div class="rstat-card">
-            <div class="rstat-num">87</div>
-            <div class="rstat-lbl">Citations</div>
-          </div>
-        </div>
-        <div class="rstat-source-note">
-          <span>Source:</span>
-          <a href="https://www.researchgate.net/profile/David-Atinga" target="_blank" rel="noopener">researchgate.net/profile/David-Atinga ↗</a>
-        </div>
-      </div>
-
-      <div id="rstat-gs" class="rstat-panel">
-        <div class="rstat-grid">
-          <div class="rstat-card">
-            <div class="rstat-num">117</div>
-            <div class="rstat-lbl">Total Citations</div>
-          </div>
-          <div class="rstat-card">
-            <div class="rstat-num">4</div>
-            <div class="rstat-lbl">h-index</div>
-          </div>
-          <div class="rstat-card">
-            <div class="rstat-num">2</div>
-            <div class="rstat-lbl">i10-index</div>
-          </div>
-        </div>
-        <div class="rstat-source-note">
-          <span>Source:</span>
-          <a href="https://scholar.google.com/citations?user=jdGp7Q4AAAAJ&hl=en" target="_blank" rel="noopener">scholar.google.com/citations ↗</a>
-        </div>
-      </div>
-    </div><!-- /.rstat-section -->
 
   </div>
 </section>
@@ -2210,14 +2202,6 @@ function toggleExpMore(btn) {
   var rest = btn.nextElementSibling;
   var open = rest.classList.toggle('open');
   btn.textContent = open ? '▾ Show less' : '▸ More details';
-}
-
-// ── RESEARCH STATS TABS ───────────────────────────────────────────
-function showRstatTab(panelId, tabEl) {
-  document.querySelectorAll('.rstat-panel').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.rstat-tab').forEach(t => t.classList.remove('active'));
-  document.getElementById(panelId).classList.add('active');
-  tabEl.classList.add('active');
 }
 
 // ── EXPERIENCE TABS ───────────────────────────────────────────────
